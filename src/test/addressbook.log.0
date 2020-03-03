@@ -1,0 +1,132 @@
+Mar 03, 2020 8:43:21 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 8:45:46 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 8:47:09 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 8:47:35 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 8:47:44 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 8:49:17 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 8:51:43 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 8:51:44 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 8:51:44 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/duplicatePersonAddressBook.json not found
+Mar 03, 2020 8:59:38 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 9:12:14 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 9:12:14 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 9:12:14 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/duplicatePersonAddressBook.json not found
+Mar 03, 2020 9:12:30 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 9:12:30 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 9:12:30 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/duplicatePersonAddressBook.json not found
+Mar 03, 2020 9:14:25 AM seedu.address.logic.LogicManager execute
+INFO: ----------------[USER COMMAND][delete 9]
+Mar 03, 2020 9:15:33 AM seedu.address.logic.LogicManager execute
+INFO: ----------------[USER COMMAND][add n/Amy Bee p/11111111 e/amy@example.com a/Block 312, Amy Street 1]
+Mar 03, 2020 9:15:42 AM seedu.address.logic.LogicManager execute
+INFO: ----------------[USER COMMAND][uicfhmowqewca]
+Mar 03, 2020 9:15:42 AM seedu.address.logic.LogicManager execute
+INFO: ----------------[USER COMMAND][list]
+Mar 03, 2020 9:15:42 AM seedu.address.logic.LogicManager execute
+INFO: ----------------[USER COMMAND][add n/Amy Bee p/11111111 e/amy@example.com a/Block 312, Amy Street 1]
+Mar 03, 2020 9:15:42 AM seedu.address.logic.LogicManager execute
+INFO: ----------------[USER COMMAND][delete 9]
+Mar 03, 2020 9:38:09 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 9:39:44 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 9:39:44 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 9:39:44 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/duplicatePersonAddressBook.json not found
+Mar 03, 2020 9:40:40 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/NonExistentFile.json not found
+Mar 03, 2020 9:40:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidAndValidPersonAddressBook.json not found
+Mar 03, 2020 9:40:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:40:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 9:43:39 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:44:18 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:50:22 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:50:35 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 9:53:18 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 9:54:42 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:57:25 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:59:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/NonExistentFile.json not found
+Mar 03, 2020 9:59:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidAndValidPersonAddressBook.json not found
+Mar 03, 2020 9:59:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 9:59:41 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 10:04:54 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/NonExistentFile.json not found
+Mar 03, 2020 10:04:54 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidAndValidPersonAddressBook.json not found
+Mar 03, 2020 10:04:54 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 10:04:54 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 10:05:47 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 10:05:47 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/typicalPersonsAddressBook.json not found
+Mar 03, 2020 10:05:47 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonSerializableAddressBookTest/duplicatePersonAddressBook.json not found
+Mar 03, 2020 10:10:16 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 10:21:37 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/NonExistentFile.json not found
+Mar 03, 2020 10:21:37 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidAndValidPersonAddressBook.json not found
+Mar 03, 2020 10:21:37 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 10:21:37 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 10:21:46 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonUserPrefsStorageTest/TypicalUserPref.json not found
+Mar 03, 2020 10:21:46 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonUserPrefsStorageTest/NotJsonFormatUserPrefs.json not found
+Mar 03, 2020 10:21:46 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonUserPrefsStorageTest/EmptyUserPrefs.json not found
+Mar 03, 2020 10:21:46 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonUserPrefsStorageTest/NonExistentFile.json not found
+Mar 03, 2020 10:21:46 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonUserPrefsStorageTest/ExtraValuesUserPref.json not found
+Mar 03, 2020 10:27:22 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/NonExistentFile.json not found
+Mar 03, 2020 10:27:23 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidAndValidPersonAddressBook.json not found
+Mar 03, 2020 10:27:23 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 10:27:23 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
+Mar 03, 2020 10:28:24 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/NonExistentFile.json not found
+Mar 03, 2020 10:28:24 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidAndValidPersonAddressBook.json not found
+Mar 03, 2020 10:28:24 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/notJsonFormatAddressBook.json not found
+Mar 03, 2020 10:28:24 AM seedu.address.commons.util.JsonUtil readJsonFile
+INFO: Json file src/test/data/JsonAddressBookStorageTest/invalidPersonAddressBook.json not found
