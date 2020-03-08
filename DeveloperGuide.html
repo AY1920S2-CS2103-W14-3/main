@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>AddressBook Level 3 - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 3 - Developer Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Naggy Joel</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S2-CS2103-W14-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 3 - Developer Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
@@ -623,29 +623,42 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <h2 id="product-scope"><a class="link" href="#product-scope">Appendix A: Product Scope</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Target user profile</strong>:</p>
+<p><strong>Target user profile</strong>: Busy university students who want to balance their hectic work schedule as well as their social life.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>has a need to manage a significant number of contacts</p>
+<p>Has the need to manage a significant number of contacts and project/assignment deadlines</p>
 </li>
 <li>
-<p>prefer desktop apps over other types</p>
+<p>Has the need to manage a significant number of friends' birthdays and their miscellaneous information (such as their likes and dislikes)</p>
 </li>
 <li>
-<p>can type fast</p>
+<p>Can type fast and prefers typing over mouse input</p>
 </li>
 <li>
-<p>prefers typing over mouse input</p>
+<p>Is reasonably comfortable using CLI applications</p>
 </li>
 <li>
-<p>is reasonably comfortable using CLI apps</p>
+<p>Prefers desktop applications instead of other applications</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>Value proposition</strong>: manage contacts faster than a typical mouse/GUI driven app</p>
+<p><strong>Value proposition</strong>: A one-stop application for managing your social life, allowing you to manage contacts faster than a typical mouse/GUI driven app.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Afraid that you will forget your best friend&#8217;s birthday? Naggy Joel will remind you!</p>
+</li>
+<li>
+<p>Not sure where you want to hang out? Naggy Joel can suggest places for you!</p>
+</li>
+<li>
+<p>Want to hang out with your friends but not sure when you can because of your hectic university schedule and many deadlines? Naggy Joel will help you find the time!</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -673,39 +686,33 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">new user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">see usage instructions</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">refer to instructions when I forget how to use the App</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">busy university student</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">be reminded of my friends' birthdays as and when they are approaching</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">have no need to memorize all my friends' birthdays</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">add a new person</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">busy university student with many groupmates and friends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">find and sort contacts by certain criteria (eg. find by name, find by tags, find by organization)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">locate my friends and groupmates easily</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">delete a person</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">remove entries that I no longer need</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">busy university student with many assignments and project deadlines scattered throughout the semester</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">be provided timely reminders of my work deadlines</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">not have to remember the specific timing, date and deliverables of each assignment.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* * *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">find a person by name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">locate details of persons without having to go through the entire list</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">busy university student with a hectic work schedule</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">be able to find pockets of free time within my schedule where I can go meet my friends</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">schedule my social events efficiently</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>* *</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">hide <a href="#private-contact-detail">private contact details</a> by default</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">minimize chance of someone else seeing them by accident</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>*</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">user with many persons in the address book</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">sort persons by name</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">locate a person easily</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">busy university student with a hectic work schedule</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">be able to be suggested places to eat with my friends based on "KIV" notes for certain restaurants</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">choose a gathering place without much hassle</p></td>
 </tr>
 </tbody>
 </table>
@@ -780,13 +787,49 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Should work on any <a href="#mainstream-os">mainstream OS</a> as long as it has Java <code>11</code> or above installed.</p>
+<p>The final product is a result of evolving/enhancing/morphing the given code base.</p>
 </li>
 <li>
-<p>Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.</p>
+<p>The final product targets users who can type fast and prefer typing over other means of input.</p>
+</li>
+<li>
+<p>The final product should be for a single user.</p>
+</li>
+<li>
+<p>The product is developed incrementally over the project duration.</p>
+</li>
+<li>
+<p>The data should be stored locally and should be in a human editable text file.</p>
+</li>
+<li>
+<p>The data cannot be stored in a DBMS</p>
+</li>
+<li>
+<p>The software should follow the Object-Oriented paradigm primarily.</p>
+</li>
+<li>
+<p>The software should work on any <a href="#mainstream-os">mainstream OS</a> such as Windows, Linux, and OS-X platforms and should avoid having OS-dependent libraries and OS-specific features.</p>
+</li>
+<li>
+<p>The software should work on a computer that has version 11 of Java installed.</p>
+</li>
+<li>
+<p>The software should work without requiring an installer.</p>
+</li>
+<li>
+<p>The software should not depend on a remote server.</p>
+</li>
+<li>
+<p>The use of third-party frameworks is subject to approval by the module administrators</p>
+</li>
+<li>
+<p>The file size of deliverables should not exceed 100MB for the JAR file and 15MB/file for the PDF files</p>
 </li>
 <li>
 <p>A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse.</p>
+</li>
+<li>
+<p>Should be able to hold up to 1000 persons without a noticeable sluggishness in performance for typical usage.</p>
 </li>
 </ol>
 </div>
@@ -802,11 +845,7 @@ If the <code>currentStatePointer</code> is at index <code>addressBookStateList.s
 <dl>
 <dt class="hdlist1"><a id="mainstream-os"></a> Mainstream OS</dt>
 <dd>
-<p>Windows, Linux, Unix, OS-X</p>
-</dd>
-<dt class="hdlist1"><a id="private-contact-detail"></a> Private contact detail</dt>
-<dd>
-<p>A contact detail that is not meant to be shared with others</p>
+<p>Windows, Linux, OS-X</p>
 </dd>
 </dl>
 </div>
@@ -958,4 +997,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-02 06:50:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-08 09:05:06 UTC</div></div></div></body></html>
