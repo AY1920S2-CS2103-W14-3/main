@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Naggy Joel</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://ay1920s2-cs2103-w14-3.github.io/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Naggy Joel - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>Naggy Joel</code>      Since: <code>Jan 2020</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -14,30 +14,30 @@
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-ab-add-code">3.2. Adding a person: <code>ab add</code></a></li>
-<li><a href="#listing-all-persons-code-ab-list-code">3.3. Listing all persons : <code>ab list</code></a></li>
-<li><a href="#editing-a-person-code-ab-edit-code">3.4. Editing a person : <code>ab edit</code></a></li>
-<li><a href="#adding-tags-to-a-person-code-ab-addtag-code">3.5. Adding tags to a person : <code>ab addtag</code></a></li>
-<li><a href="#adding-tags-to-a-person-code-ab-rmtag-code">3.6. Adding tags to a person : <code>ab rmtag</code></a></li>
-<li><a href="#sort-contacts-code-ab-sort-code">3.7. Sort contacts: <code>ab sort</code></a></li>
+<li><a href="#adding-a-person-code-ab-add-code">3.2. Adding a person: <code>(ab)add</code></a></li>
+<li><a href="#listing-all-persons-code-ab-list-code">3.3. Listing all persons : <code>(ab)list</code></a></li>
+<li><a href="#editing-a-person-code-ab-edit-code">3.4. Editing a person : <code>(ab)edit</code></a></li>
+<li><a href="#adding-tags-to-a-person-code-ab-addtag-code">3.5. Adding tags to a person : <code>(ab)addtag</code></a></li>
+<li><a href="#adding-tags-to-a-person-code-ab-rmtag-code">3.6. Adding tags to a person : <code>(ab)rmtag</code></a></li>
+<li><a href="#sort-contacts-code-ab-sort-code">3.7. Sort contacts: <code>(ab)sort</code></a></li>
 <li><a href="#undo-and-redo-commands-code-undo-redo-code">3.8. Undo and redo commands: <code>undo/redo</code></a></li>
-<li><a href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.9. List everything about a contact in field: <code>ab get</code></a></li>
-<li><a href="#store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code">3.10. Store additional information about contacts using the Note Taker: <code>ab addnote</code></a></li>
-<li><a href="#edit-additional-information-about-contacts-code-ab-editnote-code">3.11. Edit additional information about contacts: <code>ab editnote</code></a></li>
-<li><a href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.12. Delete additional information about contacts: <code>ab deletenote</code></a></li>
+<li><a href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.9. List everything about a contact in field: <code>(ab)get</code></a></li>
+<li><a href="#store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code">3.10. Store additional information about contacts using the Note Taker: <code>(ab)addnote</code></a></li>
+<li><a href="#edit-additional-information-about-contacts-code-ab-editnote-code">3.11. Edit additional information about contacts: <code>(ab)editnote</code></a></li>
+<li><a href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.12. Delete additional information about contacts: <code>(ab)deletenote</code></a></li>
 <li><a href="#obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code">3.13. Obtain gift suggestions for a particular contact using the Birthday Tracker <code>(coming in v2.0)</code></a></li>
-<li><a href="#adds-a-new-restaurant-code-rt-add-code">3.14. Adds a new restaurant: <code>rt add</code></a></li>
-<li><a href="#search-code-rt-search-code">3.15. Search: <code>rt search</code></a></li>
-<li><a href="#deletes-a-restaurant-code-rt-delete-code">3.16. Deletes a restaurant: <code>rt delete</code></a></li>
-<li><a href="#add-notes-to-a-restaurant-code-rt-notes-code">3.17. Add notes to a restaurant: <code>rt notes</code></a></li>
-<li><a href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.18. Add new assignment to the Schoolwork Tracker: <code>st add</code></a></li>
-<li><a href="#list-current-assignments-code-st-list-code">3.19. List current assignments: <code>st list</code></a></li>
-<li><a href="#mark-as-completed-code-st-done-code">3.20. Mark as completed: <code>st done</code></a></li>
-<li><a href="#delete-assignment-code-st-delete-code">3.21. Delete assignment: <code>st delete</code></a></li>
-<li><a href="#add-person-to-assignment-code-st-addmem-code">3.22. Add person to assignment: <code>st addmem</code></a></li>
+<li><a href="#adds-a-new-restaurant-code-rt-add-code">3.14. Adds a new restaurant: <code>(rt)add</code></a></li>
+<li><a href="#search-code-rt-search-code">3.15. Search: <code>(rt)search</code></a></li>
+<li><a href="#deletes-a-restaurant-code-rt-delete-code">3.16. Deletes a restaurant: <code>(rt)delete</code></a></li>
+<li><a href="#add-notes-to-a-restaurant-code-rt-notes-code">3.17. Add notes to a restaurant: <code>(rt)notes</code></a></li>
+<li><a href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.18. Add new assignment to the Schoolwork Tracker: <code>(st)add</code></a></li>
+<li><a href="#list-current-assignments-code-st-list-code">3.19. List current assignments: <code>(st)list</code></a></li>
+<li><a href="#mark-as-completed-code-st-done-code">3.20. Mark as completed: <code>(st)done</code></a></li>
+<li><a href="#delete-assignment-code-st-delete-code">3.21. Delete assignment: <code>(st)delete</code></a></li>
+<li><a href="#add-person-to-assignment-code-st-addmem-code">3.22. Add person to assignment: <code>(st)addmem</code></a></li>
 <li><a href="#schedule-an-event-code-schedule-code">3.23. Schedule an event: <code>schedule</code></a></li>
 <li><a href="#create-a-new-social-event-code-event-code">3.24. Create a new social event: <code>event</code></a></li>
-<li><a href="#deleting-a-person-code-ab-delete-code">3.25. Deleting a person : <code>ab delete</code></a></li>
+<li><a href="#deleting-a-person-code-ab-delete-code">3.25. Deleting a person : <code>(ab)delete</code></a></li>
 <li><a href="#clearing-all-entries-code-clear-code">3.26. Clearing all entries : <code>clear</code></a></li>
 <li><a href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></li>
 <li><a href="#saving-the-data">3.28. Saving the data</a></li>
@@ -53,7 +53,18 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 3 (AB3) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB3 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>Does the name Naggy Joel sound like a very boring application? Fret not, it is actually the exact opposite! It helps you
+maximise your time to get as much fun as you can amidst your hectic work schedule. In fact, it aims to help you be the
+best friend that you can ever be!</p>
+</div>
+<div class="paragraph">
+<p>Naggy Joel is for those who <strong>prefer to use a desktop app for managing their social life</strong>. It is an application that
+allows a user to manage all aspects of their social life, ranging from their different social circles and contacts,
+to their events and deadlines, as well as, places to hang out and potential practical gifts that will be very much
+appreciated by the recipient.  More importantly, Naggy Joel is <strong>optimized for those who prefer to work with a Command
+Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, Naggy
+Joel can get social life managed faster than traditional GUI apps. Interested? Jump to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started.
+Enjoy!</p>
 </div>
 </div>
 </div>
@@ -66,7 +77,7 @@
 <p>Ensure you have Java <code>11</code> or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/AY1920S2-CS2103-W14-3/main/releases">here</a>.</p>
+<p>Download the latest <code>naggyjoel.jar</code> <a href="https://github.com/AY1920S2-CS2103-W14-3/main/releases">here</a>.</p>
 </li>
 <li>
 <p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
@@ -120,7 +131,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
+<p>Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>(ab)add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>add n/John Doe</code>.</p>
 </li>
 <li>
 <p>Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/John Doe t/friend</code> or as <code>n/John Doe</code>.</p>
@@ -142,10 +153,10 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-ab-add-code"><a class="link" href="#adding-a-person-code-ab-add-code">3.2. Adding a person: <code>ab add</code></a></h3>
+<h3 id="adding-a-person-code-ab-add-code"><a class="link" href="#adding-a-person-code-ab-add-code">3.2. Adding a person: <code>(ab)add</code></a></h3>
 <div class="paragraph">
 <p>Adds a person to the address book<br>
-Format: <code>ab add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [o/ORGANIZATION] [b/BIRTHDAY]</code></p>
+Format: <code>(ab)add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [o/ORGANIZATION] [b/BIRTHDAY]</code></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -155,7 +166,7 @@ Format: <code>ab add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [o/ORGA
 </td>
 <td class="content">
 A person can have any number of tags (including 0)
-BIRTHDAY must be written in a MM-DD format.
+BIRTHDAY must be written in a MM-dd format.
 Fields inside square brackets are optional.
 </td>
 </tr>
@@ -167,25 +178,25 @@ Fields inside square brackets are optional.
 <div class="ulist">
 <ul>
 <li>
-<p><code>ab add n/Akshay</code></p>
+<p><code>(ab)add n/Akshay</code></p>
 </li>
 <li>
-<p><code>ab add n/Joel HH e/joel@yahoo.com.sg p/12345678 o/NUS a/Pasir Ris St. 71, Blk 123, #01-79</code></p>
+<p><code>(ab)add n/Joel HH e/joel@yahoo.com.sg p/12345678 o/NUS a/Pasir Ris St. 71, Blk 123, #01-79</code></p>
 </li>
 <li>
-<p><code>ab add n/Aisyle Nat e/aisyle@gmail.com p/87654321 o/NUS b/02-12</code></p>
+<p><code>(ab)add n/Aisyle Nat e/aisyle@gmail.com p/87654321 b/02-12 o/NUS</code></p>
 </li>
 <li>
-<p><code>ab add n/ Benjamin t/CS2103</code></p>
+<p><code>(ab)add n/ Benjamin t/CS2103</code></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-ab-list-code"><a class="link" href="#listing-all-persons-code-ab-list-code">3.3. Listing all persons : <code>ab list</code></a></h3>
+<h3 id="listing-all-persons-code-ab-list-code"><a class="link" href="#listing-all-persons-code-ab-list-code">3.3. Listing all persons : <code>(ab)list</code></a></h3>
 <div class="paragraph">
 <p>Lists out all your contacts in the address book. Each contact will have a displayed index. Only lists the name, phone number and tags (if present)<br>
-Format: <code>ab list [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
+Format: <code>(ab)list [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -209,15 +220,15 @@ Format: <code>ab list [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:
-* <code>ab list -g/NUS -n/Lim</code><br>
+* <code>(ab)list -g/NUS -n/Lim</code><br>
 List all contacts that is in group “NUS” and have the word “Lim” in its name</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person-code-ab-edit-code"><a class="link" href="#editing-a-person-code-ab-edit-code">3.4. Editing a person : <code>ab edit</code></a></h3>
+<h3 id="editing-a-person-code-ab-edit-code"><a class="link" href="#editing-a-person-code-ab-edit-code">3.4. Editing a person : <code>(ab)edit</code></a></h3>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
-Format: <code>ab edit INDEX n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [o/ORGANIZATION] [b/BIRTHDAY]</code></p>
+Format: <code>(ab)edit INDEX n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [o/ORGANIZATION] [b/BIRTHDAY]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -251,21 +262,21 @@ Format: <code>ab edit INDEX n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] 
 <div class="ulist">
 <ul>
 <li>
-<p><code>ab edit 37 a/2 Cactus Road, S903281</code><br>
+<p><code>(ab)edit 37 a/2 Cactus Road, S903281</code><br>
 Changes the 37th person’s address to 2 Cactus Road, S903281.</p>
 </li>
 <li>
-<p><code>ab edit 2 n/Elysia Tan o/Comp Club</code><br>
+<p><code>(ab)edit 2 n/Elysia Tan o/Comp Club</code><br>
 Changes the second person’s name to Elysia Tan, and organization to Comp Club.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-tags-to-a-person-code-ab-addtag-code"><a class="link" href="#adding-tags-to-a-person-code-ab-addtag-code">3.5. Adding tags to a person : <code>ab addtag</code></a></h3>
+<h3 id="adding-tags-to-a-person-code-ab-addtag-code"><a class="link" href="#adding-tags-to-a-person-code-ab-addtag-code">3.5. Adding tags to a person : <code>(ab)addtag</code></a></h3>
 <div class="paragraph">
 <p>Allows you to add additional tags to your contacts.<br>
-Format: <code>ab addtag INDEX [t/TAG]</code></p>
+Format: <code>(ab)addtag INDEX [t/TAG]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -293,17 +304,17 @@ Format: <code>ab addtag INDEX [t/TAG]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ab addtag 37 t/noob</code>
+<p><code>(ab)addtag 37 t/noob</code>
 Adds the tag “noob” to the person at index 37</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-tags-to-a-person-code-ab-rmtag-code"><a class="link" href="#adding-tags-to-a-person-code-ab-rmtag-code">3.6. Adding tags to a person : <code>ab rmtag</code></a></h3>
+<h3 id="adding-tags-to-a-person-code-ab-rmtag-code"><a class="link" href="#adding-tags-to-a-person-code-ab-rmtag-code">3.6. Adding tags to a person : <code>(ab)rmtag</code></a></h3>
 <div class="paragraph">
 <p>Allows you to add additional tags to your contacts.<br>
-Format: <code>ab rmtag INDEX [t/TAG]</code></p>
+Format: <code>(ab)rmtag INDEX [t/TAG]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -325,14 +336,14 @@ Format: <code>ab rmtag INDEX [t/TAG]</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>ab rmtag 37 t/noob</code><br>
+<p><code>(ab)rmtag 37 t/noob</code><br>
 Removes the tag “noob” from the person at index 37</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="sort-contacts-code-ab-sort-code"><a class="link" href="#sort-contacts-code-ab-sort-code">3.7. Sort contacts: <code>ab sort</code></a></h3>
+<h3 id="sort-contacts-code-ab-sort-code"><a class="link" href="#sort-contacts-code-ab-sort-code">3.7. Sort contacts: <code>(ab)sort</code></a></h3>
 <div class="paragraph">
 <p>Displays the list of contacts in a certain sorted order<br>
 Format: <code>ab sort [-f] [-o] [-b]</code></p>
@@ -359,7 +370,7 @@ Format: <code>ab sort [-f] [-o] [-b]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:
-* <code>ab sort -a</code><br>
+* <code>(ab)sort -a</code><br>
 Lists all contacts alphabetically</p>
 </div>
 </div>
@@ -371,9 +382,9 @@ Format: <code>undo/redo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-everything-about-a-contact-in-field-code-ab-get-code"><a class="link" href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.9. List everything about a contact in field: <code>ab get</code></a></h3>
+<h3 id="list-everything-about-a-contact-in-field-code-ab-get-code"><a class="link" href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.9. List everything about a contact in field: <code>(ab)get</code></a></h3>
 <div class="paragraph">
-<p>Format: <code>ab get INDEX</code></p>
+<p>Format: <code>(ab)get INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -391,10 +402,10 @@ Format: <code>undo/redo</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code"><a class="link" href="#store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code">3.10. Store additional information about contacts using the Note Taker: <code>ab addnote</code></a></h3>
+<h3 id="store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code"><a class="link" href="#store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code">3.10. Store additional information about contacts using the Note Taker: <code>(ab)addnote</code></a></h3>
 <div class="paragraph">
 <p>Store additional information about contacts using the Note Taker<br>
-Format: <code>ab addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
+Format: <code>(ab)addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -412,10 +423,10 @@ Format: <code>ab addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="edit-additional-information-about-contacts-code-ab-editnote-code"><a class="link" href="#edit-additional-information-about-contacts-code-ab-editnote-code">3.11. Edit additional information about contacts: <code>ab editnote</code></a></h3>
+<h3 id="edit-additional-information-about-contacts-code-ab-editnote-code"><a class="link" href="#edit-additional-information-about-contacts-code-ab-editnote-code">3.11. Edit additional information about contacts: <code>(ab)editnote</code></a></h3>
 <div class="paragraph">
 <p>Edit additional information about contacts using the Note Taker<br>
-Format: <code>ab editnote INDEX [-l/LINE_NUMBER] i/INFO</code></p>
+Format: <code>(ab)editnote INDEX [-l/LINE_NUMBER] i/INFO</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -436,10 +447,10 @@ Format: <code>ab editnote INDEX [-l/LINE_NUMBER] i/INFO</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-additional-information-about-contacts-code-ab-deletenote-code"><a class="link" href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.12. Delete additional information about contacts: <code>ab deletenote</code></a></h3>
+<h3 id="delete-additional-information-about-contacts-code-ab-deletenote-code"><a class="link" href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.12. Delete additional information about contacts: <code>(ab)deletenote</code></a></h3>
 <div class="paragraph">
 <p>Delete additional information about contacts using the Note Taker<br>
-Format: <code>ab deletenote INDEX [-l/LINE_NUMBER]</code></p>
+Format: <code>(ab)deletenote INDEX [-l/LINE_NUMBER]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -467,10 +478,10 @@ Format: <code>ab deletenote INDEX [-l/LINE_NUMBER]</code></p>
 
 </div>
 <div class="sect2">
-<h3 id="adds-a-new-restaurant-code-rt-add-code"><a class="link" href="#adds-a-new-restaurant-code-rt-add-code">3.14. Adds a new restaurant: <code>rt add</code></a></h3>
+<h3 id="adds-a-new-restaurant-code-rt-add-code"><a class="link" href="#adds-a-new-restaurant-code-rt-add-code">3.14. Adds a new restaurant: <code>(rt)add</code></a></h3>
 <div class="paragraph">
 <p>Adds a new restaurant<br>
-Format: <code>rt add n/NAME [o/OPERATING_HOURS] [l/LOCATION] [p/PRICE_POINT] [c/CUISINE]</code></p>
+Format: <code>(rt)add n/NAME [o/OPERATING_HOURS] [l/LOCATION] [p/PRICE_POINT] [c/CUISINE]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -489,17 +500,17 @@ Format: <code>rt add n/NAME [o/OPERATING_HOURS] [l/LOCATION] [p/PRICE_POINT] [c/
 <div class="ulist">
 <ul>
 <li>
-<p><code>rt add rubbish o/0900:2300 p/$$</code><br>
+<p><code>(rt)add rubbish o/0900:2300 p/$$</code><br>
 Adds a new restaurant called rubbish with 2 dollar signs price point and opens from 9am to 11pm</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="search-code-rt-search-code"><a class="link" href="#search-code-rt-search-code">3.15. Search: <code>rt search</code></a></h3>
+<h3 id="search-code-rt-search-code"><a class="link" href="#search-code-rt-search-code">3.15. Search: <code>(rt)search</code></a></h3>
 <div class="paragraph">
 <p>Search for restaurants based on a number of criteria.<br>
-Format: <code>rt search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
+Format: <code>(rt)search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -530,28 +541,28 @@ Format: <code>rt search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HO
 <div class="ulist">
 <ul>
 <li>
-<p><code>rt search k/no signboard p/$$</code><br>
+<p><code>(rt)search k/no signboard p/$$</code><br>
 Searches for restaurants with the keyword no signboard which is at a medium price point.</p>
 </li>
 <li>
-<p><code>rt search l/bedok p/$</code><br>
+<p><code>(rt)search l/bedok p/$</code><br>
 Searches for restaurants in the bedok area at a low price point.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deletes-a-restaurant-code-rt-delete-code"><a class="link" href="#deletes-a-restaurant-code-rt-delete-code">3.16. Deletes a restaurant: <code>rt delete</code></a></h3>
+<h3 id="deletes-a-restaurant-code-rt-delete-code"><a class="link" href="#deletes-a-restaurant-code-rt-delete-code">3.16. Deletes a restaurant: <code>(rt)delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes a restaurant from the list<br>
-Format: <code>rt delete n/NAME</code></p>
+Format: <code>(rt)delete n/NAME</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-notes-to-a-restaurant-code-rt-notes-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-notes-code">3.17. Add notes to a restaurant: <code>rt notes</code></a></h3>
+<h3 id="add-notes-to-a-restaurant-code-rt-notes-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-notes-code">3.17. Add notes to a restaurant: <code>(rt)notes</code></a></h3>
 <div class="paragraph">
 <p>Adds a new restaurant<br>
-Format: <code>rt notes n/NAME [r/RECOMMENDED_FOOD] [g/GOOD_FOOD] [b/BAD_FOOD]</code></p>
+Format: <code>(rt)notes n/NAME [r/RECOMMENDED_FOOD] [g/GOOD_FOOD] [b/BAD_FOOD]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -559,17 +570,17 @@ Format: <code>rt notes n/NAME [r/RECOMMENDED_FOOD] [g/GOOD_FOOD] [b/BAD_FOOD]</c
 <div class="ulist">
 <ul>
 <li>
-<p><code>rt notes rubbish r/chicken chop g/truffle fries b/risotto</code><br>
+<p><code>(rt)notes rubbish r/chicken chop g/truffle fries b/risotto</code><br>
 Adds a notes to an existing restaurant in the list called rubbish with recommended food Chicken Chop, good food Truffle Fries, and bad food Risotto.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.18. Add new assignment to the Schoolwork Tracker: <code>st add</code></a></h3>
+<h3 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.18. Add new assignment to the Schoolwork Tracker: <code>(st)add</code></a></h3>
 <div class="paragraph">
 <p>Adds a new assignment to your list of assignments and projects.<br>
-Format: <code>st add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
+Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -591,17 +602,17 @@ Format: <code>st add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>st add t/CS2103 post lecture quiz d/20200211 2359 e/1</code><br>
+<p><code>(st)add t/CS2103 post lecture quiz d/20200211 2359 e/1</code><br>
 Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-02-2020 23:59 and which takes an estimated one hour to complete.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.19. List current assignments: <code>st list</code></a></h3>
+<h3 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.19. List current assignments: <code>(st)list</code></a></h3>
 <div class="paragraph">
 <p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first. By default, it sorts the list in alphabetical order.<br>
-Format: <code>st list [-d] [-e]</code></p>
+Format: <code>(st)list [-d] [-e]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -622,10 +633,10 @@ Format: <code>st list [-d] [-e]</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mark-as-completed-code-st-done-code"><a class="link" href="#mark-as-completed-code-st-done-code">3.20. Mark as completed: <code>st done</code></a></h3>
+<h3 id="mark-as-completed-code-st-done-code"><a class="link" href="#mark-as-completed-code-st-done-code">3.20. Mark as completed: <code>(st)done</code></a></h3>
 <div class="paragraph">
 <p>Marks an assignment as completed.<br>
-Format: <code>st done INDEX</code></p>
+Format: <code>(st)done INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -640,10 +651,10 @@ Format: <code>st done INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.21. Delete assignment: <code>st delete</code></a></h3>
+<h3 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.21. Delete assignment: <code>(st)delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes an assignment.<br>
-Format: <code>st delete INDEX</code></p>
+Format: <code>(st)delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -658,10 +669,10 @@ Format: <code>st delete INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-person-to-assignment-code-st-addmem-code"><a class="link" href="#add-person-to-assignment-code-st-addmem-code">3.22. Add person to assignment: <code>st addmem</code></a></h3>
+<h3 id="add-person-to-assignment-code-st-addmem-code"><a class="link" href="#add-person-to-assignment-code-st-addmem-code">3.22. Add person to assignment: <code>(st)addmem</code></a></h3>
 <div class="paragraph">
 <p>Adds a group mate to an assignment.<br>
-Format: <code>st addmem INDEX p/INDEX_1 p/INDEX_2 p/INDEX_3</code></p>
+Format: <code>(st)addmem INDEX p/INDEX_1 p/INDEX_2 p/INDEX_3</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -715,10 +726,10 @@ Format: <code>event d/DATE t/TIME</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-ab-delete-code"><a class="link" href="#deleting-a-person-code-ab-delete-code">3.25. Deleting a person : <code>ab delete</code></a></h3>
+<h3 id="deleting-a-person-code-ab-delete-code"><a class="link" href="#deleting-a-person-code-ab-delete-code">3.25. Deleting a person : <code>(ab)delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the contact at index INDEX<br>
-Format: <code>ab delete INDEX</code></p>
+Format: <code>(ab)delete INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -737,7 +748,7 @@ Format: <code>ab delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>delete 2</code><br>
+<p><code>(ab)delete 2</code><br>
 Deletes the 2nd person in the address book.</p>
 </li>
 </ul>
@@ -814,4 +825,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-10 08:59:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-15 15:19:31 UTC</div></div></div></body></html>
