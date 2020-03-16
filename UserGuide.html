@@ -15,7 +15,7 @@
 <ul class="sectlevel2">
 <li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
 <li><a href="#adding-a-person-code-ab-add-code">3.2. Adding a person: <code>(ab)add</code></a></li>
-<li><a href="#listing-all-persons-code-ab-list-code">3.3. Listing all persons : <code>(ab)list</code></a></li>
+<li><a href="#finding-a-specific-contact-a-specific-set-of-contacts-code-ab-find-code">3.3. Finding a specific contact/a specific set of contacts: <code>(ab)find</code></a></li>
 <li><a href="#editing-a-person-code-ab-edit-code">3.4. Editing a person : <code>(ab)edit</code></a></li>
 <li><a href="#adding-tags-to-a-person-code-ab-addtag-code">3.5. Adding tags to a person : <code>(ab)addtag</code></a></li>
 <li><a href="#adding-tags-to-a-person-code-ab-rmtag-code">3.6. Adding tags to a person : <code>(ab)rmtag</code></a></li>
@@ -193,10 +193,10 @@ Fields inside square brackets are optional.
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-ab-list-code"><a class="link" href="#listing-all-persons-code-ab-list-code">3.3. Listing all persons : <code>(ab)list</code></a></h3>
+<h3 id="finding-a-specific-contact-a-specific-set-of-contacts-code-ab-find-code"><a class="link" href="#finding-a-specific-contact-a-specific-set-of-contacts-code-ab-find-code">3.3. Finding a specific contact/a specific set of contacts: <code>(ab)find</code></a></h3>
 <div class="paragraph">
-<p>Lists out all your contacts in the address book. Each contact will have a displayed index. Only lists the name, phone number and tags (if present)<br>
-Format: <code>(ab)list [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
+<p>Lists out all your contacts in the address book which match a certain criteria. Each contact will have a displayed index. Only lists the name, phone number and tags (if present)<br>
+Format: <code>(ab)find [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -220,8 +220,8 @@ Format: <code>(ab)list [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:
-* <code>(ab)list -g/NUS -n/Lim</code><br>
-List all contacts that is in group “NUS” and have the word “Lim” in its name</p>
+* <code>(ab)find -g/NUS -n/Lim</code><br>
+Finds and lists all contacts that is in group “NUS” and have the word “Lim” in its name</p>
 </div>
 </div>
 <div class="sect2">
@@ -825,4 +825,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-15 15:19:31 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-16 09:13:32 UTC</div></div></div></body></html>
