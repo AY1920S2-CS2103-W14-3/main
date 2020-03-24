@@ -335,8 +335,12 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="sect3">
 <h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.1.1. Proposed implementation</a></h4>
 <div class="paragraph">
-<p>The schedule visualiser is facilitated by the implemented <code>SchoolworkTracker</code>. The main purpose of the <code>SchoolworkTracker</code> is to allow users to keep track of all their assignments and deadlines so that they do not accidentally overlook any of them. The main components of the <code>SchoolworkTracker</code> are as shown in the following class diagram.
-image::StClassDiagram.png[]</p>
+<p>The schedule visualiser is facilitated by the implemented <code>SchoolworkTracker</code>. The main purpose of the <code>SchoolworkTracker</code> is to allow users to keep track of all their assignments and deadlines so that they do not accidentally overlook any of them. The main components of the <code>SchoolworkTracker</code> are as shown in the following class diagram.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/stClassDiagram.png" alt="stClassDiagram">
+</div>
 </div>
 <div class="paragraph">
 <p>This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing a user to get a better sense of their current commitments and workload so that they can better manage their time to pursue other social events and hang out with friends.
@@ -356,22 +360,34 @@ It utilises the existing <code>Assignments</code> stored in the <code>Assignment
 <p>Step 1. The user launches the application for the first time. The <code>SchoolworkTracker</code> will be initialized with the initial state, which is an empty list.</p>
 </div>
 <div class="paragraph">
-<p>Step 2. The user executes the add assignment command [(st)add n/… d/… e/…] to add the following assignments to the Schoolwork Tracker.
-image::StFilledList.png[]</p>
+<p>Step 2. The user executes the add assignment command [(st)add n/… d/… e/…] to add the following assignments to the Schoolwork Tracker.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/stFilledList.png" alt="stFilledList">
+</div>
 </div>
 <div class="paragraph">
 <p>Step 3. Today is 23 March 2020 and the user wants to see how busy he is and whether he has time to go out with his friends in the next five days while still being able to complete his assignments on time.</p>
 </div>
 <div class="paragraph">
-<p>The following sequence diagram below shows how the schedule visualisation operation works.
-image::StScheduleSequenceDiagram.png[]</p>
+<p>The following sequence diagram below shows how the schedule visualisation operation works.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/stScheduleSequenceDiagram.png" alt="stScheduleSequenceDiagram">
+</div>
 </div>
 <div class="paragraph">
 <p>Step 4. Based on the results obtained from the schedule command, the user can then decide on how to best plan his outing with his friends.</p>
 </div>
 <div class="paragraph">
-<p>A sample result of the schedule command is as follows:
-image::StScheduleResult.png[]</p>
+<p>A sample result of the schedule command is as follows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="images/stScheduleResult.png" alt="stScheduleResult">
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -1349,4 +1365,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-24 04:09:13 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-24 04:20:44 UTC</div></div></div></body></html>
