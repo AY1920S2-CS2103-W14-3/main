@@ -156,7 +156,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <h3 id="adding-a-person-code-ab-add-code"><a class="link" href="#adding-a-person-code-ab-add-code">3.2. Adding a person: <code>(ab)add</code></a></h3>
 <div class="paragraph">
 <p>Adds a person to the address book<br>
-Format: <code>(ab)add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [o/ORGANIZATION] [b/BIRTHDAY]</code></p>
+Format: <code>(ab)add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [g/ORGANIZATION] [b/BIRTHDAY]</code></p>
 </div>
 <div class="admonitionblock tip">
 <table>
@@ -178,7 +178,7 @@ Fields inside square brackets are optional.
 <div class="ulist">
 <ul>
 <li>
-<p><code>(ab)add n/Akshay</code></p>
+<p><code>(ab)add n/Akshay g/NUS</code></p>
 </li>
 <li>
 <p><code>(ab)add n/Joel HH e/joel@yahoo.com.sg p/12345678 o/NUS a/Pasir Ris St. 71, Blk 123, #01-79</code></p>
@@ -248,6 +248,9 @@ Format: <code>(ab)edit INDEX n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG]
 </li>
 <li>
 <p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
+</li>
+<li>
+<p>Remarks cannot be edited using this command.</p>
 </li>
 <li>
 <p>The name in 'n/' and phone number in 'p/' should not be empty.</p>
@@ -738,6 +741,9 @@ Format: <code>(ab)delete INDEX</code></p>
 <li>
 <p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the last sorted LIST function (see 2.4).</p>
 </li>
+<li>
+<p>All remarks and tags will be deleted if specified.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -825,4 +831,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-27 11:27:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-28 10:38:04 UTC</div></div></div></body></html>
