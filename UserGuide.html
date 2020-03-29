@@ -25,23 +25,24 @@
 <li><a href="#store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code">3.10. Store additional information about contacts using the Note Taker: <code>(ab)addnote</code></a></li>
 <li><a href="#edit-additional-information-about-contacts-code-ab-editnote-code">3.11. Edit additional information about contacts: <code>(ab)editnote</code></a></li>
 <li><a href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.12. Delete additional information about contacts: <code>(ab)deletenote</code></a></li>
-<li><a href="#obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code">3.13. Obtain gift suggestions for a particular contact using the Birthday Tracker <code>(coming in v2.0)</code></a></li>
-<li><a href="#adds-a-new-restaurant-code-rt-add-code">3.14. Adds a new restaurant: <code>(rt)add</code></a></li>
-<li><a href="#search-code-rt-search-code">3.15. Search: <code>(rt)search</code></a></li>
-<li><a href="#deletes-a-restaurant-code-rt-delete-code">3.16. Deletes a restaurant: <code>(rt)delete</code></a></li>
-<li><a href="#add-notes-to-a-restaurant-code-rt-notes-code">3.17. Add notes to a restaurant: <code>(rt)notes</code></a></li>
-<li><a href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.18. Add new assignment to the Schoolwork Tracker: <code>(st)add</code></a></li>
-<li><a href="#list-current-assignments-code-st-list-code">3.19. List current assignments: <code>(st)list</code></a></li>
-<li><a href="#mark-as-completed-code-st-done-code">3.20. Mark as completed: <code>(st)done</code></a></li>
-<li><a href="#delete-assignment-code-st-delete-code">3.21. Delete assignment: <code>(st)delete</code></a></li>
-<li><a href="#add-person-to-assignment-code-st-addmem-code">3.22. Add person to assignment: <code>(st)addmem</code></a></li>
-<li><a href="#schedule-an-event-code-schedule-code">3.23. Schedule an event: <code>schedule</code></a></li>
-<li><a href="#create-a-new-social-event-code-event-code">3.24. Create a new social event: <code>event</code></a></li>
-<li><a href="#deleting-a-person-code-ab-delete-code">3.25. Deleting a person : <code>(ab)delete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.26. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.28. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.29. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#list-contacts-with-birthdays-in-the-next-5-days-current-day-included-code-ab-birthday-code">3.13. List contacts with birthdays in the next 5 days (current day included): <code>(ab)birthday</code></a></li>
+<li><a href="#obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code">3.14. Obtain gift suggestions for a particular contact using the Birthday Tracker <code>(coming in v2.0)</code></a></li>
+<li><a href="#adds-a-new-restaurant-code-rt-add-code">3.15. Adds a new restaurant: <code>(rt)add</code></a></li>
+<li><a href="#search-code-rt-search-code">3.16. Search: <code>(rt)search</code></a></li>
+<li><a href="#deletes-a-restaurant-code-rt-delete-code">3.17. Deletes a restaurant: <code>(rt)delete</code></a></li>
+<li><a href="#add-notes-to-a-restaurant-code-rt-notes-code">3.18. Add notes to a restaurant: <code>(rt)notes</code></a></li>
+<li><a href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.19. Add new assignment to the Schoolwork Tracker: <code>(st)add</code></a></li>
+<li><a href="#list-current-assignments-code-st-list-code">3.20. List current assignments: <code>(st)list</code></a></li>
+<li><a href="#mark-as-completed-code-st-done-code">3.21. Mark as completed: <code>(st)done</code></a></li>
+<li><a href="#delete-assignment-code-st-delete-code">3.22. Delete assignment: <code>(st)delete</code></a></li>
+<li><a href="#add-person-to-assignment-code-st-addmem-code">3.23. Add person to assignment: <code>(st)addmem</code></a></li>
+<li><a href="#schedule-an-event-code-schedule-code">3.24. Schedule an event: <code>schedule</code></a></li>
+<li><a href="#create-a-new-social-event-code-event-code">3.25. Create a new social event: <code>event</code></a></li>
+<li><a href="#deleting-a-person-code-ab-delete-code">3.26. Deleting a person : <code>(ab)delete</code></a></li>
+<li><a href="#clearing-all-entries-code-clear-code">3.27. Clearing all entries : <code>clear</code></a></li>
+<li><a href="#exiting-the-program-code-exit-code">3.28. Exiting the program : <code>exit</code></a></li>
+<li><a href="#saving-the-data">3.29. Saving the data</a></li>
+<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.30. Encrypting data files <code>[coming in v2.0]</code></a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -477,11 +478,17 @@ Format: <code>(ab)deletenote INDEX [-l/LINE_NUMBER]</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code">3.13. Obtain gift suggestions for a particular contact using the Birthday Tracker <code>(coming in v2.0)</code></a></h3>
+<h3 id="list-contacts-with-birthdays-in-the-next-5-days-current-day-included-code-ab-birthday-code"><a class="link" href="#list-contacts-with-birthdays-in-the-next-5-days-current-day-included-code-ab-birthday-code">3.13. List contacts with birthdays in the next 5 days (current day included): <code>(ab)birthday</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>(ab)birthday</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker-code-coming-in-v2-0-code">3.14. Obtain gift suggestions for a particular contact using the Birthday Tracker <code>(coming in v2.0)</code></a></h3>
 
 </div>
 <div class="sect2">
-<h3 id="adds-a-new-restaurant-code-rt-add-code"><a class="link" href="#adds-a-new-restaurant-code-rt-add-code">3.14. Adds a new restaurant: <code>(rt)add</code></a></h3>
+<h3 id="adds-a-new-restaurant-code-rt-add-code"><a class="link" href="#adds-a-new-restaurant-code-rt-add-code">3.15. Adds a new restaurant: <code>(rt)add</code></a></h3>
 <div class="paragraph">
 <p>Adds a new restaurant<br>
 Format: <code>(rt)add n/NAME l/LOCATION [o/OPERATING_HOURS] [p/PRICE_POINT] [c/CUISINE]</code></p>
@@ -510,7 +517,7 @@ Adds a new restaurant called rubbish at bedok with 2 dollar signs price point an
 </div>
 </div>
 <div class="sect2">
-<h3 id="search-code-rt-search-code"><a class="link" href="#search-code-rt-search-code">3.15. Search: <code>(rt)search</code></a></h3>
+<h3 id="search-code-rt-search-code"><a class="link" href="#search-code-rt-search-code">3.16. Search: <code>(rt)search</code></a></h3>
 <div class="paragraph">
 <p>Search for restaurants based on a number of criteria.<br>
 Format: <code>(rt)search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
@@ -555,14 +562,14 @@ Searches for restaurants in the bedok area at a low price point.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deletes-a-restaurant-code-rt-delete-code"><a class="link" href="#deletes-a-restaurant-code-rt-delete-code">3.16. Deletes a restaurant: <code>(rt)delete</code></a></h3>
+<h3 id="deletes-a-restaurant-code-rt-delete-code"><a class="link" href="#deletes-a-restaurant-code-rt-delete-code">3.17. Deletes a restaurant: <code>(rt)delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes a restaurant from the list<br>
 Format: <code>(rt)delete n/NAME</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-notes-to-a-restaurant-code-rt-notes-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-notes-code">3.17. Add notes to a restaurant: <code>(rt)notes</code></a></h3>
+<h3 id="add-notes-to-a-restaurant-code-rt-notes-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-notes-code">3.18. Add notes to a restaurant: <code>(rt)notes</code></a></h3>
 <div class="paragraph">
 <p>Adds a new restaurant<br>
 Format: <code>(rt)notes n/NAME [r/RECOMMENDED_FOOD] [g/GOOD_FOOD] [b/BAD_FOOD]</code></p>
@@ -580,7 +587,7 @@ Adds a notes to an existing restaurant in the list called rubbish with recommend
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.18. Add new assignment to the Schoolwork Tracker: <code>(st)add</code></a></h3>
+<h3 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.19. Add new assignment to the Schoolwork Tracker: <code>(st)add</code></a></h3>
 <div class="paragraph">
 <p>Adds a new assignment to your list of assignments and projects.<br>
 Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
@@ -590,7 +597,10 @@ Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>DEADLINE must be entered in a yyyymmdd HHMM format.</p>
+<p>DEADLINE must be entered in a yyyy-mm-dd HH:mm format.</p>
+</li>
+<li>
+<p>DEADLINE cannot be one that has already passed.</p>
 </li>
 <li>
 <p>ESTIMATED_COMPLETION_TIME is the number of hours expected to finish the assignment.</p>
@@ -605,14 +615,14 @@ Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><code>(st)add t/CS2103 post lecture quiz d/20200211 2359 e/1</code><br>
+<p><code>(st)add t/CS2103 post lecture quiz d/2020-02-11 2359 e/1</code><br>
 Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-02-2020 23:59 and which takes an estimated one hour to complete.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.19. List current assignments: <code>(st)list</code></a></h3>
+<h3 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.20. List current assignments: <code>(st)list</code></a></h3>
 <div class="paragraph">
 <p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first. By default, it sorts the list in alphabetical order.<br>
 Format: <code>(st)list [-d] [-e]</code></p>
@@ -636,7 +646,7 @@ Format: <code>(st)list [-d] [-e]</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="mark-as-completed-code-st-done-code"><a class="link" href="#mark-as-completed-code-st-done-code">3.20. Mark as completed: <code>(st)done</code></a></h3>
+<h3 id="mark-as-completed-code-st-done-code"><a class="link" href="#mark-as-completed-code-st-done-code">3.21. Mark as completed: <code>(st)done</code></a></h3>
 <div class="paragraph">
 <p>Marks an assignment as completed.<br>
 Format: <code>(st)done INDEX</code></p>
@@ -654,7 +664,7 @@ Format: <code>(st)done INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.21. Delete assignment: <code>(st)delete</code></a></h3>
+<h3 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.22. Delete assignment: <code>(st)delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes an assignment.<br>
 Format: <code>(st)delete INDEX</code></p>
@@ -672,7 +682,7 @@ Format: <code>(st)delete INDEX</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="add-person-to-assignment-code-st-addmem-code"><a class="link" href="#add-person-to-assignment-code-st-addmem-code">3.22. Add person to assignment: <code>(st)addmem</code></a></h3>
+<h3 id="add-person-to-assignment-code-st-addmem-code"><a class="link" href="#add-person-to-assignment-code-st-addmem-code">3.23. Add person to assignment: <code>(st)addmem</code></a></h3>
 <div class="paragraph">
 <p>Adds a group mate to an assignment.<br>
 Format: <code>(st)addmem INDEX p/INDEX_1 p/INDEX_2 p/INDEX_3</code></p>
@@ -690,7 +700,7 @@ Format: <code>(st)addmem INDEX p/INDEX_1 p/INDEX_2 p/INDEX_3</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="schedule-an-event-code-schedule-code"><a class="link" href="#schedule-an-event-code-schedule-code">3.23. Schedule an event: <code>schedule</code></a></h3>
+<h3 id="schedule-an-event-code-schedule-code"><a class="link" href="#schedule-an-event-code-schedule-code">3.24. Schedule an event: <code>schedule</code></a></h3>
 <div class="paragraph">
 <p>Looks through the list of current assignments to find a free slot for social activities.<br>
 Format: <code>schedule</code></p>
@@ -708,7 +718,7 @@ Format: <code>schedule</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="create-a-new-social-event-code-event-code"><a class="link" href="#create-a-new-social-event-code-event-code">3.24. Create a new social event: <code>event</code></a></h3>
+<h3 id="create-a-new-social-event-code-event-code"><a class="link" href="#create-a-new-social-event-code-event-code">3.25. Create a new social event: <code>event</code></a></h3>
 <div class="paragraph">
 <p>Creates a social event.<br>
 Format: <code>event d/DATE t/TIME</code></p>
@@ -729,7 +739,7 @@ Format: <code>event d/DATE t/TIME</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person-code-ab-delete-code"><a class="link" href="#deleting-a-person-code-ab-delete-code">3.25. Deleting a person : <code>(ab)delete</code></a></h3>
+<h3 id="deleting-a-person-code-ab-delete-code"><a class="link" href="#deleting-a-person-code-ab-delete-code">3.26. Deleting a person : <code>(ab)delete</code></a></h3>
 <div class="paragraph">
 <p>Deletes the contact at index INDEX<br>
 Format: <code>(ab)delete INDEX</code></p>
@@ -761,28 +771,28 @@ Deletes the 2nd person in the address book.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.26. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.27. Clearing all entries : <code>clear</code></a></h3>
 <div class="paragraph">
 <p>Clears all entries from the address book.<br>
 Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.27. Exiting the program : <code>exit</code></a></h3>
+<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.28. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
 <p>Exits the program.<br>
 Format: <code>exit</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.28. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.29. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.29. Encrypting data files <code>[coming in v2.0]</code></a></h3>
+<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.30. Encrypting data files <code>[coming in v2.0]</code></a></h3>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -831,4 +841,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-28 11:45:34 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-03-29 04:02:06 UTC</div></div></div></body></html>
