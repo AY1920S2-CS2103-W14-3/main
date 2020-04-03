@@ -77,13 +77,13 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
+<p><strong><code>(ab)list</code></strong> : lists all contacts</p>
 </li>
 <li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>(ab)add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
 </li>
 <li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>(ab)delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -342,7 +342,7 @@ Format: <code>(ab)addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
 <p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function (see 2.4).</p>
 </li>
 <li>
-<p>There should be at least one i/INFO</p>
+<p>There should be at least one i/INFO specified.</p>
 </li>
 </ul>
 </div>
@@ -353,7 +353,7 @@ Format: <code>(ab)addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
 <h4 id="edit-additional-information-about-contacts-code-ab-editnote-code"><a class="link" href="#edit-additional-information-about-contacts-code-ab-editnote-code">3.2.7. Edit additional information about contacts: <code>(ab)editnote</code></a></h4>
 <div class="paragraph">
 <p>Edit additional information about contacts using the Note Taker<br>
-Format: <code>(ab)editnote INDEX [-l/LINE_NUMBER] i/INFO</code></p>
+Format: <code>(ab)editnote INDEX l/LINE_NUMBER i/INFO</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -363,10 +363,7 @@ Format: <code>(ab)editnote INDEX [-l/LINE_NUMBER] i/INFO</code></p>
 <p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function (see 2.4).</p>
 </li>
 <li>
-<p>If [-l] is not specified, all information will be replaced by the new one in INFO</p>
-</li>
-<li>
-<p>[-l] Line number of information to be replaced</p>
+<p>l/LINE_NUMBER Line number of information to be replaced</p>
 </li>
 </ul>
 </div>
@@ -377,7 +374,7 @@ Format: <code>(ab)editnote INDEX [-l/LINE_NUMBER] i/INFO</code></p>
 <h4 id="delete-additional-information-about-contacts-code-ab-deletenote-code"><a class="link" href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.2.8. Delete additional information about contacts: <code>(ab)deletenote</code></a></h4>
 <div class="paragraph">
 <p>Delete additional information about contacts using the Note Taker<br>
-Format: <code>(ab)deletenote INDEX [-l/LINE_NUMBER]</code></p>
+Format: <code>(ab)deletenote INDEX l/LINE_NUMBER</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -390,10 +387,7 @@ Format: <code>(ab)deletenote INDEX [-l/LINE_NUMBER]</code></p>
 <p>If none of the optional switches are specified, all information will be deleted</p>
 </li>
 <li>
-<p>[-l] Line number of information to be deleted</p>
-</li>
-<li>
-<p>[-k] Delete all lines that contain this keyword</p>
+<p>l/LINE_NUMBER Line number of information to be deleted</p>
 </li>
 </ul>
 </div>
@@ -862,4 +856,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-03 01:08:28 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-03 16:37:44 UTC</div></div></div></body></html>
