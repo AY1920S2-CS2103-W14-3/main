@@ -643,13 +643,13 @@ Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>DEADLINE must be entered in a yyyy-mm-dd HH:mm format.</p>
+<p>DEADLINE must be entered in a yyyy-mm-dd HH:mm format and cannot be one that has already passed.</p>
 </li>
 <li>
-<p>DEADLINE cannot be one that has already passed.</p>
+<p>ESTIMATED_COMPLETION_TIME is the number of hours expected to finish the assignment, rounded off to the nearest half an hour.</p>
 </li>
 <li>
-<p>ESTIMATED_COMPLETION_TIME is the number of hours expected to finish the assignment.</p>
+<p>You will not be able to add two assignments with both the same name and deadline.</p>
 </li>
 </ul>
 </div>
@@ -668,7 +668,7 @@ Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, du
 </div>
 </div>
 <div class="sect3">
-<h4 id="coming-soon-delete-assignment-code-st-delete-code"><a class="link" href="#coming-soon-delete-assignment-code-st-delete-code">3.4.2. [Coming Soon] Delete assignment: <code>(st)delete</code></a></h4>
+<h4 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.4.2. Delete assignment: <code>(st)delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes an assignment.<br>
 Format: <code>(st)delete INDEX</code></p>
@@ -686,7 +686,37 @@ Format: <code>(st)delete INDEX</code></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.4.3. List current assignments: <code>(st)list</code></a></h4>
+<h4 id="edits-an-assignment-code-st-edit-code"><a class="link" href="#edits-an-assignment-code-st-edit-code">3.4.3. Edits an assignment: <code>(st)edit</code></a></h4>
+<div class="paragraph">
+<p>Marks an assignment as completed.<br>
+Format: <code>(st)edit INDEX [t/TITLE] [e/ESTIMATED_COMPLETION_TIME] [d/DEADLINE] [s/STATUS]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX must be a positive integer. It corresponds to the INDEX of the assignment as shown when you list all assignments in the Schoolwork Tracker using the default list function (see below).</p>
+</li>
+<li>
+<p>DEADLINE must be entered in a yyyy-mm-dd HH:mm format and cannot be one that has already passed.</p>
+</li>
+<li>
+<p>ESTIMATED_COMPLETION_TIME is the number of hours expected to finish the assignment, rounded off to the nearest half an hour.</p>
+</li>
+<li>
+<p>STATUS can only be <code>Completed</code> or <code>Uncompleted</code>.</p>
+</li>
+<li>
+<p>At least one optional field needs to be specified.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.4.4. List current assignments: <code>(st)list</code></a></h4>
 <div class="paragraph">
 <p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first. By default, it sorts the list in alphabetical order.<br>
 Format: <code>(st)list [-d/DEADLINE] [-e/ESTIMATED_COMPLETION_TIME]</code></p>
@@ -697,24 +727,6 @@ Format: <code>(st)list [-d/DEADLINE] [-e/ESTIMATED_COMPLETION_TIME]</code></p>
 <ul>
 <li>
 <p>Only 1 field can be specified at each time</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="mark-assignment-as-completed-code-st-done-code"><a class="link" href="#mark-assignment-as-completed-code-st-done-code">3.4.4. Mark assignment as completed: <code>(st)done</code></a></h4>
-<div class="paragraph">
-<p>Marks an assignment as completed.<br>
-Format: <code>(st)done INDEX</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>INDEX must be a positive integer. It corresponds to the INDEX of the assignment as shown when you list all assignments in the Schoolwork Tracker using the default list function (see above).</p>
 </li>
 </ul>
 </div>
@@ -859,4 +871,4 @@ e.g. <code>find James Jake</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 13:53:59 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-04 17:10:02 UTC</div></div></div></body></html>
