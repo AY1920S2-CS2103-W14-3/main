@@ -16,10 +16,11 @@
 <li><a href="#general-commands">3.1. General Commands</a></li>
 <li><a href="#address-book-commands">3.2. Address Book Commands</a></li>
 <li><a href="#restaurant-book-commands">3.3. Restaurant Book commands</a></li>
-<li><a href="#schoolwork-tracker-commands">3.4. Schoolwork Tracker commands</a></li>
-<li><a href="#event-book-commands">3.5. Event Book commands</a></li>
-<li><a href="#saving-the-data">3.6. Saving the data</a></li>
-<li><a href="#coming-in-v2-0">3.7. Coming in v2.0</a></li>
+<li><a href="#edit-notes-to-a-restaurant-code-rt-editnote-code">3.4. Edit notes to a restaurant : <code>(rt)editnote</code></a></li>
+<li><a href="#schoolwork-tracker-commands">3.5. Schoolwork Tracker commands</a></li>
+<li><a href="#event-book-commands">3.6. Event Book commands</a></li>
+<li><a href="#saving-the-data">3.7. Saving the data</a></li>
+<li><a href="#coming-in-v2-0">3.8. Coming in v2.0</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -242,11 +243,46 @@ Format: <code>(ab)delete INDEX [t/] [e/] [a/] [g/] [b/]</code></p>
 <ul>
 <li>
 <p><code>(ab)delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+Deletes the 2nd person in the address book.<br>
+Format: <code>(ab)delete INDEX [e/EMAIL] [a/ADDRESS] [b/BIRTHDAY] [g/GROUPNAME] [t/TAG]&#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>Deletes the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p><code>(ab)delete 2 t/</code><br>
-Deletes all the tags that belong to the 2nd person in the address book.</p>
+<p>At least one of the optional fields must be provided and cannot be left empty.</p>
+</li>
+<li>
+<p>Name and phone of the contact cannot be deleted.</p>
+</li>
+<li>
+<p>Existing values will be deleted if the field is specified.</p>
+</li>
+<li>
+<p>All tags and remarks will be deleted if indicated.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)delete 3 a/</code><br>
+Deletes the third person&#8217;s address.</p>
+</li>
+<li>
+<p>`(ab)delete 20 e/ b/ i/
+Deletes the 20th person&#8217;s email, birthday, and all remarks.</p>
 </li>
 </ul>
 </div>
@@ -382,7 +418,7 @@ Format: <code>(ab)deletenote INDEX l/LINE_NUMBER&#8230;&#8203;</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function (see 2.4).</p>
+<p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function.</p>
 </li>
 <li>
 <p>l/LINE_NUMBER Line number of information to be deleted</p>
@@ -546,7 +582,21 @@ Deletes the 1st restaurant in the restaurant book.</p>
 <h4 id="add-notes-to-a-restaurant-code-rt-addnote-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-addnote-code">3.3.3. Add notes to a restaurant : <code>(rt)addnote</code></a></h4>
 <div class="paragraph">
 <p>Adds a new note to a restaurant<br>
-Format: <code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [a/AWESOME_FOOD] [b/BAD_FOOD]</code></p>
+Format: <code>(rt)addnote INDEX [r/RECOMMENDED_FOOD1] [r/RECOMMENDED_FOOD2] [g/GOOD_FOOD] [b/BAD_FOOD] &#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX must be a positive integer. It refers to the index of the respective restaurant as displayed in the LIST function.</p>
+</li>
+<li>
+<p>There should be at least either one r/RECOMMENDED_FOOD, one g/GOOD_FOOD, or one b/BAD_FOOD specified.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -554,14 +604,64 @@ Format: <code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [a/AWESOME_FOOD] [b/BAD_FOO
 <div class="ulist">
 <ul>
 <li>
-<p><code>(rt)addnote 5 r/chicken chop a/truffle fries b/risotto</code><br>
-Adds a notes to the restaurant at index 5 with recommended food Chicken Chop, good food Truffle Fries, and bad food Risotto.</p>
+<p><code>(rt)addnote 5 r/chicken chop g/truffle fries b/risotto</code><br>
+Adds a note to the restaurant at index 5 with recommended food Chicken Chop, good food Truffle Fries, and bad food Risotto.</p>
+</li>
+<li>
+<p><code>(rt)addnote 2 g/Cheese baked rice</code>
+Adds a note to the restaurant at index 2 with good food Cheese baked rice.</p>
+</li>
+<li>
+<p><code>(rt)addnote 1 b/Fried rice b/Latte</code>
+Adds a note to the restaurant at index 1 with bad food Fried rice and Latte.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="edit-notes-to-a-restaurant-code-rt-editnote-code"><a class="link" href="#edit-notes-to-a-restaurant-code-rt-editnote-code">3.4. Edit notes to a restaurant : <code>(rt)editnote</code></a></h3>
+<div class="paragraph">
+<p>Edits a note to a restaurant<br>
+Format: <code>(rt)editnote INDEX [rl/LINE_NUMBER] [r/RECOMMENDED_FOOD] [gl/LINE_NUMBER] [g/GOOD_FOOD] [bl/BAD_FOOD] [b/BAD_FOOD]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX must be a positive integer. It refers to the index of the respective restaurant as displayed in the LIST function.</p>
+</li>
+<li>
+<p>There should be at least either one r/RECOMMENDED_FOOD, one g/GOOD_FOOD, or one b/BAD_FOOD specified to be edited.</p>
+</li>
+<li>
+<p>For each of the food notes, at most one can be edited each time.</p>
+</li>
+<li>
+<p>Line number for the respective food notes to be edited should be present.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>'(rt)editnote 1 rl/2 r/Lobster pasta gl/1 g/Mushroom soup bl/3 b/Salad'
+Edits a note to the restaurant at index 1 with recommend food Lobster pasta at line number 2, good food Mushroom soup at line number 1, and bad food Salad at line number 3.</p>
+</li>
+<li>
+<p><code>(rt)editnote 2 gl/2 g/Chicken chop</code>
+Edits a note to the restaurant at index 2 with good food Chicken chop.</p>
+</li>
+</ul>
+</div>
 <div class="sect3">
-<h4 id="change-visited-status-of-restaurant-code-rt-visited-code"><a class="link" href="#change-visited-status-of-restaurant-code-rt-visited-code">3.3.4. Change visited status of restaurant : <code>(rt)visited</code></a></h4>
+<h4 id="change-visited-status-of-restaurant-code-rt-visited-code"><a class="link" href="#change-visited-status-of-restaurant-code-rt-visited-code">3.4.1. Change visited status of restaurant : <code>(rt)visited</code></a></h4>
 <div class="paragraph">
 <p>Updates visited status of restaurant to visited<br>
 Format: <code>(rt)visited INDEX</code></p>
@@ -579,7 +679,7 @@ Updated visited status of restaurant at index 3 to visited.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-all-restaurants-code-rt-list-code"><a class="link" href="#list-all-restaurants-code-rt-list-code">3.3.5. List all restaurants : <code>(rt)list</code></a></h4>
+<h4 id="list-all-restaurants-code-rt-list-code"><a class="link" href="#list-all-restaurants-code-rt-list-code">3.4.2. List all restaurants : <code>(rt)list</code></a></h4>
 <div class="paragraph">
 <p>Lists all restaurants<br>
 Format: <code>(rt)list</code></p>
@@ -597,7 +697,7 @@ Lists all restaurants.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="coming-soon-find-restaurant-code-rt-find-code"><a class="link" href="#coming-soon-find-restaurant-code-rt-find-code">3.3.6. [Coming Soon] Find restaurant : <code>(rt)find</code></a></h4>
+<h4 id="coming-soon-find-restaurant-code-rt-find-code"><a class="link" href="#coming-soon-find-restaurant-code-rt-find-code">3.4.3. [Coming Soon] Find restaurant : <code>(rt)find</code></a></h4>
 <div class="paragraph">
 <p>Finds restaurants based on a number of criteria.<br>
 Format: <code>(rt)find [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
@@ -643,9 +743,9 @@ Finds restaurants in the bedok area at a low price point.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="schoolwork-tracker-commands"><a class="link" href="#schoolwork-tracker-commands">3.4. Schoolwork Tracker commands</a></h3>
+<h3 id="schoolwork-tracker-commands"><a class="link" href="#schoolwork-tracker-commands">3.5. Schoolwork Tracker commands</a></h3>
 <div class="sect3">
-<h4 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.4.1. Add new assignment to the Schoolwork Tracker : <code>(st)add</code></a></h4>
+<h4 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.5.1. Add new assignment to the Schoolwork Tracker : <code>(st)add</code></a></h4>
 <div class="paragraph">
 <p>Adds a new assignment to your list of assignments and projects.<br>
 Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
@@ -683,7 +783,7 @@ Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, du
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.4.2. Delete assignment : <code>(st)delete</code></a></h4>
+<h4 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.5.2. Delete assignment : <code>(st)delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes an assignment.<br>
 Format: <code>(st)delete INDEX</code></p>
@@ -712,7 +812,7 @@ Deletes the 1st assignment in the Schoolwork Tracker.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="edits-an-assignment-code-st-edit-code"><a class="link" href="#edits-an-assignment-code-st-edit-code">3.4.3. Edits an assignment: <code>(st)edit</code></a></h4>
+<h4 id="edits-an-assignment-code-st-edit-code"><a class="link" href="#edits-an-assignment-code-st-edit-code">3.5.3. Edits an assignment: <code>(st)edit</code></a></h4>
 <div class="paragraph">
 <p>Marks an assignment as completed.<br>
 Format: <code>(st)edit INDEX [t/TITLE] [e/ESTIMATED_COMPLETION_TIME] [d/DEADLINE] [s/STATUS]</code></p>
@@ -755,7 +855,7 @@ Changes the title of the first assignment to 'CS2103 Quiz' and estimated complet
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.4.4. List current assignments : <code>(st)list</code></a></h4>
+<h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.5.4. List current assignments : <code>(st)list</code></a></h4>
 <div class="paragraph">
 <p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first.<br>
 Format: <code>(st)list [-d/] [-e/]</code></p>
@@ -790,7 +890,7 @@ Assignments will be shown in ascending order by deadline with all completed assi
 </div>
 </div>
 <div class="sect3">
-<h4 id="visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code"><a class="link" href="#visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code">3.4.5. Visualise the intensity of your upcoming schedule : <code>(st)schedule</code></a></h4>
+<h4 id="visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code"><a class="link" href="#visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code">3.5.5. Visualise the intensity of your upcoming schedule : <code>(st)schedule</code></a></h4>
 <div class="paragraph">
 <p>Looks through the list of current uncompleted assignments to calculate the estimated work hours per day to complete all assignments by their deadlines<br>
 Format: <code>(st)schedule n/NUM_DAYS</code></p>
@@ -823,9 +923,9 @@ Shows the user&#8217;s upcoming schedule for the next 5 days colour-coded based 
 </div>
 </div>
 <div class="sect2">
-<h3 id="event-book-commands"><a class="link" href="#event-book-commands">3.5. Event Book commands</a></h3>
+<h3 id="event-book-commands"><a class="link" href="#event-book-commands">3.6. Event Book commands</a></h3>
 <div class="sect3">
-<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.5.1. Create a new social event : <code>(ev)add</code></a></h4>
+<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.6.1. Create a new social event : <code>(ev)add</code></a></h4>
 <div class="paragraph">
 <p>Creates a social event.<br>
 Format: <code>(ev)add et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</code></p>
@@ -843,7 +943,7 @@ Format: <code>(ev)add et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.5.2. Listing all events : <code>(ev)list</code></a></h4>
+<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.6.2. Listing all events : <code>(ev)list</code></a></h4>
 <div class="paragraph">
 <p>Lists all social events in your Event Book.<br>
 Format: <code>(ev)list</code></p>
@@ -851,20 +951,20 @@ Format: <code>(ev)list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.6. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.7. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book, Schoolwork Tracker, Event Book and Restaurant Book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.7. Coming in v2.0</a></h3>
+<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.8. Coming in v2.0</a></h3>
 <div class="sect3">
-<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.7.1. Obtain gift suggestions for a particular contact</a></h4>
+<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.8.1. Obtain gift suggestions for a particular contact</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.7.2. Encrypting data files</a></h4>
+<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.8.2. Encrypting data files</a></h4>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -977,7 +1077,7 @@ There is no need to save manually.</p>
 <p><code>(ab)addnote INDEX i/INFO&#8230;&#8203;</code></p>
 </li>
 <li>
-<p><code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [a/AWESOME_FOOD] [b/BAD_FOOD]</code></p>
+<p><code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [g/GOOD_FOOD] [b/BAD_FOOD]</code></p>
 </li>
 </ul>
 </div>
@@ -998,6 +1098,9 @@ There is no need to save manually.</p>
 <ul>
 <li>
 <p><code>(ab)editnote INDEX l/LINE_NUMBER i/INFO</code></p>
+</li>
+<li>
+<p>`(rt)editnote INDEX [rl/LINE_NUMBER_RECOMMENDED] [r/RECOMMENDED_FOOD] [gl/LINE_NUMBER_GOOD] [g/GOOD_FOOD] [bl//LINE_NUMBER_BAD] [b/BAD_FOOD]</p>
 </li>
 </ul>
 </div>
@@ -1036,4 +1139,4 @@ There is no need to save manually.</p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 08:57:09 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:33:43 UTC</div></div></div></body></html>
