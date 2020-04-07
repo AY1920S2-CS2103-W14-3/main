@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Elysia Tan - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">Naggy Joel</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://ay1920s2-cs2103-w14-3.github.io/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Elysia Tan - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-naggy-joel"><a class="link" href="#project-naggy-joel">PROJECT: Naggy Joel</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Naggy Joel</strong> is a desktop social life manager application for university students who wants to enjoy life but not at the expense of their studies. It has a GUI created with JavaFX and is optimized to allow users interact with it through the Command Line Interface (CLI).</p>
+</div>
+<div class="paragraph">
+<p><strong>Naggy Joel</strong> allows users to keep track of various aspects of their lives, ranging from their different social circles and contacts, to their events and deadlines, as well as, places to hang out and potential practical gifts that will be very much appreciated by their recipients. It aims to help the user be the best friend and best student that they can ever be.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="major-enhancements"><a class="link" href="#major-enhancements">Major Enhancements:</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Added the ability to allow users to generate their upcoming schedule</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>What it does:</strong> Generates the user’s schedule for a specified number of day(s) based on the uncompleted stored assignments, their deadlines and estimated completion time per assignment.</p>
+</li>
+<li>
+<p><strong>Justification:</strong> Generally, students will consider their outstanding assignments and the estimated amount of time required to complete them before deciding whether or not they have the time to hang out with friends. However, often times there are just too many and it is difficult to estimate the work hours per day for the next few days at the back of their minds.</p>
+</li>
+<li>
+<p><strong>Highlights:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Each day will be colour-coded based on the estimated work hours for the day.</p>
+</li>
+<li>
+<p>There were many cases to consider ensure a balanced distribution of work hours to each day while ensuring that the user can still meet all deadlines.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="minor-enhancements"><a class="link" href="#minor-enhancements">Minor Enhancements:</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Added the model for Assignment</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>What it does:</strong> Forms the backbone of most commands which require Assignment.</p>
+</li>
+<li>
+<p><strong>Justification:</strong> Our application is designed to enable students to keep track of their assignments so that they can make the most out of their university life. As such, this enhancement is crucial as it would later be involved in some of the enhancements that take place in future.</p>
+</li>
+<li>
+<p><strong>Highlights:</strong> This enhancement requires an understanding of what a typical assignment should consist of so that it does not violate the law of demeter.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Added the ability to visualise contacts with upcoming birthdays</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>What it does:</strong> Displays all contacts with birthdays in the next 5 days (current day included).</p>
+</li>
+<li>
+<p><strong>Justification:</strong> As a university student with a busy life and many things to remember, often times we may unintentionally forget the birthdays of our friends and family. As such, this feature will help to serve as a reminder for users.</p>
+</li>
+<li>
+<p><strong>Highlights:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Upcoming birthdays are colour-coded based on when the contact’s birthday is and is sorted in increasing date order when displayed.</p>
+</li>
+<li>
+<p>Can be extended to provide gift or celebration suggestions to users based on the remarks stored for that particular contact.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>*Changed the functionality of the given <code>edit</code> Person command</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>What it does:</strong> The enhanced <code>edit</code> command allows users to append new tags and delete individual tags.</p>
+</li>
+<li>
+<p><strong>Justification:</strong> The original command only allows users to replace all existing tags with the new ones which is not very user-friendly as often times we want to add/delete individual tags rather than replace everything.</p>
+</li>
+<li>
+<p><strong>Highlights:</strong> Multiple tags can be added/deleted in the same command. Only distinct tags will be added if they do not already exist and all stated tags will be deleted if they exist.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to undo/redo previous commands</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command.</p>
+</li>
+<li>
+<p>Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
+</li>
+<li>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+</li>
+<li>
+<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using up/down keys.</p>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#=undefined&amp;search=elysiatanzy">Overview of code contribution</a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edited the GUI of the application (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/68">#68</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/145">#145</a>)</p>
+</li>
+<li>
+<p>Wrote additional tests for existing features to increase coverage (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/65">#65</a>)</p>
+</li>
+<li>
+<p>Added in the birthday field to Person, allowed tags for a Person to include spaces and updated the existing commands to accommodate these changes.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Contributed to both the User Guide and Developer Guide for this project.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Contribution to team-based tasks:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Did cosmetic tweaks to existing contents of the User Guide (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/71">#71</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/150">#150</a>)</p>
+</li>
+<li>
+<p>Maintained the issue tracker</p>
+</li>
+<li>
+<p>Managed release v1.2.1 to v1.3.1 (3 releases) on Github (examples: <a href="https://github.com/ElysiaTanZY/ped/issues?q=is%3Aissue+is%3Aall" class="bare">https://github.com/ElysiaTanZY/ped/issues?q=is%3Aissue+is%3Aall</a> [1])</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Over 20 <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+author%3AelysiaTanZY" class="bare">https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+author%3AelysiaTanZY</a> [Pull Requests] on Github</p>
+</li>
+<li>
+<p>Reviewed and merged Pull Requests by team members</p>
+</li>
+<li>
+<p>Helped team members debug problems in their code and gave suggestions on how to enhance features</p>
+</li>
+<li>
+<p>Reported bugs and suggestions for other teams in the module</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users.</em></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="proposed-schedule-visualiser"><a class="link" href="#proposed-schedule-visualiser">[Proposed] Schedule Visualiser</a></h3>
+<div class="sect3">
+<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">Proposed implementation</a></h4>
+<div class="paragraph">
+<p>The schedule visualiser is facilitated by the implemented <code>SchoolworkTracker</code>. The main purpose of the <code>SchoolworkTracker</code> is to allow users to keep track of all their assignments so that they do not accidentally overlook any of them. The main components of the <code>SchoolworkTracker</code> are as shown in the following class diagram.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stClassDiagram.png" alt="stClassDiagram">
+</div>
+</div>
+<div class="paragraph">
+<p>This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing a user to get a better sense of their current commitments and workload so that they can better manage their time to pursue other social events and hang out with friends. It utilises the existing <code>Assignments</code> stored in the <code>AssignmentList</code> of the <code>SchoolworkTracker</code>. Additionally, it implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SchoolworkTracker#calExpectedWorkPerDay()</code>&#8201;&#8212;&#8201;Calculates the expected amount of work the user has to put in each day for the next five days (based on hours) to meet all deadlines.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario of how the schedule visualizer behaves at each stage.</p>
+</div>
+<div class="paragraph">
+<p> Step 1. The user launches the application for the first time. The <code>SchoolworkTracker</code> will be initialized with the initial state, which is an empty list.</p>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes the add assignment command [<code>(st)add t/CS2103 tP d/2020-03-27 12:00 e/5</code>] to add the following assignments to the Schoolwork Tracker.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stFilledList.png" alt="stFilledList">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 3. Today is 23 March 2020 and the user wants to see how busy he is and whether he has time to go out with his friends in the next five days while still being able to complete his assignments on time.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram below shows how the schedule visualisation operation works. </p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stOverallSequenceDiagram.png" alt="stOverallSequenceDiagram">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stPart1.png" alt="stPart1">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stPart2.png" alt="stPart2">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stPart3.png" alt="stPart3">
+</div>
+</div>
+<div class="paragraph">
+<p>Step 4. Based on the results obtained from the schedule command, the user can then decide on how to best plan his outing with his friends.</p>
+</div>
+<div class="paragraph">
+<p>A sample result of the schedule command is as follows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/stScheduleResult.png" alt="stScheduleResult">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
+<div class="sect4">
+<h5 id="aspect-how-the-expected-work-hours-per-day-is-to-be-calculated"><a class="link" href="#aspect-how-the-expected-work-hours-per-day-is-to-be-calculated">Aspect: How the expected work hours per day is to be calculated</a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1 (current choice):</strong> Allocate hours required to complete assignment whose deadline is the next day from query date, if any. Then, allocate hours of the other assignments in such a way to ensure balance workload.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Takes into account approaching deadlines and attempts to allocate an equal number of hours each day.</p>
+</li>
+<li>
+<p>Cons: Complicated algorithm is more prone to errors.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2:</strong> Sum the estimated hours / Number of days to deadline for all assignments.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier to implement.</p>
+</li>
+<li>
+<p>Cons: Does not take into account approaching deadlines and may result in some days having impossibly high workload.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:35:30 UTC</div></div></div></body></html>
