@@ -3,10 +3,8 @@
 :relfileprefix: team/
 :imagesDir: images
 :stylesDir: stylesheets
+Naggy Joel was developed by the Naggy Joel team. +
 
-AddressBook - Level 3 was developed by the https://se-edu.github.io/docs/Team.html[se-edu] team. +
-_{The dummy content given below serves as a placeholder to be used by future forks of the project.}_ +
-{empty} +
 We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore].
 
 == Project Team
@@ -32,7 +30,7 @@ Responsibilities: UI, Intellij expert, Sourcetree expert
 
 === Elysia Tan
 image::elysiatanzy.png[width="150", align="left"]
-{empty}[http://github.com/ElysiaTanZY[github]] [<<johndoe#, portfolio>>]
+{empty}[http://github.com/ElysiaTanZY[github]] [<<elysiatanzy#, portfolio>>]
 
 Role: Developer +
 Responsibilities: Deliverables & deadlines, testing
