@@ -37,9 +37,10 @@ best friend that you can ever be!</p>
 </div>
 <div class="paragraph">
 <p>Naggy Joel is for those who <strong>prefer to use a desktop app for managing their social life</strong>. It is an application that
-allows a user to manage all aspects of their social life, ranging from their different social circles and contacts,
-to their events and deadlines, as well as, places to hang out and potential practical gifts that will be very much
-appreciated by the recipient.  More importantly, Naggy Joel is <strong>optimized for those who prefer to work with a Command
+allows you to manage all aspects of their social life, ranging from your different social circles and contacts,
+to your events, as well as, places to hang out and potential practical gifts that will be very much
+appreciated by your recipients all without compromising on your academic life.
+More importantly, Naggy Joel is <strong>optimized for those who prefer to work with a Command
 Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, Naggy
 Joel can get social life managed faster than traditional GUI apps. Interested? Jump to <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started.
 Enjoy!</p>
@@ -77,13 +78,25 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p><strong><code>(ab)list</code></strong> : lists all contacts</p>
+<p>** <code>(ab)list</code> : Lists all contacts</p>
 </li>
 <li>
-<p><strong><code>(ab)add</code></strong>` n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : adds a contact named <code>John Doe</code> to the Address Book.</p>
+<p><strong><code>(ab)add</code></strong>` n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named <code>John Doe</code> to the Address Book.</p>
 </li>
 <li>
-<p><strong><code>(ab)delete</code></strong> <code>3</code> : deletes the 3rd contact shown in the current list</p>
+<p><strong><code>(ab)delete</code></strong> <code>3</code> : Deletes the 3rd contact shown in the current list</p>
+</li>
+<li>
+<p><strong>* <code>(st)list</code></strong> : Lists all assignments</p>
+</li>
+<li>
+<p><strong><code>(st)add</code></strong> t/CS2103 tP d/2020-11-11 23:59 e/10 : Adds an assignment titled <code>CS2103 tP</code> with deadline on 11 November 2020 11:59 PM and an estimated completion time of 10 hours.</p>
+</li>
+<li>
+<p><strong>* <code>(rt)list</code></strong> : Lists all restaurants</p>
+</li>
+<li>
+<p><strong><code>(rt)add</code></strong> n/McDonalds l/NUS o/0900:2300 p/$ v/Yes :  Adds a new visited restaurant named McDonalds located in NUS with operating hours 9:00 AM to 11:00 PM with the lowest price point.</p>
 </li>
 <li>
 <p><strong><code>exit</code></strong> : exits the app</p>
@@ -104,7 +117,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Command Format</strong>
+<p><strong>Command Format</strong><br>
 *  Words in <code>UPPER_CASE</code> are the parameters to be supplied by the user e.g. in <code>(ab)add n/NAME</code>, <code>NAME</code> is a parameter which can be used as <code>(ab)add n/John Doe</code>.
 *  Items in square brackets are optional e.g <code>n/NAME [t/TAG]</code> can be used as <code>n/John Doe t/friend</code> or as <code>n/John Doe</code>.
 *  Items with <code>…</code>​ after them can be used multiple times including zero times e.g. <code>[t/TAG]&#8230;&#8203;</code> can be used as <code>&#160;</code> (i.e. 0 times), <code>t/friend</code>, <code>t/friend t/family</code> etc.
@@ -158,11 +171,23 @@ Format: <code>(ab)add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [t/TAG] [g/GRO
 </td>
 <td class="content">
 A person can have any number of tags (including 0)
-BIRTHDAY must be written in a MM-dd format.
-Fields inside square brackets are optional.
 </td>
 </tr>
 </table>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>BIRTHDAY must be written in a MM-dd format.</p>
+</li>
+<li>
+<p>Fields inside square brackets are optional.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -170,16 +195,16 @@ Fields inside square brackets are optional.
 <div class="ulist">
 <ul>
 <li>
-<p><code>(ab)add n/Akshay g/NUS p/56789012</code></p>
+<p><code>(ab)add n/Akshay g/NUS p/56789012</code><br>
+Adds a contact named Akshay with phone number 56789012 into the group NUS.</p>
 </li>
 <li>
-<p><code>(ab)add n/Joel HH e/joel@yahoo.com.sg p/12345678 g/NUS a/Pasir Ris St. 71, Blk 123, #01-79</code></p>
+<p><code>(ab)add n/Joel HH e/joel@yahoo.com.sg p/12345678 g/NUS a/Pasir Ris St. 71, Blk 123, #01-79</code><br>
+Adds a contact named Joel HH with email address <a href="mailto:joel@yahoo.com.sg">joel@yahoo.com.sg</a>, phone number 12345678 and address Pasir Ris St. 71, Blk 123, #01-79 into the group NUS.</p>
 </li>
 <li>
-<p><code>(ab)add n/Aisyle Nat e/aisyle@gmail.com p/87654321 b/02-12 g/NUS</code></p>
-</li>
-<li>
-<p><code>(ab)add n/ Benjamin t/CS2103 p/45671234</code></p>
+<p><code>(ab)add n/Aisyle Nat e/aisyle@gmail.com p/87654321 b/02-12 g/NUS</code><br>
+Adds a contact named Aisyle Nat with email address <a href="mailto:aisyle@gmail.com">aisyle@gmail.com</a>, phone number 87654321 and birthday 12 February into the group NUS.</p>
 </li>
 </ul>
 </div>
@@ -188,7 +213,7 @@ Fields inside square brackets are optional.
 <h4 id="deleting-a-person-code-ab-delete-code"><a class="link" href="#deleting-a-person-code-ab-delete-code">3.2.2. Deleting a person : <code>(ab)delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes the contact at index INDEX<br>
-Format: <code>(ab)delete INDEX</code></p>
+Format: <code>(ab)delete INDEX [t/] [e/] [a/] [g/] [b/]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -196,6 +221,15 @@ Format: <code>(ab)delete INDEX</code></p>
 <ul>
 <li>
 <p>INDEX must be a positive integer. It refers to the index of the respective contact as shown in the displayed person list.</p>
+</li>
+<li>
+<p>Fields inside square brackets are optional.</p>
+</li>
+<li>
+<p>Specifying any of the optional fields will delete the existing values.</p>
+</li>
+<li>
+<p>If none of the optional fields are specified, the entire contact will be deleted.</p>
 </li>
 </ul>
 </div>
@@ -210,6 +244,10 @@ Format: <code>(ab)delete INDEX</code></p>
 <p><code>(ab)delete 2</code><br>
 Deletes the 2nd person in the address book.</p>
 </li>
+<li>
+<p><code>(ab)delete 2 t/</code><br>
+Deletes all the tags that belong to the 2nd person in the address book.</p>
+</li>
 </ul>
 </div>
 </div>
@@ -217,7 +255,7 @@ Deletes the 2nd person in the address book.</p>
 <h4 id="editing-a-person-code-ab-edit-code"><a class="link" href="#editing-a-person-code-ab-edit-code">3.2.3. Editing a person : <code>(ab)edit</code></a></h4>
 <div class="paragraph">
 <p>Edits an existing person in the address book.<br>
-Format: <code>(ab)edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [b/BIRTHDAY] [g/GROUPNAME] [t/TAG]&#8230;&#8203; [-t/TAG_TO_BE_DELETED]&#8230;&#8203;</code></p>
+Format: <code>(ab)edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [b/BIRTHDAY] [g/GROUPNAME] [t/TAG_TO_BE_ADDED]&#8230;&#8203; [-t/TAG_TO_BE_DELETED]&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -227,16 +265,10 @@ Format: <code>(ab)edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [b/
 <p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>At least one of the optional fields must be provided and cannot be left empty.</p>
+<p>At least one of the optional fields must be provided and parameter cannot be left empty.</p>
 </li>
 <li>
 <p>Existing values will be updated to the input values except tags.</p>
-</li>
-<li>
-<p><code>t/</code>: Multiple tags can be specified and all will be added, if it is not a duplicate.</p>
-</li>
-<li>
-<p><code>-t/</code>: Multiple tags can be specified and all will be deleted, if they exist.</p>
 </li>
 <li>
 <p>Remarks cannot be edited using this command.</p>
@@ -244,6 +276,16 @@ Format: <code>(ab)edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [b/
 </ul>
 </div>
 </div>
+</div>
+<div class="ulist TIP">
+<ul class="TIP">
+<li>
+<p>Multiple tags can be specified and all will be added, if it is not a duplicate.</p>
+</li>
+<li>
+<p>Multiple tags can be specified and all will be deleted, if they exist.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -256,7 +298,11 @@ Changes the 37th person’s address to 2 Cactus Road, S903281.</p>
 </li>
 <li>
 <p><code>(ab)edit 2 n/Elysia Tan g/Comp Club</code><br>
-Changes the second person’s name to Elysia Tan, and organization to Comp Club.</p>
+Changes the 2nd person’s name to Elysia Tan, and group to Comp Club.</p>
+</li>
+<li>
+<p><code>(ab)edit 2 t/best friend -t/good friend</code><br>
+Removes the tag good friend from the 2nd person and adds the tag best friend to him/her.</p>
 </li>
 </ul>
 </div>
@@ -265,14 +311,14 @@ Changes the second person’s name to Elysia Tan, and organization to Comp Club.
 <h4 id="store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code"><a class="link" href="#store-additional-information-about-contacts-using-the-note-taker-code-ab-addnote-code">3.2.4. Store additional information about contacts using the Note Taker: <code>(ab)addnote</code></a></h4>
 <div class="paragraph">
 <p>Store additional information about contacts using the Note Taker<br>
-Format: <code>(ab)addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
+Format: <code>(ab)addnote INDEX i/INFO1&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function (see 2.4).</p>
+<p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function.</p>
 </li>
 <li>
 <p>There should be at least one i/INFO specified.</p>
@@ -280,6 +326,17 @@ Format: <code>(ab)addnote INDEX i/INFO1 i/INFO2 &#8230;&#8203;</code></p>
 </ul>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)addnote 1 i/Like to swim i/Likes cheese</code><br>
+Adds the notes 'Like to swim' and 'Likes cheese' to the first person in the displayed person list.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -293,7 +350,7 @@ Format: <code>(ab)editnote INDEX l/LINE_NUMBER i/INFO</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function (see 2.4).</p>
+<p>INDEX must be a positive integer. It refers to the index of the respective contact as displayed in the LIST function.</p>
 </li>
 <li>
 <p>l/LINE_NUMBER Line number of information to be replaced</p>
@@ -302,12 +359,23 @@ Format: <code>(ab)editnote INDEX l/LINE_NUMBER i/INFO</code></p>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)editnote 1 l/5 i/Likes having fun</code><br>
+Replaces the 5th note of the 1st person to 'Likes having fun'.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
 <h4 id="delete-additional-information-about-contacts-code-ab-deletenote-code"><a class="link" href="#delete-additional-information-about-contacts-code-ab-deletenote-code">3.2.6. Delete additional information about contacts : <code>(ab)deletenote</code></a></h4>
 <div class="paragraph">
 <p>Delete additional information about contacts using the Note Taker<br>
-Format: <code>(ab)deletenote INDEX l/LINE_NUMBER l/LINE_NUMBER &#8230;&#8203;</code></p>
+Format: <code>(ab)deletenote INDEX l/LINE_NUMBER&#8230;&#8203;</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -322,6 +390,17 @@ Format: <code>(ab)deletenote INDEX l/LINE_NUMBER l/LINE_NUMBER &#8230;&#8203;</c
 </ul>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)deletenote 1 l/4 l/5</code><br>
+Deletes the 4th and 5th note from the first person.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -351,41 +430,27 @@ Finds and lists all contacts that is in group “NUS” and have the word “Lim
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-contacts-in-a-particular-order-code-ab-sort-code"><a class="link" href="#list-contacts-in-a-particular-order-code-ab-sort-code">3.2.8. List contacts in a particular order : <code>(ab)sort</code></a></h4>
+<h4 id="lists-all-contacts-code-ab-list-code"><a class="link" href="#lists-all-contacts-code-ab-list-code">3.2.8. Lists all contacts: <code>(ab)list</code></a></h4>
 <div class="paragraph">
-<p>Displays the list of contacts in a certain sorted order<br>
-Format: <code>ab sort [-f] [-o] [-b]</code></p>
+<p>Lists all contacts stored in the address book, only displaying the name, phone number and tags (if any)<br>
+Format: <code>(ab)list</code></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
+<div class="ulist TIP">
+<ul class="TIP">
 <li>
-<p>Only one of the optional switches may be indicated at any time.</p>
+<p>If you want to search for a particular contact, see <code>(ab)find</code></p>
 </li>
 <li>
-<p>[-f] indicates sorting by most frequently searched for.</p>
-</li>
-<li>
-<p>[-o] indicates sorting by organizations’ names.</p>
-</li>
-<li>
-<p>[-b] indicates sorting by birthday from the current date.</p>
+<p>If you want more information about a particular contact, see <code>(ab)get</code></p>
 </li>
 </ul>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Examples:
-* <code>(ab)sort -a</code><br>
-Lists all contacts alphabetically</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="list-everything-about-a-contact-in-field-code-ab-get-code"><a class="link" href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.2.9. List everything about a contact in field : <code>(ab)get</code></a></h4>
 <div class="paragraph">
-<p>Format: <code>(ab)get INDEX</code></p>
+<p>Displays all information about the queried contact<br>
+Format: <code>(ab)get INDEX</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -401,11 +466,23 @@ Lists all contacts alphabetically</p>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)get 1</code><br>
+Displays all information about the 1st person.</p>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect3">
-<h4 id="list-contacts-with-birthdays-in-the-next-5-days-current-day-included-code-ab-birthday-code"><a class="link" href="#list-contacts-with-birthdays-in-the-next-5-days-current-day-included-code-ab-birthday-code">3.2.10. List contacts with birthdays in the next 5 days (current day included) : <code>(ab)birthday</code></a></h4>
+<h4 id="list-contacts-with-birthdays-with-upcoming-birthdays-code-ab-birthday-code"><a class="link" href="#list-contacts-with-birthdays-with-upcoming-birthdays-code-ab-birthday-code">3.2.10. List contacts with birthdays with upcoming birthdays : <code>(ab)birthday</code></a></h4>
 <div class="paragraph">
-<p>Format: <code>(ab)birthday</code></p>
+<p>Lists all contacts with birthdays in the next 5 days (current day included)<br>
+Format: <code>(ab)birthday</code></p>
 </div>
 </div>
 </div>
@@ -432,7 +509,7 @@ Format: <code>(rt)add n/NAME l/LOCATION v/VISITED [o/OPERATING_HOURS] [p/PRICE_P
 <div class="ulist">
 <ul>
 <li>
-<p>There are 3 price points, each one distinguished according to the number of dollar signs. The lowest price point is $. The medium price point is . The highest price point is $.</p>
+<p>There are 3 price points, each one distinguished according to the number of dollar signs. The lowest price point is <code>$</code>. The medium price point is <code>`. The highest price point is `$</code>.</p>
 </li>
 </ul>
 </div>
@@ -459,12 +536,17 @@ Adds a new restaurant called rubbish at bedok with 2 dollar signs price point an
 <p>Deletes a restaurant from the list<br>
 Format: <code>(rt)delete INDEX</code></p>
 </div>
+<div class="paragraph">
+<p>Example:
+* <code>(rt)delete 1</code><br>
+Deletes the 1st restaurant in the restaurant book.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="add-notes-to-a-restaurant-code-rt-addnote-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-addnote-code">3.3.3. Add notes to a restaurant : <code>(rt)addnote</code></a></h4>
 <div class="paragraph">
 <p>Adds a new note to a restaurant<br>
-Format: <code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [a/GOOD_FOOD] [b/BAD_FOOD]</code></p>
+Format: <code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [a/AWESOME_FOOD] [b/BAD_FOOD]</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
@@ -515,10 +597,10 @@ Lists all restaurants.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="coming-soon-search-code-rt-search-code"><a class="link" href="#coming-soon-search-code-rt-search-code">3.3.6. [Coming Soon] Search : <code>(rt)search</code></a></h4>
+<h4 id="coming-soon-find-restaurant-code-rt-find-code"><a class="link" href="#coming-soon-find-restaurant-code-rt-find-code">3.3.6. [Coming Soon] Find restaurant : <code>(rt)find</code></a></h4>
 <div class="paragraph">
-<p>Search for restaurants based on a number of criteria.<br>
-Format: <code>(rt)search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
+<p>Finds restaurants based on a number of criteria.<br>
+Format: <code>(rt)find [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -528,7 +610,7 @@ Format: <code>(rt)search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_H
 <p>At least one search criteria must be filled in.</p>
 </li>
 <li>
-<p>There are 3 price points, each one distinguished according to the number of dollar signs. The lowest price point is $. The medium price point is . The highest price point is $.</p>
+<p>There are 3 price points, each one distinguished according to the number of dollar signs. The lowest price point is <code>$</code>. The medium price point is <code>`. The highest price point is `$</code>.</p>
 </li>
 <li>
 <p>If more than 1 optional parameters are filled, they are viewed as a conjunction of filters</p>
@@ -549,12 +631,12 @@ Format: <code>(rt)search [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_H
 <div class="ulist">
 <ul>
 <li>
-<p><code>(rt)search k/no signboard p/$$</code><br>
-Searches for restaurants with the keyword no signboard which is at a medium price point.</p>
+<p><code>(rt)find k/no signboard p/$$</code><br>
+Finds restaurants with the keyword no signboard which is at a medium price point.</p>
 </li>
 <li>
-<p><code>(rt)search l/bedok p/$</code><br>
-Searches for restaurants in the bedok area at a low price point.</p>
+<p><code>(rt)find l/bedok p/$</code><br>
+Finds restaurants in the bedok area at a low price point.</p>
 </li>
 </ul>
 </div>
@@ -573,13 +655,16 @@ Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>DEADLINE must be entered in a yyyy-mm-dd HH:mm format and cannot be one that has already passed.</p>
+<p>DEADLINE must be entered in a yyyy-MM-dd HH:mm format and cannot be one that has already passed.</p>
 </li>
 <li>
 <p>ESTIMATED_COMPLETION_TIME is the number of hours expected to finish the assignment, rounded off to the nearest half an hour.</p>
 </li>
 <li>
 <p>You will not be able to add two assignments with both the same name and deadline.</p>
+</li>
+<li>
+<p>The status of the assignment is set to 'Uncompleted' by default.</p>
 </li>
 </ul>
 </div>
@@ -592,7 +677,7 @@ Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
 <ul>
 <li>
 <p><code>(st)add t/CS2103 post lecture quiz d/2020-11-11 23:59 e/1</code><br>
-Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-11-2020 23:59 and which takes an estimated one hour to complete.</p>
+Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-11-2020 23:59 PM and which takes an estimated one hour to complete.</p>
 </li>
 </ul>
 </div>
@@ -608,11 +693,22 @@ Format: <code>(st)delete INDEX</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>INDEX must be a positive integer. It corresponds to the INDEX of the assignment as shown when you list all assignments in the Schoolwork Tracker using the default list function (see below).</p>
+<p>INDEX must be a positive integer. It corresponds to the INDEX of the assignment as shown when you list all assignments in the Schoolwork Tracker using the list function.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(st)delete 1</code><br>
+Deletes the 1st assignment in the Schoolwork Tracker.</p>
+</li>
+</ul>
 </div>
 </div>
 <div class="sect3">
@@ -626,10 +722,10 @@ Format: <code>(st)edit INDEX [t/TITLE] [e/ESTIMATED_COMPLETION_TIME] [d/DEADLINE
 <div class="ulist">
 <ul>
 <li>
-<p>INDEX must be a positive integer. It corresponds to the INDEX of the assignment as shown when you list all assignments in the Schoolwork Tracker using the default list function (see below).</p>
+<p>INDEX must be a positive integer. It corresponds to the INDEX of the assignment as shown when you list all assignments in the Schoolwork Tracker using the list function.</p>
 </li>
 <li>
-<p>DEADLINE must be entered in a yyyy-mm-dd HH:mm format and cannot be one that has already passed.</p>
+<p>DEADLINE must be entered in a yyyy-MM-dd HH:mm format and cannot be one that has already passed.</p>
 </li>
 <li>
 <p>ESTIMATED_COMPLETION_TIME is the number of hours expected to finish the assignment, rounded off to the nearest half an hour.</p>
@@ -644,23 +740,53 @@ Format: <code>(st)edit INDEX [t/TITLE] [e/ESTIMATED_COMPLETION_TIME] [d/DEADLINE
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>Example:
+* <code>(st)edit 1 t/CS2103 Quiz e/1</code><br>
+Changes the title of the first assignment to 'CS2103 Quiz' and estimated completion time to 1 hour.</p>
+</div>
+<div class="sect4">
+<h5 id="marking-an-assignment-as-done-code-st-edit-s-completed-code"><a class="link" href="#marking-an-assignment-as-done-code-st-edit-s-completed-code">Marking an assignment as done : <code>(st)edit s/Completed</code></a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="marking-an-assignment-as-uncompleted-code-st-edit-s-uncompleted-code"><a class="link" href="#marking-an-assignment-as-uncompleted-code-st-edit-s-uncompleted-code">Marking an assignment as uncompleted : <code>(st)edit s/Uncompleted</code></a></h5>
+
+</div>
 </div>
 <div class="sect3">
 <h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.4.4. List current assignments : <code>(st)list</code></a></h4>
 <div class="paragraph">
-<p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first. By default, it sorts the list in alphabetical order.<br>
-Format: <code>(st)list [-d/DEADLINE] [-e/ESTIMATED_COMPLETION_TIME]</code></p>
+<p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first.<br>
+Format: <code>(st)list [-d/] [-e/]</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p>Only 1 field can be specified at each time</p>
+<p>At most 1 optional field can be specified at each time</p>
+</li>
+<li>
+<p>If no optional field is specified, assignments will be sorted in alphabetical order.</p>
+</li>
+<li>
+<p>Completed assignments will always be shown at the bottom of the list.</p>
+</li>
+<li>
+<p>[-d/] : Assignments will be sorted in ascending order by deadline.</p>
+</li>
+<li>
+<p>[-e/] : Assignments will be sorted in ascending order based on the estimated completion time.</p>
 </li>
 </ul>
 </div>
 </div>
+</div>
+<div class="paragraph">
+<p>Example:
+* <code>(st)list -d/</code><br>
+Assignments will be shown in ascending order by deadline with all completed assignments at the bottom of the list.</p>
 </div>
 </div>
 <div class="sect3">
@@ -689,22 +815,27 @@ Format: <code>(st)schedule n/NUM_DAYS</code></p>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>Example:
+* <code>(st)schedule n/5</code><br>
+Shows the user&#8217;s upcoming schedule for the next 5 days colour-coded based on the estimated work hours per day.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="event-book-commands"><a class="link" href="#event-book-commands">3.5. Event Book commands</a></h3>
 <div class="sect3">
-<h4 id="create-a-new-social-event-code-event-code"><a class="link" href="#create-a-new-social-event-code-event-code">3.5.1. Create a new social event : <code>event</code></a></h4>
+<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.5.1. Create a new social event : <code>(ev)add</code></a></h4>
 <div class="paragraph">
 <p>Creates a social event.<br>
-Format: <code>event et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</code></p>
+Format: <code>(ev)add et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</code></p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="ulist">
 <ul>
 <li>
-<p><code>EVENT DATE</code> must be in a YYYY-MM-DD HH:MM format</p>
+<p><code>EVENT DATE</code> must be in a YYYY-MM-dd HH:mm format</p>
 </li>
 </ul>
 </div>
@@ -712,10 +843,10 @@ Format: <code>event et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-events-code-eventlist-code"><a class="link" href="#listing-all-events-code-eventlist-code">3.5.2. Listing all events : <code>eventlist</code></a></h4>
+<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.5.2. Listing all events : <code>(ev)list</code></a></h4>
 <div class="paragraph">
 <p>Lists all social events in your Event Book.<br>
-Format: <code>eventlist</code></p>
+Format: <code>(ev)list</code></p>
 </div>
 </div>
 </div>
@@ -729,29 +860,11 @@ There is no need to save manually.</p>
 <div class="sect2">
 <h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.7. Coming in v2.0</a></h3>
 <div class="sect3">
-<h4 id="add-person-to-assignment-code-st-addmem-code"><a class="link" href="#add-person-to-assignment-code-st-addmem-code">3.7.1. Add person to assignment: <code>(st)addmem</code></a></h4>
-<div class="paragraph">
-<p>Adds a group mate to an assignment.<br>
-Format: <code>(st)addmem INDEX p/INDEX_1 p/INDEX_2 p/INDEX_3</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>INDEX must be a positive integer. It corresponds to the rank of the assignment shown</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact-using-the-birthday-tracker">3.7.2. Obtain gift suggestions for a particular contact using the Birthday Tracker</a></h4>
+<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.7.1. Obtain gift suggestions for a particular contact</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.7.3. Encrypting data files</a></h4>
+<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.7.2. Encrypting data files</a></h4>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -774,31 +887,153 @@ Format: <code>(st)addmem INDEX p/INDEX_1 p/INDEX_2 p/INDEX_3</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>(ab)add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p><strong>Add</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)add n/NAME p/PHONE_NUMBER [e/EMAIL] [a/ADDRESS] [b/BIRTHDAY] [g/GROUPNAME] [t/TAG]&#8230;&#8203;</code></p>
+</li>
+<li>
+<p><code>(rt)add n/NAME l/LOCATION o/OPERATING_HOURS p/PRICE_POINT v/VISITED</code></p>
+</li>
+<li>
+<p><code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
+</li>
+<li>
+<p><code>(ev)add et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Delete</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)delete INDEX [p/] [e/] [a/] [t/] [b/] [g/]</code></p>
+</li>
+<li>
+<p><code>(rt)delete INDEX</code></p>
+</li>
+<li>
+<p><code>(st)delete INDEX</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Edit</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [b/BIRTHDAY] [g/GROUPNAME] [t/TAG_TO_BE_ADDED]&#8230;&#8203; [-t/TAG_TO_BE_DELETED]&#8230;&#8203;</code><br></p>
+</li>
+<li>
+<p><code>(rt)edit INDEX</code></p>
+</li>
+<li>
+<p><code>(st)edit INDEX [t/TITLE] [d/DEADLINE] [e/ESTIMATED_COMPLETION_TIME] [s/STATUS]</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Find</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)find [-g/GROUPNAME] [-n/WORD] [-t/TAG]</code></p>
+</li>
+<li>
+<p><code>(rt)find [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>List</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)list</code></p>
+</li>
+<li>
+<p><code>(rt)list</code></p>
+</li>
+<li>
+<p><code>(st)list [-d] [-e]</code></p>
+</li>
+<li>
+<p><code>(ev)list</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Add notes</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)addnote INDEX i/INFO&#8230;&#8203;</code></p>
+</li>
+<li>
+<p><code>(rt)addnote INDEX [r/RECOMMENDED_FOOD] [a/AWESOME_FOOD] [b/BAD_FOOD]</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Delete notes</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)deletenote INDEX l/LINE_NUMBER&#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Edit notes</strong> :</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(ab)editnote INDEX l/LINE_NUMBER i/INFO</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Get all information about a contact</strong> :<br>
+<code>(ab)get INDEX</code></p>
+</li>
+<li>
+<p><strong>Show contacts with birthdays in the next 5 days</strong> :<br>
+<code>(ab)birthday</code></p>
+</li>
+<li>
+<p><strong>Mark a restaurant as visited</strong> :<br>
+<code>(rt)visited INDEX</code></p>
+</li>
+<li>
+<p><strong>Shows the user&#8217;s upcoming schedule</strong> :<br>
+<code>(st)schedule n/NUM_DAYS</code></p>
+</li>
+<li>
+<p><strong>Undo commands</strong> : <code>undo</code></p>
+</li>
+<li>
+<p><strong>Redo commands</strong> : <code>redo</code></p>
 </li>
 <li>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
-</li>
-<li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
-</li>
-<li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
-</li>
-<li>
-<p><strong>List</strong> : <code>list</code></p>
-</li>
-<li>
 <p><strong>Help</strong> : <code>help</code></p>
+</li>
+<li>
+<p><strong>exit</strong> : <code>exit</code></p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 08:11:08 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 08:57:09 UTC</div></div></div></body></html>
