@@ -16,11 +16,10 @@
 <li><a href="#general-commands">3.1. General Commands</a></li>
 <li><a href="#address-book-commands">3.2. Address Book Commands</a></li>
 <li><a href="#restaurant-book-commands">3.3. Restaurant Book commands</a></li>
-<li><a href="#edit-notes-to-a-restaurant-code-rt-editnote-code">3.4. Edit notes to a restaurant : <code>(rt)editnote</code></a></li>
-<li><a href="#schoolwork-tracker-commands">3.5. Schoolwork Tracker commands</a></li>
-<li><a href="#event-book-commands">3.6. Event Book commands</a></li>
-<li><a href="#saving-the-data">3.7. Saving the data</a></li>
-<li><a href="#coming-in-v2-0">3.8. Coming in v2.0</a></li>
+<li><a href="#schoolwork-tracker-commands">3.4. Schoolwork Tracker commands</a></li>
+<li><a href="#event-book-commands">3.5. Event Book commands</a></li>
+<li><a href="#saving-the-data">3.6. Saving the data</a></li>
+<li><a href="#coming-in-v2-0">3.7. Coming in v2.0</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -79,7 +78,7 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <div class="ulist">
 <ul>
 <li>
-<p>** <code>(ab)list</code> : Lists all contacts</p>
+<p><strong><code>(ab)list</code></strong> : Lists all contacts</p>
 </li>
 <li>
 <p><strong><code>(ab)add</code></strong>` n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : Adds a contact named <code>John Doe</code> to the Address Book.</p>
@@ -88,13 +87,13 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 <p><strong><code>(ab)delete</code></strong> <code>3</code> : Deletes the 3rd contact shown in the current list</p>
 </li>
 <li>
-<p><strong>* <code>(st)list</code></strong> : Lists all assignments</p>
+<p><strong><code>(st)list</code></strong> : Lists all assignments</p>
 </li>
 <li>
 <p><strong><code>(st)add</code></strong> t/CS2103 tP d/2020-11-11 23:59 e/10 : Adds an assignment titled <code>CS2103 tP</code> with deadline on 11 November 2020 11:59 PM and an estimated completion time of 10 hours.</p>
 </li>
 <li>
-<p><strong>* <code>(rt)list</code></strong> : Lists all restaurants</p>
+<p><strong><code>(rt)list</code></strong> : Lists all restaurants</p>
 </li>
 <li>
 <p><strong><code>(rt)add</code></strong> n/McDonalds l/NUS o/0900:2300 p/$ v/Yes :  Adds a new visited restaurant named McDonalds located in NUS with operating hours 9:00 AM to 11:00 PM with the lowest price point.</p>
@@ -618,9 +617,8 @@ Adds a note to the restaurant at index 1 with bad food Fried rice and Latte.</p>
 </ul>
 </div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="edit-notes-to-a-restaurant-code-rt-editnote-code"><a class="link" href="#edit-notes-to-a-restaurant-code-rt-editnote-code">3.4. Edit notes to a restaurant : <code>(rt)editnote</code></a></h3>
+<div class="sect3">
+<h4 id="edit-notes-to-a-restaurant-code-rt-editnote-code"><a class="link" href="#edit-notes-to-a-restaurant-code-rt-editnote-code">3.3.4. Edit notes to a restaurant : <code>(rt)editnote</code></a></h4>
 <div class="paragraph">
 <p>Edits a note to a restaurant<br>
 Format: <code>(rt)editnote INDEX [rl/LINE_NUMBER] [r/RECOMMENDED_FOOD] [gl/LINE_NUMBER] [g/GOOD_FOOD] [bl/BAD_FOOD] [b/BAD_FOOD]</code></p>
@@ -660,8 +658,9 @@ Edits a note to the restaurant at index 2 with good food Chicken chop.</p>
 </li>
 </ul>
 </div>
+</div>
 <div class="sect3">
-<h4 id="change-visited-status-of-restaurant-code-rt-visited-code"><a class="link" href="#change-visited-status-of-restaurant-code-rt-visited-code">3.4.1. Change visited status of restaurant : <code>(rt)visited</code></a></h4>
+<h4 id="change-visited-status-of-restaurant-code-rt-visited-code"><a class="link" href="#change-visited-status-of-restaurant-code-rt-visited-code">3.3.5. Change visited status of restaurant : <code>(rt)visited</code></a></h4>
 <div class="paragraph">
 <p>Updates visited status of restaurant to visited<br>
 Format: <code>(rt)visited INDEX</code></p>
@@ -679,7 +678,7 @@ Updated visited status of restaurant at index 3 to visited.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-all-restaurants-code-rt-list-code"><a class="link" href="#list-all-restaurants-code-rt-list-code">3.4.2. List all restaurants : <code>(rt)list</code></a></h4>
+<h4 id="list-all-restaurants-code-rt-list-code"><a class="link" href="#list-all-restaurants-code-rt-list-code">3.3.6. List all restaurants : <code>(rt)list</code></a></h4>
 <div class="paragraph">
 <p>Lists all restaurants<br>
 Format: <code>(rt)list</code></p>
@@ -697,7 +696,7 @@ Lists all restaurants.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="coming-soon-find-restaurant-code-rt-find-code"><a class="link" href="#coming-soon-find-restaurant-code-rt-find-code">3.4.3. [Coming Soon] Find restaurant : <code>(rt)find</code></a></h4>
+<h4 id="coming-soon-find-restaurant-code-rt-find-code"><a class="link" href="#coming-soon-find-restaurant-code-rt-find-code">3.3.7. [Coming Soon] Find restaurant : <code>(rt)find</code></a></h4>
 <div class="paragraph">
 <p>Finds restaurants based on a number of criteria.<br>
 Format: <code>(rt)find [k/KEYWORD] [l/LOCATION] [p/PRICE_POINT] [o/OPERATING_HOURS]</code></p>
@@ -743,9 +742,9 @@ Finds restaurants in the bedok area at a low price point.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="schoolwork-tracker-commands"><a class="link" href="#schoolwork-tracker-commands">3.5. Schoolwork Tracker commands</a></h3>
+<h3 id="schoolwork-tracker-commands"><a class="link" href="#schoolwork-tracker-commands">3.4. Schoolwork Tracker commands</a></h3>
 <div class="sect3">
-<h4 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.5.1. Add new assignment to the Schoolwork Tracker : <code>(st)add</code></a></h4>
+<h4 id="add-new-assignment-to-the-schoolwork-tracker-code-st-add-code"><a class="link" href="#add-new-assignment-to-the-schoolwork-tracker-code-st-add-code">3.4.1. Add new assignment to the Schoolwork Tracker : <code>(st)add</code></a></h4>
 <div class="paragraph">
 <p>Adds a new assignment to your list of assignments and projects.<br>
 Format: <code>(st)add t/TITLE d/DEADLINE e/ESTIMATED_COMPLETION_TIME</code></p>
@@ -783,7 +782,7 @@ Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, du
 </div>
 </div>
 <div class="sect3">
-<h4 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.5.2. Delete assignment : <code>(st)delete</code></a></h4>
+<h4 id="delete-assignment-code-st-delete-code"><a class="link" href="#delete-assignment-code-st-delete-code">3.4.2. Delete assignment : <code>(st)delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes an assignment.<br>
 Format: <code>(st)delete INDEX</code></p>
@@ -812,7 +811,7 @@ Deletes the 1st assignment in the Schoolwork Tracker.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="edits-an-assignment-code-st-edit-code"><a class="link" href="#edits-an-assignment-code-st-edit-code">3.5.3. Edits an assignment: <code>(st)edit</code></a></h4>
+<h4 id="edits-an-assignment-code-st-edit-code"><a class="link" href="#edits-an-assignment-code-st-edit-code">3.4.3. Edits an assignment: <code>(st)edit</code></a></h4>
 <div class="paragraph">
 <p>Marks an assignment as completed.<br>
 Format: <code>(st)edit INDEX [t/TITLE] [e/ESTIMATED_COMPLETION_TIME] [d/DEADLINE] [s/STATUS]</code></p>
@@ -855,7 +854,7 @@ Changes the title of the first assignment to 'CS2103 Quiz' and estimated complet
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.5.4. List current assignments : <code>(st)list</code></a></h4>
+<h4 id="list-current-assignments-code-st-list-code"><a class="link" href="#list-current-assignments-code-st-list-code">3.4.4. List current assignments : <code>(st)list</code></a></h4>
 <div class="paragraph">
 <p>Sorts the user’s list of assignments and displays them. This helps the user choose which assignment to do first.<br>
 Format: <code>(st)list [-d/] [-e/]</code></p>
@@ -890,7 +889,7 @@ Assignments will be shown in ascending order by deadline with all completed assi
 </div>
 </div>
 <div class="sect3">
-<h4 id="visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code"><a class="link" href="#visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code">3.5.5. Visualise the intensity of your upcoming schedule : <code>(st)schedule</code></a></h4>
+<h4 id="visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code"><a class="link" href="#visualise-the-intensity-of-your-upcoming-schedule-code-st-schedule-code">3.4.5. Visualise the intensity of your upcoming schedule : <code>(st)schedule</code></a></h4>
 <div class="paragraph">
 <p>Looks through the list of current uncompleted assignments to calculate the estimated work hours per day to complete all assignments by their deadlines<br>
 Format: <code>(st)schedule n/NUM_DAYS</code></p>
@@ -923,9 +922,9 @@ Shows the user&#8217;s upcoming schedule for the next 5 days colour-coded based 
 </div>
 </div>
 <div class="sect2">
-<h3 id="event-book-commands"><a class="link" href="#event-book-commands">3.6. Event Book commands</a></h3>
+<h3 id="event-book-commands"><a class="link" href="#event-book-commands">3.5. Event Book commands</a></h3>
 <div class="sect3">
-<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.6.1. Create a new social event : <code>(ev)add</code></a></h4>
+<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.5.1. Create a new social event : <code>(ev)add</code></a></h4>
 <div class="paragraph">
 <p>Creates a social event.<br>
 Format: <code>(ev)add et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</code></p>
@@ -943,7 +942,7 @@ Format: <code>(ev)add et/EVENT_TITLE edt/EVENT_DATE ed/DURATION ep/LOCATION</cod
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.6.2. Listing all events : <code>(ev)list</code></a></h4>
+<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.5.2. Listing all events : <code>(ev)list</code></a></h4>
 <div class="paragraph">
 <p>Lists all social events in your Event Book.<br>
 Format: <code>(ev)list</code></p>
@@ -951,20 +950,20 @@ Format: <code>(ev)list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.7. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.6. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book, Schoolwork Tracker, Event Book and Restaurant Book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.8. Coming in v2.0</a></h3>
+<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.7. Coming in v2.0</a></h3>
 <div class="sect3">
-<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.8.1. Obtain gift suggestions for a particular contact</a></h4>
+<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.7.1. Obtain gift suggestions for a particular contact</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.8.2. Encrypting data files</a></h4>
+<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.7.2. Encrypting data files</a></h4>
 <div class="paragraph">
 <p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
@@ -1139,4 +1138,4 @@ There is no need to save manually.</p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 10:35:30 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-07 14:22:18 UTC</div></div></div></body></html>
