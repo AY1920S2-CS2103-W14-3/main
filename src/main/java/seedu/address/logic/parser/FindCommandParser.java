@@ -4,12 +4,9 @@ import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.logging.Logger;
 
-import seedu.address.commons.core.LogsCenter;
 import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.ModelManager;
 import seedu.address.model.person.GroupContainsKeywordsPredicate;
 import seedu.address.model.person.NameContainsKeywordsPredicate;
 import seedu.address.model.person.TagsContainsKeywordsPredicate;
@@ -18,9 +15,6 @@ import seedu.address.model.person.TagsContainsKeywordsPredicate;
  * Parses input arguments and creates a new FindCommand object
  */
 public class FindCommandParser implements Parser<FindCommand> {
-
-    // for sarah's use
-    private static final Logger logger = LogsCenter.getLogger(ModelManager.class);
 
     /**
      * Parses the given {@code String} of arguments in the context of the FindCommand
@@ -39,6 +33,28 @@ public class FindCommandParser implements Parser<FindCommand> {
         ArrayList<String> groupnameKeywords = new ArrayList<>();
         ArrayList<String> wordKeywords = new ArrayList<>();
         ArrayList<String> tagKeywords = new ArrayList<>();
+
+        // run some check to make sure there is no invalid command!
+        boolean hasGroupName = false;
+        boolean hasWord = false;
+        boolean hasTags = false;
+        for (int i = 0; i < nameKeywords.length; i++) {
+            if (nameKeywords[i].contains("-g/")) {
+                hasGroupName = true;
+            }
+            if (nameKeywords[i].contains("-n/")) {
+                hasWord = true;
+            }
+            if (nameKeywords[i].contains("-t/")) {
+                hasTags = true;
+            }
+        }
+        if ((hasGroupName == false) && (hasWord == false) && (hasTags == false)) {
+            // then they did not provide any keywords to search for!
+            throw new ParseException(
+                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));
+        }
+
 
         for (int i = 0; i < nameKeywords.length; i++) {
             if (nameKeywords[i].contains("-g/")) {

@@ -2,21 +2,7 @@ package seedu.address.logic.commands;
 
 import static seedu.address.logic.parser.CliSyntax.PREFIX_NUM_DAYS;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-
-import javafx.collections.ObservableList;
-
 import seedu.address.model.Model;
-import seedu.address.model.assignment.Assignment;
-import seedu.address.model.assignment.DeadlineComparator;
-import seedu.address.model.assignment.Status;
-import seedu.address.model.day.Day;
 
 /**
  * Displays user's expected workload for the next n days (including today) based on stored assignments, their deadlines
@@ -27,9 +13,8 @@ public class ScheduleCommand extends Command {
     public static final String COMMAND_FUNCTION = "Calculates and displays the estimated workload for the next "
         + "NUM_DAYS days (including today) based on stored assignments, their deadlines and estimated work hours "
         + "per assignment.";
-    public static final String MESSAGE_SUCCESS = "Your expected workload can be found in the panel on the right!\n\n"
-        + "NOTE: This only takes into account your stored assignments and nothing else...\n\n"
-        + "NOTE: A hard cap of 24 hours is placed and results are rounded up to the nearest half an hour.";
+    public static final String MESSAGE_SUCCESS = "Your expected workload can be found in the panel on the right!\n"
+        + "Note that this only takes into account your stored assignments and nothing else...";
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": " + COMMAND_FUNCTION + "\n"
         + "Parameters: "
         + PREFIX_NUM_DAYS + "NUM_DAYS "
@@ -44,15 +29,7 @@ public class ScheduleCommand extends Command {
 
     @Override
     public CommandResult execute(Model model) {
-        ObservableList<Assignment> assignmentList = model.getAssignmentList();
-
-        model.createSchedule(numDays);
-        ArrayList<Day> allocationResult = generateSchedule(numDays, assignmentList);
-
-        for (int i = 0; i < numDays; i++) {
-            model.setDay(i, allocationResult.get(i));
-        }
-
+        model.calculateScheduleIntensity(numDays);
         return new CommandResult(MESSAGE_SUCCESS, false, false, false, false, false, false, false, true);
     }
 
