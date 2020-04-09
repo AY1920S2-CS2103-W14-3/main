@@ -76,7 +76,7 @@ public class ScheduleCommand extends Command {
 
         distributedHoursAllAssignments.add(new BigDecimal(0));
 
-        // Assignments are iterated through in sorted order according to deadline
+        // Assignments are iterated through in sorted order starting with the assignment due the earliest
         for (int i = 0; i < sortedAssignmentList.size(); i++) {
             String assignmentStatus = sortedAssignmentList.get(i).getStatus().status;
             LocalDateTime deadline = sortedAssignmentList.get(i).getDeadline().dateTime;
