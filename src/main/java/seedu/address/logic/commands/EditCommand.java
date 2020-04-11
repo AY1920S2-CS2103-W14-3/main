@@ -31,7 +31,8 @@ public class EditCommand extends Command {
     public static final String COMMAND_FUNCTION = "Edits the details of the person identified "
             + "by the index number used in the displayed person list. "
             + "Other than tags, existing values will be overwritten by the input values. "
-            + "If a tag not currently present is specified for deletion, it will be ignored.";
+            + "If a tag not currently present is specified for deletion, it will be ignored."
+            + "Simply input a single " + PREFIX_TAG + " followed by an empty string to clear all tags";
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": " + COMMAND_FUNCTION + "\n"
             + "Parameters: INDEX (must be a positive integer) "
             + "[" + PREFIX_NAME + "NAME] "
@@ -40,8 +41,8 @@ public class EditCommand extends Command {
             + "[" + PREFIX_ADDRESS + "ADDRESS] "
             + "[" + PREFIX_BIRTHDAY + "BIRTHDAY] "
             + "[" + PREFIX_ORGANIZATION + "ORGANIZATION] "
-            + "[" + PREFIX_TAG + "TAG]...\n"
-            + "[" + PREFIX_DELETE_TAG + "TAG]...\n"
+            + "[" + PREFIX_TAG + "TAGtoAdd]...\n"
+            + "[" + PREFIX_DELETE_TAG + "TAGtoRemove]...\n"
             + "Example: " + COMMAND_WORD + " 1 "
             + PREFIX_PHONE + "91234567 "
             + PREFIX_EMAIL + "johndoe@example.com";
