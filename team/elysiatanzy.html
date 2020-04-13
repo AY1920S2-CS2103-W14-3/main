@@ -484,7 +484,7 @@ Displays 5 days of your generated schedule.</p>
 <div class="sect2">
 <h3 id="schoolwork-tracker"><a class="link" href="#schoolwork-tracker">Schoolwork Tracker</a></h3>
 <div class="paragraph text-justify">
-<p>The <code>SchoolworkTracker</code> helps users keep track of their assignments so that they do not accidentally overlook any of them.</p>
+<p>The <code>SchoolworkTracker</code> helps users keep track of their assignments so that they do not accidentally overlook any of them. It consists of the <code>AssignmentList</code> which contains all the added assignments.</p>
 </div>
 <div class="paragraph text-justify">
 <p>From <strong>Fig 1</strong> below, each <code>Assignment</code> has four components: <code>Title</code>, <code>Deadline</code>, <code>Status</code> and <code>Workload</code>. <code>Workload</code> refers to the expected amount of time required to finish the <code>Assignment</code>. These components will be used for schedule generation when <code>(st)schedule n/NUM_DAYS</code> is executed (explained below).</p>
@@ -590,7 +590,7 @@ is thrown instead and the user will be notified of the proper command usage. If 
 <p><em>Fig 6. Sequence Diagram showing the execution of the ScheduleCommand</em></p>
 </div>
 <div class="paragraph text-justify">
-<p>The schedule generation process will be explained next and begins with Fig 7.</p>
+<p>The schedule generation process will be explained next and begins with Fig 7 all the way to Fig 9.</p>
 </div>
 <div class="paragraph text-justify">
 <p>In <strong>Fig 7</strong> below, <code>filteredAssignments</code> is iterated through in sorted order, starting with the <code>Assignment</code> due the earliest and for all assignments:</p>
@@ -648,10 +648,10 @@ is thrown instead and the user will be notified of the proper command usage. If 
 <div class="ulist">
 <ul>
 <li>
-<p>If the <code>Assignment</code> is <strong>due</strong> on the query date: The amount of time that can be allocated to the assignment will be capped at the amount of time available before the <code>Deadline</code>.</p>
+<p><code>Assignment</code> <strong>due</strong> on query date: The amount of time that can be allocated to the assignment will be capped at the amount of time available before the <code>Deadline</code>.</p>
 </li>
 <li>
-<p>If the <code>Assignment</code> is <strong>not due</strong> on the query date: <code>Workload</code> will be distributed incrementally.</p>
+<p><code>Assignment</code> <strong>not due</strong> on query date: Incremental distribution of <code>Workload</code> starting from days with no allocated hours, then days with least amount of allocated hours and lastly allocating evenly.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -669,12 +669,12 @@ is thrown instead and the user will be notified of the proper command usage. If 
 </ul>
 </div>
 <div class="paragraph">
-<p>The actual caps placed are as stated above but after accounting for the amount of time already allocated to other assignments in the respective days.</p>
+<p>Actual caps are as above but after accounting for hours already allocated to other assignments.</p>
 </div>
 <div class="paragraph text-justify">
 <p>Once the user’s schedule is generated, <code>ScheduleList</code> is updated with the <code>allocationResult</code>, a <code>CommandResult</code>
 object will be created and returned to <code>LogicManager</code>. <code>LogicManager</code> returns it to <code>MainWindow</code> who
-will then retrieve the generated schedule and display it as shown in Fig 10 below.</p>
+will then retrieve the generated schedule and display it as shown in <strong>Fig 10</strong> below.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -768,4 +768,4 @@ will then retrieve the generated schedule and display it as shown in Fig 10 belo
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 08:36:24 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 09:45:14 UTC</div></div></div></body></html>
