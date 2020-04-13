@@ -22,13 +22,11 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#proposed-schedule-visualiser">3.1. [Proposed] Schedule Visualiser</a></li>
-<li><a href="#detailed-contact-viewer">3.2. Detailed Contact Viewer</a></li>
-<li><a href="#sorting-of-assignments">3.3. Sorting of Assignments</a></li>
-<li><a href="#editing-of-restaurant-notes">3.4. Editing of Restaurant Notes</a></li>
-<li><a href="#finding-contacts">3.5. Finding Contacts</a></li>
-<li><a href="#logging">3.6. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.7. Configuration</a></li>
+<li><a href="#schoolwork-tracker">3.1. Schoolwork Tracker</a></li>
+<li><a href="#schedule">3.2. Schedule</a></li>
+<li><a href="#finding-contacts">3.3. Finding Contacts</a></li>
+<li><a href="#logging">3.4. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.5. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -43,8 +41,32 @@
 <li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
 <li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
-<li><a href="#deleting-a-person">G.2. Deleting a person</a></li>
-<li><a href="#saving-data">G.3. Saving data</a></li>
+<li><a href="#adding-a-person">G.2. Adding a person</a></li>
+<li><a href="#deleting-a-person">G.3. Deleting a person</a></li>
+<li><a href="#editing-a-person">G.4. Editing a person</a></li>
+<li><a href="#adding-additional-information-to-a-person">G.5. Adding additional information to a person</a></li>
+<li><a href="#editing-additional-information-for-a-person">G.6. Editing additional information for a person</a></li>
+<li><a href="#deleting-additional-information-of-a-person">G.7. Deleting additional information of a person</a></li>
+<li><a href="#finding-a-specific-contact-specific-set-of-contacts">G.8. Finding a specific contact/specific set of contacts</a></li>
+<li><a href="#retrieves-a-specific-contact-and-view-in-full-details">G.9. Retrieves a specific contact and view in full details</a></li>
+<li><a href="#list-contacts-with-upcoming-birthdays">G.10. List contacts with upcoming birthdays</a></li>
+<li><a href="#adding-a-restaurant">G.11. Adding a restaurant</a></li>
+<li><a href="#list-all-restaurants-saved">G.12. List all restaurants saved</a></li>
+<li><a href="#editing-a-restaurant">G.13. Editing a restaurant</a></li>
+<li><a href="#deleting-a-restaurant">G.14. Deleting a restaurant</a></li>
+<li><a href="#adding-food-note-s-to-a-restaurant">G.15. Adding food note(s) to a restaurant</a></li>
+<li><a href="#editing-food-note-s-of-a-restaurant">G.16. Editing food note(s) of a restaurant</a></li>
+<li><a href="#deleting-food-note-s-of-a-restaurant">G.17. Deleting food note(s) of a restaurant</a></li>
+<li><a href="#search-for-restaurants-based-on-a-number-of-criteria">G.18. Search for restaurants based on a number of criteria</a></li>
+<li><a href="#adding-an-assignment">G.19. Adding an assignment</a></li>
+<li><a href="#list-current-assignments">G.20. List current assignments</a></li>
+<li><a href="#deleting-an-assignment">G.21. Deleting an assignment</a></li>
+<li><a href="#editing-an-assignment">G.22. Editing an assignment</a></li>
+<li><a href="#adding-a-social-event">G.23. Adding a social event</a></li>
+<li><a href="#listing-all-events">G.24. Listing all events</a></li>
+<li><a href="#editing-a-social-event">G.25. Editing a social event</a></li>
+<li><a href="#deleting-a-social-event">G.26. Deleting a social event</a></li>
+<li><a href="#saving-data">G.27. Saving data</a></li>
 </ul>
 </li>
 </ul>
@@ -332,92 +354,231 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="paragraph">
 <p>This section describes some noteworthy details on how certain features are implemented.</p>
 </div>
-<div class="sect2">
-<h3 id="proposed-schedule-visualiser"><a class="link" href="#proposed-schedule-visualiser">3.1. [Proposed] Schedule Visualiser</a></h3>
-<div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">3.1.1. Proposed implementation</a></h4>
 <div class="paragraph">
-<p>The schedule visualiser is facilitated by the implemented <code>SchoolworkTracker</code>. The main purpose of the <code>SchoolworkTracker</code> is to allow users to keep track of all their assignments so that they do not accidentally overlook any of them. The main components of the <code>SchoolworkTracker</code> are as shown in the following class diagram.</p>
+<p>tag::schedule[]</p>
 </div>
-<div class="imageblock">
+<div class="sect2">
+<h3 id="schoolwork-tracker"><a class="link" href="#schoolwork-tracker">3.1. Schoolwork Tracker</a></h3>
+<div class="paragraph text-justify">
+<p>The <code>SchoolworkTracker</code> helps users keep track of their assignments so that they do not accidentally overlook any of them.</p>
+</div>
+<div class="paragraph text-justify">
+<p>From <strong>Fig 1</strong> below, each <code>Assignment</code> has four components: <code>Title</code>, <code>Deadline</code>, <code>Status</code> and <code>Workload</code>. <code>Workload</code> refers to the expected amount of time required to finish the <code>Assignment</code>. These components will be used for schedule generation when <code>(st)schedule n/NUM_DAYS</code> is executed (explained below).</p>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="images/stClassDiagram.png" alt="stClassDiagram">
 </div>
 </div>
-<div class="paragraph">
-<p>This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing a user to get a better sense of their current commitments and workload so that they can better manage their time to pursue other social events and hang out with friends. It utilises the existing <code>Assignments</code> stored in the <code>AssignmentList</code> of the <code>SchoolworkTracker</code>. Additionally, it implements the following operations:</p>
+<div class="paragraph text-center">
+<p><em>Fig 1. Class Diagram detailing the main components of the SchoolworkTracker</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="schedule"><a class="link" href="#schedule">3.2. Schedule</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">3.2.1. Current Implementation</a></h4>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/scheduleResult.png" alt="scheduleResult">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 2. Sample result of the generated schedule</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>Schedule is facilitated by the <code>SchoolworkTracker</code>. This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing users to better visualise their current commitments so that they can better manage their time to pursue social events. This feature aims to distribute <code>Workload</code> as evenly as possible while ensuring that the user is able to complete the <code>Assignment</code> before the <code>Deadline</code>, unless it is impossible (i.e. <code>Workload</code> exceeds the amount of time the user has before the <code>Deadline</code> after taking into account more urgent assignments). A sample result is shown in <strong>Fig 2</strong> above.</p>
+</div>
+<div class="paragraph text-justify">
+<p>It utilizes the existing <code>Assignment</code> stored in the <code>SchoolworkTracker</code> and implements <code>ScheduleList</code> which represents the generated schedule.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 3</strong> below, <code>ScheduleList</code> consists of <code>Day</code> objects and each <code>Day</code> has 3 components. <code>totalAllocatedHours</code> represents the total number of hours allocated to the <code>Day</code>.
+<code>dueAssignment</code> refers to an assignment that is due on the <code>Day</code> and <code>allocatedAssignment</code> represents an assignment that has been scheduled to be done on that <code>Day</code>. The latter also has an additional field <code>allocatedHours</code> which correspond to the suggested amount of time
+that should be spent on the assignment on that <code>Day</code>.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/scheduleClassDiagram.png" alt="scheduleClassDiagram">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 3. Class Diagram detailing the main components of ScheduleList</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>Given below is a detailed example of how the schedule command behaves at each stage.</p>
+</div>
+<div class="paragraph text-justify">
+<p><strong>Step 1</strong>: User launches <code>Naggy Joel</code> for the first time. <code>SchoolworkTracker</code> is initialized to an empty list.</p>
+</div>
+<div class="paragraph text-justify">
+<p><strong>Step 2</strong>: User executes the add assignment command [<code>(st)add n/NAME d/DEADLINE e/ESTIMATED_COMPLETION_HOURS</code>] to add assignments to the <code>SchoolworkTracker</code>.</p>
+</div>
+<div class="paragraph text-justify">
+<p><strong>Step 3</strong>: User wants to better understand his schedule for the next 5 days before deciding whether he has time to hang out with his friends and executes <code>(st)schedule n/5</code>.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 4</strong> below, after the user enters the schedule command, the command will first be checked for validity. If it is not valid, the user will be informed and can then choose whether to re-enter the command or enter another command. On the other hand, if the input command is valid, the application will proceed to generate his schedule and after display it on the GUI.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/scheduleActivityDiagram.png" alt="scheduleActivityDiagram">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 4. Activity Diagram summarizing what happens when the schedule command is executed</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>The specific workings of the schedule command will be explained in the paragraphs below.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 5</strong> below, arguments from the input command is first parsed using the <code>ScheduleCommandParser</code> which converts
+the string variable into an integer and then passes it to <code>ScheduleCommand</code> for use later on and represents the <code>NUM_DAYS</code> queried. If the input argument is invalid, a <code>ParseException</code>
+is thrown and the user will be notified of the proper command usage.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/scheduleCommandGeneration.png" alt="scheduleCommandGeneration">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 5. Sequence Diagram depicting generation of ScheduleCommand object</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>If the command is valid, <code>LogicManager</code> will call the <code>execute()</code> method in <code>ScheduleCommand</code>.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 6</strong> below, the necessary preparations will be made before the schedule is being generated:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>ScheduleCommand</code> will retrieve the <code>filteredAssignments</code> from the <code>Model</code> component.</p>
+</li>
+<li>
+<p>The <code>ScheduleList</code> will then be initialized to have a size equals to the <code>NUM_DAYS</code> queried by the user, which in this example is <code>5</code> since the user typed <code>(st)schedule n/5</code>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/scheduleCommandExecution.png" alt="scheduleCommandExecution">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 6. Sequence Diagram showing the execution of the Schedule Command</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>The schedule generation process will be explained next and begins with Fig 7.</p>
+</div>
+<div class="paragraph text-justify">
+<p>In <strong>Fig 7</strong> below, <code>filteredAssignments</code> is iterated through in sorted order, starting with the <code>Assignment</code> due the earliest and for all assignments:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>Status</code> and <code>Deadline</code> of the <code>Assignment</code> will be retrieved.</p>
+</li>
+<li>
+<p>If <code>Status</code> is uncompleted and <code>Deadline</code> is not over, <code>Workload</code> will be distributed.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/generateSchedule.png" alt="generateSchedule">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 7. Sequence Diagram showing the process of generating the schedule</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>As shown in <strong>Fig 8</strong> below, for each uncompleted <code>Assignment</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Workload</code> is retrieved and distributed across several days, from query date to deadline, incrementally so as to generate a balanced schedule.</p>
+</li>
+<li>
+<p>The final allocation of hours, including amount unscheduled, is recorded and the <code>Assignment</code> will be recorded as a <code>dueAssignment</code> if its deadline falls within the range of days queried.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/handleUncompletedAssignment.png" alt="handleUncompletedAssignment">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 8 Sequence Diagram showing how an uncompleted Assignment is handled</em></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="images/allocateHours.png" alt="allocateHours">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 9. Sequence Diagram showing how the workload of an assignment is distributed</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>From <strong>Fig 9</strong> above, assignments due on query date are handled differently from those that are not.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>SchoolworkTracker#calExpectedWorkPerDay()</code>&#8201;&#8212;&#8201;Calculates the expected amount of work the user has to put in each day for the next five days (based on hours) to meet all deadlines.</p>
+<p>If the <code>Assignment</code> is <strong>due</strong> on the query date: The amount of time that can be allocated to the assignment will be capped at the amount of time available before the <code>Deadline</code>.</p>
+</li>
+<li>
+<p>If the <code>Assignment</code> is <strong>not due</strong> on the query date: <code>Workload</code> will be distributed incrementally.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Between query date and deadline (both exclusive): Available time is capped at 24 hours.</p>
+</li>
+<li>
+<p>Query date: Available time is capped at the amount of time left in the day.</p>
+</li>
+<li>
+<p>Deadline: Available time is capped at the amount of time before the assignment is due.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Given below is an example usage scenario of how the schedule visualizer behaves at each stage.</p>
+<p>The actual caps placed are as stated above but after accounting for the amount of time already allocated to other assignments in the respective days.</p>
 </div>
-<div class="paragraph">
-<p> Step 1. The user launches the application for the first time. The <code>SchoolworkTracker</code> will be initialized with the initial state, which is an empty list.</p>
+<div class="paragraph text-justify">
+<p>Once the user’s schedule is generated, <code>ScheduleList</code> is updated with the <code>allocationResult</code>, a <code>CommandResult</code>
+object will be created and returned to <code>LogicManager</code>. <code>LogicManager</code> returns it to <code>MainWindow</code> who
+will then retrieve the generated schedule and display it as shown in Fig 10 below.</p>
 </div>
-<div class="paragraph">
-<p>Step 2. The user executes the add assignment command [<code>(st)add t/CS2103 tP d/2020-03-27 12:00 e/5</code>] to add the following assignments to the Schoolwork Tracker.</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="images/stFilledList.png" alt="stFilledList">
+<img src="images/getUi.png" alt="getUi">
 </div>
 </div>
-<div class="paragraph">
-<p>Step 3. Today is 23 March 2020 and the user wants to see how busy he is and whether he has time to go out with his friends in the next five days while still being able to complete his assignments on time.</p>
+<div class="paragraph text-center">
+<p><em>Fig 10. Sequence Diagram showing how the generated schedule is retrieved</em></p>
 </div>
-<div class="paragraph">
-<p>The following sequence diagram below shows how the schedule visualisation operation works. </p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/stOverallSequenceDiagram.png" alt="stOverallSequenceDiagram">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/stPart1.png" alt="stPart1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/stPart2.png" alt="stPart2">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/stPart3.png" alt="stPart3">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 4. Based on the results obtained from the schedule command, the user can then decide on how to best plan his outing with his friends.</p>
-</div>
-<div class="paragraph">
-<p>A sample result of the schedule command is as follows:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="images/stScheduleResult.png" alt="stScheduleResult">
-</div>
+<div class="paragraph text-justify">
+<p><strong>Step 4</strong>: Based on the results, the user can then decide on how to best schedule his outing.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.2.2. Design Considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-how-the-expected-work-hours-per-day-is-to-be-calculated"><a class="link" href="#aspect-how-the-expected-work-hours-per-day-is-to-be-calculated">Aspect: How the expected work hours per day is to be calculated</a></h5>
+<h5 id="aspect-distribution-of-estimated-work-hours-for-each-assignment"><a class="link" href="#aspect-distribution-of-estimated-work-hours-for-each-assignment">Aspect: Distribution of estimated work hours for each assignment</a></h5>
+<div class="ulist text-justify">
+<ul>
+<li>
+<p><strong>Current choice:</strong> Hours are allocated incrementally to achieve a balanced schedule while still ensuring that deadlines can be met (unless impossible due to the constraints of time left)</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Allocate hours required to complete assignment whose deadline is the next day from query date, if any. Then, allocate hours of the other assignments in such a way to ensure balance workload.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Takes into account approaching deadlines and attempts to allocate an equal number of hours each day.</p>
+<p>Pros: Better reflects the real-world scenario where students are more likely to spread out their work and encourages work life balance which is the main selling point of Naggy Joel.</p>
 </li>
 <li>
 <p>Cons: Complicated algorithm is more prone to errors.</p>
@@ -425,15 +586,19 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </ul>
 </div>
 </li>
+</ul>
+</div>
+<div class="ulist text-justify">
+<ul>
 <li>
-<p><strong>Alternative 2:</strong> Sum the estimated hours / Number of days to deadline for all assignments.</p>
+<p><strong>Alternative:</strong> For each day, cumulatively add <code>Workload/Days to deadline</code> for all assignments</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: Easier to implement.</p>
 </li>
 <li>
-<p>Cons: Does not take into account approaching deadlines and may result in some days having impossibly high workload.</p>
+<p>Cons: Some days may have impossibly high workload, deadlines are not handled properly.</p>
 </li>
 </ul>
 </div>
@@ -441,12 +606,50 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </ul>
 </div>
 </div>
+<div class="sect4">
+<h5 id="aspect-variable-type-to-be-used-for-calculations-during-distribution-of-workload"><a class="link" href="#aspect-variable-type-to-be-used-for-calculations-during-distribution-of-workload">Aspect: Variable type to be used for calculations during distribution of workload</a></h5>
+<div class="ulist text-justify">
+<ul>
+<li>
+<p><strong>Current choice:</strong> Use of BigDecimal for calculations</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More accurate allocation of hours while minimizing lost hours due to rounding errors.</p>
+</li>
+<li>
+<p>Cons: Harder to handle and new objects have to be created each time.</p>
+</li>
+</ul>
 </div>
+</li>
+</ul>
 </div>
-<div class="sect2">
-<h3 id="detailed-contact-viewer"><a class="link" href="#detailed-contact-viewer">3.2. Detailed Contact Viewer</a></h3>
-<div class="sect3">
-<h4 id="implementation-2"><a class="link" href="#implementation-2">3.2.1. Implementation</a></h4>
+<div class="ulist text-justify">
+<ul>
+<li>
+<p><strong>Alternative:</strong> Restrict calculations to the use of integer</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier to handle and more accurate comparisons can be made as compared to when floats are used as floating point arithmetic is not exact.</p>
+</li>
+<li>
+<p>Cons: A lot of unnecessary ‘loss’ in allocated and available time due to rounding errors.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>end::schedule[]</p>
+</div>
+<div class="paragraph">
+<p>tag::get[]
+=== Detailed Contact Viewer
+==== Implementation</p>
+</div>
 <div class="paragraph">
 <p>The detailed contact viewer is facilitated by <code>AddressBook</code>. This feature allows a user to view a particular contact details in entirety.</p>
 </div>
@@ -476,8 +679,9 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.2. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.3. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-what-information-to-display"><a class="link" href="#aspect-what-information-to-display">Aspect: What information to display</a></h5>
 <div class="ulist">
@@ -503,20 +707,19 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>Pros: AddressBook list is less cluttered.</p>
 </li>
 <li>
-<p>Cons: Omits certain information.</p>
+<p>Cons: Omits certain information.
+end::get[]</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>tag::sortAssgn[]
+=== Sorting of Assignments
+==== Implementation</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="sorting-of-assignments"><a class="link" href="#sorting-of-assignments">3.3. Sorting of Assignments</a></h3>
-<div class="sect3">
-<h4 id="implementation-3"><a class="link" href="#implementation-3">3.3.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The sorting of assignments is facilitated by <code>AssignmentList</code>. This feature allows a user to sort assignments by deadline or estimated completion time.</p>
 </div>
@@ -527,10 +730,20 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>Step 1. The user launches the application for the first time. The 'AssignmentList' will be initialized with the initial state, which is an empty list.</p>
 </div>
 <div class="paragraph">
-<p>Step 2. The user executes the following commands to add new assignments.
-* 1. <code>(st)add t/CS2103 Project d/2020-04-18 23:59 e/180</code>
-* 2. <code>(st)add t/DBA3702 Project d/2020-04-19 19:00 e/150</code>
-* 3. <code>(st)add t/CS2106 Lab d/2020-04-11 20:00 e/20</code></p>
+<p>Step 2. The user executes the following commands to add new assignments.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1. <code>(st)add t/CS2103 Project d/2020-04-18 23:59 e/180</code></p>
+</li>
+<li>
+<p>2. <code>(st)add t/DBA3702 Project d/2020-04-19 19:00 e/150</code></p>
+</li>
+<li>
+<p>3. <code>(st)add t/CS2106 Lab d/2020-04-11 20:00 e/20</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Step 3. The user executes the <code>(st)list -d</code> command to sort the assignments by deadline.</p>
@@ -549,8 +762,9 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.3.2. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.2.4. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-sort-assignment-by-estimated-completion-time"><a class="link" href="#aspect-how-to-sort-assignment-by-estimated-completion-time">Aspect: How to sort assignment by estimated completion time</a></h5>
 <div class="ulist">
@@ -576,20 +790,19 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>Pros: User can clear more assignments faster, by completing those that takes a shorter amount of time first.</p>
 </li>
 <li>
-<p>Cons: User may delay starting on assignments that take longer and risk having uncompleted assignments at the deadline.</p>
+<p>Cons: User may delay starting on assignments that take longer and risk having uncompleted assignments at the deadline.
+end::sortAssgn[]</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>tag::editRestNote[]
+=== Editing of Restaurant Notes
+==== Implementation</p>
 </div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="editing-of-restaurant-notes"><a class="link" href="#editing-of-restaurant-notes">3.4. Editing of Restaurant Notes</a></h3>
-<div class="sect3">
-<h4 id="implementation-4"><a class="link" href="#implementation-4">3.4.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The editing of restaurant notes is facilitated by <code>RestaurantBook</code>. This feature allows a user to edit existing notes of a restaurant in the list.</p>
 </div>
@@ -600,9 +813,17 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>Step 1: The user launches the application for the first time. The <code>RestaurantBook</code> will be initialized with the initial state, which is an empty list.</p>
 </div>
 <div class="paragraph">
-<p>Step 2: The user executes the following commands to add notes to a restaurant.
-* 1. <code>(rt)add n/Ameens l/Clementi v/No o/09:2300 p/$ c/Indian</code>
-* 2. <code>(rt)addnote r/Cheese fries</code></p>
+<p>Step 2: The user executes the following commands to add notes to a restaurant.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>1. <code>(rt)add n/Ameens l/Clementi v/No o/0900:2300 p/$ c/Indian</code></p>
+</li>
+<li>
+<p>2. <code>(rt)addnote r/Cheese fries</code></p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Step 3: The user executes the <code>(rt)editnote 1 rl/1 r/Butter chicken</code> command to edit the first recommended food of the restaurant at index 1, to Butter chicken.</p>
@@ -616,8 +837,9 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 </div>
+</div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.4.2. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.2.5. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-edit-note-given-3-editable-notes-for-a-restaurant"><a class="link" href="#aspect-how-to-execute-the-command-for-edit-note-given-3-editable-notes-for-a-restaurant">Aspect: How to execute the command for edit note, given 3 editable notes for a restaurant.</a></h5>
 <div class="ulist">
@@ -637,12 +859,17 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </li>
 <li>
 <p><strong>Alternative 2:</strong> Have 3 separate edit commands, one for each restaurant&#8217;s note.</p>
-</li>
+<div class="ulist">
+<ul>
 <li>
 <p>Pros: Easier to implement.</p>
 </li>
 <li>
-<p>Cons: Not user-friendly since different notes cannot be edited in a single command.</p>
+<p>Cons: Not user-friendly since different notes cannot be edited in a single command.
+end::editRestNote[]</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -650,9 +877,9 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-contacts"><a class="link" href="#finding-contacts">3.5. Finding Contacts</a></h3>
+<h3 id="finding-contacts"><a class="link" href="#finding-contacts">3.3. Finding Contacts</a></h3>
 <div class="sect3">
-<h4 id="implementation-5"><a class="link" href="#implementation-5">3.5.1. Implementation</a></h4>
+<h4 id="implementation-2"><a class="link" href="#implementation-2">3.3.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The finding of a Person is facilitated by the <code>Address Book</code>. This feature allows for users to find a specific contact in their <code>Address Book</code>.</p>
 </div>
@@ -686,7 +913,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.2. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags"><a class="link" href="#aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags">Aspect: How to execute the command for finding a contact using Java Predicates, given that a Person has multiple tags.</a></h5>
 <div class="paragraph">
@@ -747,14 +974,14 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.6. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.4. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.7, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.5, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -785,7 +1012,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.7. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.5. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1039,7 +1266,7 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>User adds an assignment by typing the "add" command and includes description of the assignment, deadline, and number of estimated hours to complete the work.</p>
+<p>User adds an assignment by typing the "(st)add" command and includes description of the assignment, deadline, and number of estimated hours to complete the work.</p>
 </li>
 <li>
 <p>Naggy Joel adds the assignment to the list of assignments.</p>
@@ -1412,7 +1639,18 @@ Expected: The most recent window size and location is retained.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.2. Deleting a person</a></h3>
+<h3 id="adding-a-person"><a class="link" href="#adding-a-person">G.2. Adding a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(ab)add n/John p/12345 o/NUS n/05-20</code>
+Expected: A new contact with the name John, phone number 12345, and birthday 20 May is added to the list. Details of the added contact shown in the status message.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.3. Deleting a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1420,31 +1658,609 @@ Expected: The most recent window size and location is retained.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Prerequisites: List all persons using the <code>list</code> command. Multiple persons in the list.</p>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
 </li>
 <li>
-<p>Test case: <code>delete 1</code><br>
-Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated.</p>
+<p>Test case: <code>(ab)delete 1</code><br>
+Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message.</p>
 </li>
 <li>
-<p>Test case: <code>delete 0</code><br>
-Expected: No person is deleted. Error details shown in the status message. Status bar remains the same.</p>
+<p>Test case: <code>(ab)delete 0</code><br>
+Expected: No person is deleted. Error details shown in the status message.</p>
 </li>
 <li>
-<p>Other incorrect delete commands to try: <code>delete</code>, <code>delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+<p>Other incorrect delete commands to try: <code>(ab)delete</code>, <code>(ab)delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
 Expected: Similar to previous.</p>
 </li>
 </ol>
 </div>
 </li>
+<li>
+<p>Deleting a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)delete x</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No person is deleted. Error details shown in the status message.</p>
+</li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.3. Saving data</a></h3>
+<h3 id="editing-a-person"><a class="link" href="#editing-a-person">G.4. Editing a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing a person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)edit 2 t/BFF -t/Friends</code><br>
+Expected: Second contact in the list is edited, with tag "Friends" deleted, and tag "BFF" added. Details  of the edited contact shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)edit x b/06-22</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No person is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-additional-information-to-a-person"><a class="link" href="#adding-additional-information-to-a-person">G.5. Adding additional information to a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adds note(s) to a person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)addnote 2 i/Likes red i/Lives in Jurong i/Cycles</code><br>
+Expected: Second contact in the list has 3 new notes, "Likes red", "Lives in Jurong" and "Cycles", added. Details of the edited contact shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)addnote x i/Can&#8217;t take spicy</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No new note is added to a person. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-additional-information-for-a-person"><a class="link" href="#editing-additional-information-for-a-person">G.6. Editing additional information for a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits an existing note of person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)editnote 2 l/2 i/Likes matcha</code><br>
+Expected: Edits the second note of the second contact in the list to "Likes matcha". Details of the edited contact shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)editnote x i/Likes red</code> (where x is larger than the number of existing notes of a person)<br>
+Expected: No note is edited for the person. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect commands to try: <code>(ab)editnote 2 l/aaa i/Likes cats</code> (where line number is not an integer)<br>
+Expected: Similar to previous</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing an existing note of a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)editnote x l/3 i/Can&#8217;t take spicy</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No note is edited for a person. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-additional-information-of-a-person"><a class="link" href="#deleting-additional-information-of-a-person">G.7. Deleting additional information of a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete note(s) of a person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)deletenote 2 l/1 l/3</code><br>
+Expected: Deletes the first and third note of the second contact in the list. Details of the edited contact shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)deletenote 2 l/x</code> (where x is larger than the number of existing notes of a person)<br>
+Expected: No note is deleted for the person. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect commands to try: <code>(ab)deletenote 2 l/2 l/aaa</code> (where line number is not an integer)<br>
+Expected: Similar to previous</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)deletenote x l/2</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No note is deleted for a person. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-a-specific-contact-specific-set-of-contacts"><a class="link" href="#finding-a-specific-contact-specific-set-of-contacts">G.8. Finding a specific contact/specific set of contacts</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding person(s) by organization, name or tag.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)find o/NUS n/Lim</code><br>
+Expected: If person(s) with the organization "NUS" and have the word "Lim" in the name, person(s) will be listed. The number of person listed shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="retrieves-a-specific-contact-and-view-in-full-details"><a class="link" href="#retrieves-a-specific-contact-and-view-in-full-details">G.9. Retrieves a specific contact and view in full details</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Retrieves a person contact while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)get 2</code><br>
+Expected: Display the second person in the full contact list. The number of person listed shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)get x</code> (where x is larger than the number of contacts in the list)<br>
+Expected: No detailed view of contact is displayed. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Retrieves a person contact while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)get x</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No detailed view of contact is displayed. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-contacts-with-upcoming-birthdays"><a class="link" href="#list-contacts-with-upcoming-birthdays">G.10. List contacts with upcoming birthdays</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All persons are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p><code>(ab)birthday</code><br>
+Expected: All contacts with birthdays in the next 5 days (current day included) should be listed.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-restaurant"><a class="link" href="#adding-a-restaurant">G.11. Adding a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(rt)add n/Ameens l/Clementi v/No o/0900:2300 p/$ c/Indian</code><br>
+Expected: Adds a new restaurant called Ameens at Clementi with 1 dollar sign price point, opens from 9am to 11pm, with cuisine Indian and has yet to be visited.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-all-restaurants-saved"><a class="link" href="#list-all-restaurants-saved">G.12. List all restaurants saved</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>(rt)list</code><br>
+Expected: All restaurants added should be displayed.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-restaurant"><a class="link" href="#editing-a-restaurant">G.13. Editing a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)edit 1 v/Yes o/0900:2200</code><br>
+Expected: Edits the first restaurant visited status to "Yes" and operating hours to "0900:2200".</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-restaurant"><a class="link" href="#deleting-a-restaurant">G.14. Deleting a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)delete 2</code><br>
+Expected: Deletes the second restaurant in the restaurant list. Details of the deleted restaurant shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)delete x</code> (where x is larger than the size of the restaurant list)<br>
+Expected: No restaurant is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-food-note-s-to-a-restaurant"><a class="link" href="#adding-food-note-s-to-a-restaurant">G.15. Adding food note(s) to a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add food note(s) to a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)addnote 1 r/Chicken Chop g/Truffle Fries b/Risotto b/Lobster Pasta</code><br>
+Expected: Add notes to the restaurant at index 1 with recommended food Chicken Chop, good food Truffle Fries, and bad food Risotto and Lobster Pasta. Details of the edited restaurant shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-food-note-s-of-a-restaurant"><a class="link" href="#editing-food-note-s-of-a-restaurant">G.16. Editing food note(s) of a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edit food note(s) to a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)editnote 1 rl/1 r/Fish and Chip gl/1 g/Mushroom soup bl/2 b/Salad</code><br>
+Expected: Edit notes to the restaurant at index 3 with recommend food Fish and Chip at line number 1, good food Mushroom soup at line number 1, and bad food Salad at line number 2. Details of the edited restaurant shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)editnote 2 rl/aaa r/Fried Rice gl/1 g/Tomato soup</code> (Non-integer line number for recommended food notes)<br>
+Expected: No restaurant&#8217;s food notes is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-food-note-s-of-a-restaurant"><a class="link" href="#deleting-food-note-s-of-a-restaurant">G.17. Deleting food note(s) of a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete food note(s) to a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)deletenote 1 rl/1 gl/1 bl/2</code><br>
+Expected: Delete notes to the restaurant at index 1, at line number 1 of recommended food notes, at line number 1 of good food notes, at line number 2 of bad food notes.</p>
+</li>
+<li>
+<p>Test case <code>(rt)deletenote 1 rl/1 gl/x bl/aaa</code> (where x is larger than the size of good food notes, and non-integer line number for bad food notes)<br>
+Expected: No restaurant&#8217;s bad notes is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="search-for-restaurants-based-on-a-number-of-criteria"><a class="link" href="#search-for-restaurants-based-on-a-number-of-criteria">G.18. Search for restaurants based on a number of criteria</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>(rt)find l/Clementi</code><br>
+Expected: Searches and display restaurants in the Clementi area. Number of restaurants displayed shown in the status message.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-an-assignment"><a class="link" href="#adding-an-assignment">G.19. Adding an assignment</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(st)add t/CS2103 post lecture quiz d/2020-11-11 23:59 e/2</code><br>
+Expected: Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-11-2020 23:59 PM and which takes an estimated two hours to complete. Details of the added assignment shown in the status message.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>(st)add t/CS2105 lab d/DATETIME e/5</code> (where DATETIME is after the current date and time)<br>
+Expected: No assignment is added. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-current-assignments"><a class="link" href="#list-current-assignments">G.20. List current assignments</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(st)list -d</code><br>
+Expected: Assignments will be shown in chronological order, with respect to the deadline, with all completed assignments at the bottom of the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)list -e</code><br>
+Expected: Assignments will be shown according to the estimated completed time in descending order with all completed assignments at the bottom of the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)list -d -e</code><br>
+Expected: Assignments will not be sorted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-assignment"><a class="link" href="#deleting-an-assignment">G.21. Deleting an assignment</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes an assignment while all assignments are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all assignments using the <code>(st)list</code> command. Multiple assignments in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)delete 1</code><br>
+Expected: Deletes the first assignment in the Schoolwork Tracker. Details of the deleted assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)delete x</code> (where x is larger than the size of Schoolwork Tracker)<br>
+Expected: No assignment is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-an-assignment"><a class="link" href="#editing-an-assignment">G.22. Editing an assignment</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits an assignment while all assignments are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all assignments using the <code>(st)list</code> command. Multiple assignments in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit 1 t/CS2103 Quiz e/1</code><br>
+Expected: Changes the title of the first assignment to 'CS2103 Quiz' and estimated completion time to 1 hour. Details of the edited assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit 1 s/Completed</code><br>
+Expected: Marks the first assignment in the Schoolwork Tracker as completed. Details of the edited assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit 1 s/Uncompleted</code><br>
+Expected: Marks the first assignment in the Schoolwork Tracker as uncompleted. Details of the edited assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit d/y</code> (where y is after the current date and time)<br>
+Expected: No assignment is edited. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect commands to try: <code>(st)edit x</code> (where x is larger than the size of Schoolwork Tracker)<br>
+Expected: Same as above</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-social-event"><a class="link" href="#adding-a-social-event">G.23. Adding a social event</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(ev)add t/Facebook job interview dt/2020-05-18 10:00 d/3 p/Facebook APAC HQ</code><br>
+Expected: Adds a new social event with title "Facebook job interview", event date 2020-05-18, duration of 3 hours and location at "Facebook APAC HQ".</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>(ev)add t/Birthday party dt/DATETIME d/3 p/Clementi</code> (where DATETIME is after the current date and time)<br>
+Expected: No social event is added. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-events"><a class="link" href="#listing-all-events">G.24. Listing all events</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>(ev)list</code><br>
+Expected: List all added social events in the Event Schedule.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-social-event"><a class="link" href="#editing-a-social-event">G.25. Editing a social event</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits a social event while all social events are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all social events using the <code>(ev)list</code> command. Multiple social events in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)edit 1 edt/2020-04-09 11:00 ed/2</code><br>
+Expected: Edits the first event in the Event Schedule by changing the timing to 11AM on the 9th of April and the estimated duration to be 2 hours.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)edit dt/DATETIME</code> (where DATETIME is after the current date and time)<br>
+Expected: No social event is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-social-event"><a class="link" href="#deleting-a-social-event">G.26. Deleting a social event</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes a social event while all social events are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all social events using the <code>(ev)list</code> command. Multiple social events in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)delete 1</code><br>
+Expected: Deletes the first social event in the Event Schedule.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)delete x</code> (where x is larger than the size of Event Schedule)<br>
+Expected: No social event is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="saving-data"><a class="link" href="#saving-data">G.27. Saving data</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1464,4 +2280,4 @@ Expected: Similar to previous.</p>
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 17:53:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 05:43:16 UTC</div></div></div></body></html>

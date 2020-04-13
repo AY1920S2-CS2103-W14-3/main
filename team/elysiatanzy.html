@@ -10,10 +10,10 @@
 <h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Naggy Joel</strong> is a desktop social life manager application for university students who wants to enjoy life but not at the expense of their studies. It has a GUI created with JavaFX and is optimized to allow users interact with it through the Command Line Interface (CLI).</p>
+<p><strong>Naggy Joel</strong> is a desktop social life manager application for university students who wants to enjoy life but not at the expense of their studies. It has a GUI created with JavaFX and is optimized to allow users to interact with it through the Command Line Interface (CLI).</p>
 </div>
 <div class="paragraph">
-<p><strong>Naggy Joel</strong> allows users to keep track of various aspects of their lives, ranging from their different social circles and contacts, to their events and deadlines, as well as, places to hang out and potential practical gifts that will be very much appreciated by their recipients. It aims to help the user be the best friend and best student that they can ever be.</p>
+<p><strong>Naggy Joel</strong> allows users to keep track of various aspects of their lives, ranging from their different social circles and contacts, to their events and deadlines. It aims to help the user be the best friend and best student that they can ever be.</p>
 </div>
 </div>
 </div>
@@ -29,10 +29,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>What it does:</strong> Generates the user’s schedule for a specified number of day(s) based on the uncompleted stored assignments, their deadlines and estimated completion time per assignment.</p>
+<p><strong>What it does:</strong> Generates the user’s schedule for a specified number of day(s) based on their stored uncompleted assignments, their individual deadlines and estimated completion time.</p>
 </li>
 <li>
-<p><strong>Justification:</strong> Generally, students will consider their outstanding assignments and the estimated amount of time required to complete them before deciding whether or not they have the time to hang out with friends. However, often times there are just too many and it is difficult to estimate the work hours per day for the next few days at the back of their minds.</p>
+<p><strong>Justification:</strong> Generally, students will consider outstanding assignments and the estimated amount of time required to complete them before deciding whether they have the time to hang out with friends. However, often times there are just too many assignments and it is difficult to estimate the work hours per day for the next few days at the back of their minds.</p>
 </li>
 <li>
 <p><strong>Highlights:</strong></p>
@@ -42,7 +42,7 @@
 <p>Each day will be colour-coded based on the estimated work hours for the day.</p>
 </li>
 <li>
-<p>There were many cases to consider ensure a balanced distribution of work hours to each day while ensuring that the user can still meet all deadlines.</p>
+<p>There were many cases to consider to ensure a balanced distribution of work hours to each day while ensuring that the user can still meet all deadlines and not go against the concept of time (i.e. a maximum of 24 hours a day and we cannot rewind time).</p>
 </li>
 </ul>
 </div>
@@ -65,7 +65,7 @@
 <p><strong>What it does:</strong> Forms the backbone of most commands which require Assignment.</p>
 </li>
 <li>
-<p><strong>Justification:</strong> Our application is designed to enable students to keep track of their assignments so that they can make the most out of their university life. As such, this enhancement is crucial as it would later be involved in some of the enhancements that take place in future.</p>
+<p><strong>Justification:</strong> Naggy Joel is designed to enable students to keep track of their assignments so that they can make the most out of their university life. As such, this addition is crucial as it would later be involved in some of the future enhancements.</p>
 </li>
 <li>
 <p><strong>Highlights:</strong> This enhancement requires an understanding of what a typical assignment should consist of so that it does not violate the law of demeter.</p>
@@ -91,6 +91,9 @@
 <p>Upcoming birthdays are colour-coded based on when the contact’s birthday is and is sorted in increasing date order when displayed.</p>
 </li>
 <li>
+<p>Displayed upon start-up and offered as a command as well.</p>
+</li>
+<li>
 <p>Can be extended to provide gift or celebration suggestions to users based on the remarks stored for that particular contact.</p>
 </li>
 </ul>
@@ -100,11 +103,11 @@
 </div>
 </li>
 <li>
-<p>*Changed the functionality of the given <code>edit</code> Person command</p>
+<p>Changed the functionality of the given <code>edit</code> Person command</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>What it does:</strong> The enhanced <code>edit</code> command allows users to append new tags and delete individual tags.</p>
+<p><strong>What it does:</strong> The enhanced <code>edit</code> allows users to append tags and delete individual tags.</p>
 </li>
 <li>
 <p><strong>Justification:</strong> The original command only allows users to replace all existing tags with the new ones which is not very user-friendly as often times we want to add/delete individual tags rather than replace everything.</p>
@@ -116,29 +119,7 @@
 </div>
 </li>
 <li>
-<p><strong>Major enhancement</strong>: added <strong>the ability to undo/redo previous commands</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command.</p>
-</li>
-<li>
-<p>Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them.</p>
-</li>
-<li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
-</li>
-<li>
-<p>Credits: <em>{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}</em></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Minor enhancement</strong>: added a history command that allows the user to navigate to previous commands using up/down keys.</p>
-</li>
-<li>
-<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#=undefined&amp;search=elysiatanzy">Overview of code contribution</a>]</p>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=elysiatanzy&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=ElysiaTanZY&amp;tabRepo=AY1920S2-CS2103-W14-3%2Fmain%5Bmaster%5D">Functional Code</a>][<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=elysiatanzy&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=ElysiaTanZY&amp;tabRepo=AY1920S2-CS2103-W14-3%2Fmain%5Bmaster%5D">Test Code</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -152,10 +133,10 @@
 <p>Edited the GUI of the application (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/68">#68</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/145">#145</a>)</p>
 </li>
 <li>
-<p>Wrote additional tests for existing features to increase coverage (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/65">#65</a>)</p>
+<p>Wrote additional tests for existing features to increase coverage (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/65">#65</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/179">#179</a>)</p>
 </li>
 <li>
-<p>Added in the birthday field to Person, allowed tags for a Person to include spaces and updated the existing commands to accommodate these changes.</p>
+<p>Added in the birthday field to Person, allowed tags for a Person to include spaces and updated the existing commands to accommodate these changes. (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/44">#44</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/145">#145</a>)</p>
 </li>
 </ul>
 </div>
@@ -165,7 +146,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Contributed to both the User Guide and Developer Guide for this project.</p>
+<p>Contributed to both the User Guide and Developer Guide for this project (shown below).</p>
 </li>
 </ul>
 </div>
@@ -181,7 +162,7 @@
 <p>Maintained the issue tracker</p>
 </li>
 <li>
-<p>Managed release v1.2.1 to v1.3.1 (3 releases) on Github (examples: <a href="https://github.com/ElysiaTanZY/ped/issues?q=is%3Aissue+is%3Aall" class="bare">https://github.com/ElysiaTanZY/ped/issues?q=is%3Aissue+is%3Aall</a> [1])</p>
+<p>Managed releases <code>v1.1, v1.2.1 to v1.4</code> (5 releases) on Github</p>
 </li>
 </ul>
 </div>
@@ -191,16 +172,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Over 20 <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+author%3AelysiaTanZY" class="bare">https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+author%3AelysiaTanZY</a> [Pull Requests] on Github</p>
+<p>Over 30 <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+author%3AElysiaTanZY+">Pull Requests</a> on Github</p>
 </li>
 <li>
-<p>Reviewed and merged Pull Requests by team members</p>
+<p>Over 20 <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+commenter%3AElysiaTanZY+">Reviews</a> on Github</p>
 </li>
 <li>
-<p>Helped team members debug problems in their code and gave suggestions on how to enhance features</p>
+<p>Helped team-members debug code and gave suggestions on how to enhance features</p>
 </li>
 <li>
-<p>Reported bugs and suggestions for other teams in the module</p>
+<p>Reported bugs and suggestions for other teams in the module (<a href="https://github.com/ElysiaTanZY/ped/issues?q=is%3Aissue+is%3Aall">1</a>)</p>
 </li>
 </ul>
 </div>
@@ -242,91 +223,227 @@
 </tbody>
 </table>
 <div class="sect2">
-<h3 id="proposed-schedule-visualiser"><a class="link" href="#proposed-schedule-visualiser">[Proposed] Schedule Visualiser</a></h3>
-<div class="sect3">
-<h4 id="proposed-implementation"><a class="link" href="#proposed-implementation">Proposed implementation</a></h4>
-<div class="paragraph">
-<p>The schedule visualiser is facilitated by the implemented <code>SchoolworkTracker</code>. The main purpose of the <code>SchoolworkTracker</code> is to allow users to keep track of all their assignments so that they do not accidentally overlook any of them. The main components of the <code>SchoolworkTracker</code> are as shown in the following class diagram.</p>
+<h3 id="schoolwork-tracker"><a class="link" href="#schoolwork-tracker">Schoolwork Tracker</a></h3>
+<div class="paragraph text-justify">
+<p>The <code>SchoolworkTracker</code> helps users keep track of their assignments so that they do not accidentally overlook any of them.</p>
 </div>
-<div class="imageblock">
+<div class="paragraph text-justify">
+<p>From <strong>Fig 1</strong> below, each <code>Assignment</code> has four components: <code>Title</code>, <code>Deadline</code>, <code>Status</code> and <code>Workload</code>. <code>Workload</code> refers to the expected amount of time required to finish the <code>Assignment</code>. These components will be used for schedule generation when <code>(st)schedule n/NUM_DAYS</code> is executed (explained below).</p>
+</div>
+<div class="imageblock" style="text-align: center">
 <div class="content">
 <img src="../images/stClassDiagram.png" alt="stClassDiagram">
 </div>
 </div>
-<div class="paragraph">
-<p>This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing a user to get a better sense of their current commitments and workload so that they can better manage their time to pursue other social events and hang out with friends. It utilises the existing <code>Assignments</code> stored in the <code>AssignmentList</code> of the <code>SchoolworkTracker</code>. Additionally, it implements the following operations:</p>
+<div class="paragraph text-center">
+<p><em>Fig 1. Class Diagram detailing the main components of the SchoolworkTracker</em></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="schedule"><a class="link" href="#schedule">Schedule</a></h3>
+<div class="sect3">
+<h4 id="current-implementation"><a class="link" href="#current-implementation">Current Implementation</a></h4>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/scheduleResult.png" alt="scheduleResult">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 2. Sample result of the generated schedule</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>Schedule is facilitated by the <code>SchoolworkTracker</code>. This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing users to better visualise their current commitments so that they can better manage their time to pursue social events. This feature aims to distribute <code>Workload</code> as evenly as possible while ensuring that the user is able to complete the <code>Assignment</code> before the <code>Deadline</code>, unless it is impossible (i.e. <code>Workload</code> exceeds the amount of time the user has before the <code>Deadline</code> after taking into account more urgent assignments). A sample result is shown in <strong>Fig 2</strong> above.</p>
+</div>
+<div class="paragraph text-justify">
+<p>It utilizes the existing <code>Assignment</code> stored in the <code>SchoolworkTracker</code> and implements <code>ScheduleList</code> which represents the generated schedule.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 3</strong> below, <code>ScheduleList</code> consists of <code>Day</code> objects and each <code>Day</code> has 3 components. <code>totalAllocatedHours</code> represents the total number of hours allocated to the <code>Day</code>.
+<code>dueAssignment</code> refers to an assignment that is due on the <code>Day</code> and <code>allocatedAssignment</code> represents an assignment that has been scheduled to be done on that <code>Day</code>. The latter also has an additional field <code>allocatedHours</code> which correspond to the suggested amount of time
+that should be spent on the assignment on that <code>Day</code>.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/scheduleClassDiagram.png" alt="scheduleClassDiagram">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 3. Class Diagram detailing the main components of ScheduleList</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>Given below is a detailed example of how the schedule command behaves at each stage.</p>
+</div>
+<div class="paragraph text-justify">
+<p><strong>Step 1</strong>: User launches <code>Naggy Joel</code> for the first time. <code>SchoolworkTracker</code> is initialized to an empty list.</p>
+</div>
+<div class="paragraph text-justify">
+<p><strong>Step 2</strong>: User executes the add assignment command [<code>(st)add n/NAME d/DEADLINE e/ESTIMATED_COMPLETION_HOURS</code>] to add assignments to the <code>SchoolworkTracker</code>.</p>
+</div>
+<div class="paragraph text-justify">
+<p><strong>Step 3</strong>: User wants to better understand his schedule for the next 5 days before deciding whether he has time to hang out with his friends and executes <code>(st)schedule n/5</code>.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 4</strong> below, after the user enters the schedule command, the command will first be checked for validity. If it is not valid, the user will be informed and can then choose whether to re-enter the command or enter another command. On the other hand, if the input command is valid, the application will proceed to generate his schedule and after display it on the GUI.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/scheduleActivityDiagram.png" alt="scheduleActivityDiagram">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 4. Activity Diagram summarizing what happens when the schedule command is executed</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>The specific workings of the schedule command will be explained in the paragraphs below.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 5</strong> below, arguments from the input command is first parsed using the <code>ScheduleCommandParser</code> which converts
+the string variable into an integer and then passes it to <code>ScheduleCommand</code> for use later on and represents the <code>NUM_DAYS</code> queried. If the input argument is invalid, a <code>ParseException</code>
+is thrown and the user will be notified of the proper command usage.</p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/scheduleCommandGeneration.png" alt="scheduleCommandGeneration">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 5. Sequence Diagram depicting generation of ScheduleCommand object</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>If the command is valid, <code>LogicManager</code> will call the <code>execute()</code> method in <code>ScheduleCommand</code>.</p>
+</div>
+<div class="paragraph text-justify">
+<p>As seen from <strong>Fig 6</strong> below, the necessary preparations will be made before the schedule is being generated:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>ScheduleCommand</code> will retrieve the <code>filteredAssignments</code> from the <code>Model</code> component.</p>
+</li>
+<li>
+<p>The <code>ScheduleList</code> will then be initialized to have a size equals to the <code>NUM_DAYS</code> queried by the user, which in this example is <code>5</code> since the user typed <code>(st)schedule n/5</code>.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/scheduleCommandExecution.png" alt="scheduleCommandExecution">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 6. Sequence Diagram showing the execution of the Schedule Command</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>The schedule generation process will be explained next and begins with Fig 7.</p>
+</div>
+<div class="paragraph text-justify">
+<p>In <strong>Fig 7</strong> below, <code>filteredAssignments</code> is iterated through in sorted order, starting with the <code>Assignment</code> due the earliest and for all assignments:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>The <code>Status</code> and <code>Deadline</code> of the <code>Assignment</code> will be retrieved.</p>
+</li>
+<li>
+<p>If <code>Status</code> is uncompleted and <code>Deadline</code> is not over, <code>Workload</code> will be distributed.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/generateSchedule.png" alt="generateSchedule">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 7. Sequence Diagram showing the process of generating the schedule</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>As shown in <strong>Fig 8</strong> below, for each uncompleted <code>Assignment</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>Workload</code> is retrieved and distributed across several days, from query date to deadline, incrementally so as to generate a balanced schedule.</p>
+</li>
+<li>
+<p>The final allocation of hours, including amount unscheduled, is recorded and the <code>Assignment</code> will be recorded as a <code>dueAssignment</code> if its deadline falls within the range of days queried.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/handleUncompletedAssignment.png" alt="handleUncompletedAssignment">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 8 Sequence Diagram showing how an uncompleted Assignment is handled</em></p>
+</div>
+<div class="imageblock" style="text-align: center">
+<div class="content">
+<img src="../images/allocateHours.png" alt="allocateHours">
+</div>
+</div>
+<div class="paragraph text-center">
+<p><em>Fig 9. Sequence Diagram showing how the workload of an assignment is distributed</em></p>
+</div>
+<div class="paragraph text-justify">
+<p>From <strong>Fig 9</strong> above, assignments due on query date are handled differently from those that are not.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>SchoolworkTracker#calExpectedWorkPerDay()</code>&#8201;&#8212;&#8201;Calculates the expected amount of work the user has to put in each day for the next five days (based on hours) to meet all deadlines.</p>
+<p>If the <code>Assignment</code> is <strong>due</strong> on the query date: The amount of time that can be allocated to the assignment will be capped at the amount of time available before the <code>Deadline</code>.</p>
+</li>
+<li>
+<p>If the <code>Assignment</code> is <strong>not due</strong> on the query date: <code>Workload</code> will be distributed incrementally.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Between query date and deadline (both exclusive): Available time is capped at 24 hours.</p>
+</li>
+<li>
+<p>Query date: Available time is capped at the amount of time left in the day.</p>
+</li>
+<li>
+<p>Deadline: Available time is capped at the amount of time before the assignment is due.</p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Given below is an example usage scenario of how the schedule visualizer behaves at each stage.</p>
+<p>The actual caps placed are as stated above but after accounting for the amount of time already allocated to other assignments in the respective days.</p>
 </div>
-<div class="paragraph">
-<p> Step 1. The user launches the application for the first time. The <code>SchoolworkTracker</code> will be initialized with the initial state, which is an empty list.</p>
+<div class="paragraph text-justify">
+<p>Once the user’s schedule is generated, <code>ScheduleList</code> is updated with the <code>allocationResult</code>, a <code>CommandResult</code>
+object will be created and returned to <code>LogicManager</code>. <code>LogicManager</code> returns it to <code>MainWindow</code> who
+will then retrieve the generated schedule and display it as shown in Fig 10 below.</p>
 </div>
-<div class="paragraph">
-<p>Step 2. The user executes the add assignment command [<code>(st)add t/CS2103 tP d/2020-03-27 12:00 e/5</code>] to add the following assignments to the Schoolwork Tracker.</p>
-</div>
-<div class="imageblock">
+<div class="imageblock" style="text-align: center">
 <div class="content">
-<img src="../images/stFilledList.png" alt="stFilledList">
+<img src="../images/getUi.png" alt="getUi">
 </div>
 </div>
-<div class="paragraph">
-<p>Step 3. Today is 23 March 2020 and the user wants to see how busy he is and whether he has time to go out with his friends in the next five days while still being able to complete his assignments on time.</p>
+<div class="paragraph text-center">
+<p><em>Fig 10. Sequence Diagram showing how the generated schedule is retrieved</em></p>
 </div>
-<div class="paragraph">
-<p>The following sequence diagram below shows how the schedule visualisation operation works. </p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/stOverallSequenceDiagram.png" alt="stOverallSequenceDiagram">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/stPart1.png" alt="stPart1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/stPart2.png" alt="stPart2">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/stPart3.png" alt="stPart3">
-</div>
-</div>
-<div class="paragraph">
-<p>Step 4. Based on the results obtained from the schedule command, the user can then decide on how to best plan his outing with his friends.</p>
-</div>
-<div class="paragraph">
-<p>A sample result of the schedule command is as follows:</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../images/stScheduleResult.png" alt="stScheduleResult">
-</div>
+<div class="paragraph text-justify">
+<p><strong>Step 4</strong>: Based on the results, the user can then decide on how to best schedule his outing.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="design-considerations"><a class="link" href="#design-considerations">Design Considerations</a></h4>
 <div class="sect4">
-<h5 id="aspect-how-the-expected-work-hours-per-day-is-to-be-calculated"><a class="link" href="#aspect-how-the-expected-work-hours-per-day-is-to-be-calculated">Aspect: How the expected work hours per day is to be calculated</a></h5>
+<h5 id="aspect-distribution-of-estimated-work-hours-for-each-assignment"><a class="link" href="#aspect-distribution-of-estimated-work-hours-for-each-assignment">Aspect: Distribution of estimated work hours for each assignment</a></h5>
+<div class="ulist text-justify">
+<ul>
+<li>
+<p><strong>Current choice:</strong> Hours are allocated incrementally to achieve a balanced schedule while still ensuring that deadlines can be met (unless impossible due to the constraints of time left)</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1 (current choice):</strong> Allocate hours required to complete assignment whose deadline is the next day from query date, if any. Then, allocate hours of the other assignments in such a way to ensure balance workload.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Takes into account approaching deadlines and attempts to allocate an equal number of hours each day.</p>
+<p>Pros: Better reflects the real-world scenario where students are more likely to spread out their work and encourages work life balance which is the main selling point of Naggy Joel.</p>
 </li>
 <li>
 <p>Cons: Complicated algorithm is more prone to errors.</p>
@@ -334,15 +451,56 @@
 </ul>
 </div>
 </li>
+</ul>
+</div>
+<div class="ulist text-justify">
+<ul>
 <li>
-<p><strong>Alternative 2:</strong> Sum the estimated hours / Number of days to deadline for all assignments.</p>
+<p><strong>Alternative:</strong> For each day, cumulatively add <code>Workload/Days to deadline</code> for all assignments</p>
 <div class="ulist">
 <ul>
 <li>
 <p>Pros: Easier to implement.</p>
 </li>
 <li>
-<p>Cons: Does not take into account approaching deadlines and may result in some days having impossibly high workload.</p>
+<p>Cons: Some days may have impossibly high workload, deadlines are not handled properly.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-variable-type-to-be-used-for-calculations-during-distribution-of-workload"><a class="link" href="#aspect-variable-type-to-be-used-for-calculations-during-distribution-of-workload">Aspect: Variable type to be used for calculations during distribution of workload</a></h5>
+<div class="ulist text-justify">
+<ul>
+<li>
+<p><strong>Current choice:</strong> Use of BigDecimal for calculations</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: More accurate allocation of hours while minimizing lost hours due to rounding errors.</p>
+</li>
+<li>
+<p>Cons: Harder to handle and new objects have to be created each time.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist text-justify">
+<ul>
+<li>
+<p><strong>Alternative:</strong> Restrict calculations to the use of integer</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easier to handle and more accurate comparisons can be made as compared to when floats are used as floating point arithmetic is not exact.</p>
+</li>
+<li>
+<p>Cons: A lot of unnecessary ‘loss’ in allocated and available time due to rounding errors.</p>
 </li>
 </ul>
 </div>
@@ -354,4 +512,4 @@
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-12 17:53:40 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 05:43:16 UTC</div></div></div></body></html>
