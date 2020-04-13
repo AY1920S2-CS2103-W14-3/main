@@ -22,12 +22,16 @@
 </li>
 <li><a href="#implementation">3. Implementation</a>
 <ul class="sectlevel2">
-<li><a href="#schedule">3.1. Schedule</a></li>
-<li><a href="#sorting-of-assignments">3.2. Sorting of Assignments</a></li>
-<li><a href="#editing-of-restaurant-notes">3.3. Editing of Restaurant Notes</a></li>
-<li><a href="#undo-redo">3.4. Undo/Redo</a></li>
-<li><a href="#logging">3.5. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.6. Configuration</a></li>
+<li><a href="#schoolwork-tracker">3.1. Schoolwork Tracker</a></li>
+<li><a href="#schedule">3.2. Schedule</a></li>
+<li><a href="#detailed-contact-viewer">3.3. Detailed Contact Viewer</a></li>
+<li><a href="#sorting-of-assignments">3.4. Sorting of Assignments</a></li>
+<li><a href="#editing-of-restaurant-notes">3.5. Editing of Restaurant Notes</a></li>
+<li><a href="#finding-contacts">3.6. Finding Contacts</a></li>
+<li><a href="#restaurant-book">3.7. Restaurant Book</a></li>
+<li><a href="#undo-redo">3.8. Undo/Redo</a></li>
+<li><a href="#logging">3.9. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.10. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -358,9 +362,10 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <p>tag::schedule[]</p>
 </div>
 <div class="paragraph">
-<p>(Elysia Tan Ziyi: 3.1, 3.2)
-=== Schoolwork Tracker</p>
+<p>(Elysia Tan Ziyi: 3.1, 3.2)</p>
 </div>
+<div class="sect2">
+<h3 id="schoolwork-tracker"><a class="link" href="#schoolwork-tracker">3.1. Schoolwork Tracker</a></h3>
 <div class="paragraph text-justify">
 <p>The <code>SchoolworkTracker</code> helps users keep track of their assignments so that they do not accidentally overlook any of them. It consists of the <code>AssignmentList</code> which contains all the added assignments.</p>
 </div>
@@ -375,10 +380,11 @@ As a more OOP model, we can store a <code>Tag</code> list in <code>Address Book<
 <div class="paragraph text-center">
 <p><em>Fig 1. Class Diagram detailing the main components of the SchoolworkTracker</em></p>
 </div>
+</div>
 <div class="sect2">
-<h3 id="schedule"><a class="link" href="#schedule">3.1. Schedule</a></h3>
+<h3 id="schedule"><a class="link" href="#schedule">3.2. Schedule</a></h3>
 <div class="sect3">
-<h4 id="current-implementation"><a class="link" href="#current-implementation">3.1.1. Current Implementation</a></h4>
+<h4 id="current-implementation"><a class="link" href="#current-implementation">3.2.1. Current Implementation</a></h4>
 <div class="paragraph text-justify">
 <p>Schedule is facilitated by the <code>SchoolworkTracker</code>. This feature enhances the basic form of the <code>SchoolworkTracker</code> by allowing users to better visualise their current commitments so that they can better manage their time to pursue social events. This feature aims to distribute <code>Workload</code> as evenly as possible while ensuring that the user is able to complete the <code>Assignment</code> before the <code>Deadline</code>, unless it is impossible (i.e. <code>Workload</code> exceeds the amount of time the user has before the <code>Deadline</code> after taking into account more urgent assignments). A sample result is shown in <strong>Fig 2</strong> below.</p>
 </div>
@@ -566,7 +572,7 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations"><a class="link" href="#design-considerations">3.1.2. Design Considerations</a></h4>
+<h4 id="design-considerations"><a class="link" href="#design-considerations">3.2.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-distribution-of-estimated-work-hours-for-each-assignment"><a class="link" href="#aspect-distribution-of-estimated-work-hours-for-each-assignment">Aspect: Distribution of estimated work hours for each assignment</a></h5>
 <div class="ulist text-justify">
@@ -647,10 +653,15 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 <p>tag::get[]</p>
 </div>
 <div class="paragraph">
-<p>(Kwan Xin Jie: 3.3, 3.4, 3.5)
-=== Detailed Contact Viewer
-==== Implementation</p>
+<p>(Kwan Xin Jie: 3.3, 3.4, 3.5)</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="detailed-contact-viewer"><a class="link" href="#detailed-contact-viewer">3.3. Detailed Contact Viewer</a></h3>
+<div class="sect3">
+<h4 id="implementation-2"><a class="link" href="#implementation-2">3.3.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The detailed contact viewer is facilitated by <code>AddressBook</code>. This feature allows a user to view a particular contact details in entirety.</p>
 </div>
@@ -680,9 +691,8 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.1.3. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-what-information-to-display"><a class="link" href="#aspect-what-information-to-display">Aspect: What information to display</a></h5>
 <div class="ulist">
@@ -725,9 +735,9 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect2">
-<h3 id="sorting-of-assignments"><a class="link" href="#sorting-of-assignments">3.2. Sorting of Assignments</a></h3>
+<h3 id="sorting-of-assignments"><a class="link" href="#sorting-of-assignments">3.4. Sorting of Assignments</a></h3>
 <div class="sect3">
-<h4 id="implementation-2"><a class="link" href="#implementation-2">3.2.1. Implementation</a></h4>
+<h4 id="implementation-3"><a class="link" href="#implementation-3">3.4.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The sorting of assignments is facilitated by <code>AssignmentList</code>. This feature allows a user to sort assignments by deadline or estimated completion time.</p>
 </div>
@@ -766,7 +776,7 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.2.2. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.4.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-sort-assignment-by-estimated-completion-time"><a class="link" href="#aspect-how-to-sort-assignment-by-estimated-completion-time">Aspect: How to sort assignment by estimated completion time</a></h5>
 <div class="ulist">
@@ -809,9 +819,9 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-of-restaurant-notes"><a class="link" href="#editing-of-restaurant-notes">3.3. Editing of Restaurant Notes</a></h3>
+<h3 id="editing-of-restaurant-notes"><a class="link" href="#editing-of-restaurant-notes">3.5. Editing of Restaurant Notes</a></h3>
 <div class="sect3">
-<h4 id="implementation-3"><a class="link" href="#implementation-3">3.3.1. Implementation</a></h4>
+<h4 id="implementation-4"><a class="link" href="#implementation-4">3.5.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The editing of restaurant notes is facilitated by <code>RestaurantBook</code>. This feature allows a user to edit existing notes of a restaurant in the list.</p>
 </div>
@@ -847,7 +857,7 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.3.2. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.5.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-edit-note-given-3-editable-notes-for-a-restaurant"><a class="link" href="#aspect-how-to-execute-the-command-for-edit-note-given-3-editable-notes-for-a-restaurant">Aspect: How to execute the command for edit note, given 3 editable notes for a restaurant.</a></h5>
 <div class="ulist">
@@ -884,11 +894,18 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 <p>end::editRestNote[]</p>
 </div>
 <div class="paragraph">
-<p>(Chua Xinhui Sarah: 3.6)
-tag::findContacts[]
-=== Finding Contacts
-==== Implementation</p>
+<p>tag::findContacts[]</p>
 </div>
+<div class="paragraph">
+<p>(Chua Xinhui Sarah: 3.6)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-contacts"><a class="link" href="#finding-contacts">3.6. Finding Contacts</a></h3>
+<div class="sect3">
+<h4 id="implementation-5"><a class="link" href="#implementation-5">3.6.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The finding of a Person is facilitated by the <code>Address Book</code>. This feature allows for users to find a specific contact in their <code>Address Book</code>.</p>
 </div>
@@ -921,9 +938,8 @@ tag::findContacts[]
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.3.3. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.6.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags"><a class="link" href="#aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags">Aspect: How to execute the command for finding a contact using Java Predicates, given that a Person has multiple tags.</a></h5>
 <div class="paragraph">
@@ -982,10 +998,18 @@ end::findContacts[]</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>(Joel Lim Hee Heng: 3.7, 3.8)
-=== Restaurant Book
-==== Current Implementation</p>
+<p>tag::rtundoredo[]</p>
 </div>
+<div class="paragraph">
+<p>(Joel Lim Hee Heng: 3.7, 3.8)</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="restaurant-book"><a class="link" href="#restaurant-book">3.7. Restaurant Book</a></h3>
+<div class="sect3">
+<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.7.1. Current Implementation</a></h4>
 <div class="paragraph text-justify">
 <p>The <code>RestaurantBook</code> helps users keep track of <code>Restaurants</code>, so that users can quickly find an eating place given their constraints (e.g. odd hours, location, food cravings, etc). We will briefly introduce the implementation and logic behind this component as a stepping stone to understand the <code>undo/redo</code> implementation in the next section.</p>
 </div>
@@ -1016,11 +1040,10 @@ end::findContacts[]</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect2">
-<h3 id="undo-redo"><a class="link" href="#undo-redo">3.4. Undo/Redo</a></h3>
+<h3 id="undo-redo"><a class="link" href="#undo-redo">3.8. Undo/Redo</a></h3>
 <div class="sect3">
-<h4 id="current-implementation-2"><a class="link" href="#current-implementation-2">3.4.1. Current Implementation</a></h4>
+<h4 id="current-implementation-3"><a class="link" href="#current-implementation-3">3.8.1. Current Implementation</a></h4>
 <div class="paragraph">
 <p>This is the Class Diagram for the <code>ModelManager</code> and the <code>ModelState</code>, the 2 integral classes to understand the <code>undo/redo</code> operations. Note that we have omitted methods used to support other commands but are irrelevant to the <code>undo/redo</code> operation and also omitted the getter methods of the <code>ModelState</code> for better readability.</p>
 </div>
@@ -1133,7 +1156,7 @@ end::findContacts[]</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.4.2. Design Considerations</a></h4>
+<h4 id="design-considerations-6"><a class="link" href="#design-considerations-6">3.8.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
 <div class="ulist">
@@ -1184,62 +1207,85 @@ end::findContacts[]</p>
 </div>
 </div>
 <div class="sect4">
-<h5 id="aspect-how-undo-redo-executes-2"><a class="link" href="#aspect-how-undo-redo-executes-2">Aspect: How undo &amp; redo executes</a></h5>
+<h5 id="aspect-which-commands-will-cause-a-state-change"><a class="link" href="#aspect-which-commands-will-cause-a-state-change">Aspect: Which commands will cause a state change</a></h5>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Alternative 1</strong>: Creates and saves the entire state of the application from scratch</p>
+<p><strong>Alternative 1</strong>: Every command will generate a new state</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Easy to implement</p>
+<p>Pros: Easy to implement (need not differentiate); can be more intuitive to some users (e.g. the user accidentally <code>(rt)list</code> and would like to go back to what the user was viewing previously)</p>
 </li>
 <li>
-<p>Cons: Requires huge amount of memory</p>
+<p>Cons: Requires more memory; can be less intuitive to some users as the <code>undo</code> for commands such as <code>(rt)list</code> only changes what the user sees but does not perform any real changes to the state</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Alternative 2</strong>: Stores only the individual command entered</p>
+<p><strong>Alternative 2 (current choice)</strong>: Only commands that change the state will cause state transitions</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Pros: Minimal memory usage</p>
+<p>Pros: Less memory usage, can be more intuitive to some users; in reality, difficult to tell which is more intuitive to users without more data</p>
 </li>
 <li>
-<p>Cons: More difficult to ensure correctness as there will be many more alternate paths (scales as the number of commands go up)</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Alternative 3 (current choice)</strong>: Partially stores the entire application</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pros: Easy to implement</p>
-</li>
-<li>
-<p>Cons: Require significant amount of memory, but less than alternative 1</p>
+<p>Cons: More difficult to ensure correctness as we need to ensure the exact set of commands that cause state transitions</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-what-to-show-when-the-user-executes-a-code-undo-code-or-code-redo-code"><a class="link" href="#aspect-what-to-show-when-the-user-executes-a-code-undo-code-or-code-redo-code">Aspect: What to show when the user executes a <code>undo</code> or <code>redo</code></a></h5>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Alternative 1</strong>: Simply show the same screen</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Easy to implement, need to only take care of the backend without worrying about the UI; user might not want to move away from his/her current screen</p>
+</li>
+<li>
+<p>Cons: User has no confirmation that the undo did happen (e.g. if the user undoes adding a restaurant but we don&#8217;t show the updated restaurant list)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Alternative 2 (current choice)</strong>: Displays what the user has undone/redone (e.g. if the user undoes adding a note to a contact, we should show the details of that contact upon the <code>undo</code> operation)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pros: Gives user confirmation of the new data and that the command is indeed undone</p>
+</li>
+<li>
+<p>Cons: More difficult to implement and requires more memory as we will have to store more information to flash to the user the correct screen that corresponds to the command</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>end::rtundoredo[]</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.5. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.9. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.6, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.10, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1270,7 +1316,7 @@ end::findContacts[]</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.6. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.10. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1506,9 +1552,6 @@ end::findContacts[]</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -2522,4 +2565,4 @@ Expected: No social event is deleted. Error details shown in the status message.
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:17:39 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:29:32 UTC</div></div></div></body></html>

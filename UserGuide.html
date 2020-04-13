@@ -162,6 +162,9 @@ Format: <code>help h/INDEX</code></p>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>tag::clear[]</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="undo-and-redo-commands-code-undo-redo-code"><a class="link" href="#undo-and-redo-commands-code-undo-redo-code">3.1.2. Undo and redo commands: <code>undo/redo</code></a></h4>
@@ -175,6 +178,9 @@ Format: <code>undo/redo</code></p>
 <div class="paragraph">
 <p>Clears all entries from the address book, schoolwork tracker, events book and restaurant book.<br>
 Format: <code>clear</code></p>
+</div>
+<div class="paragraph">
+<p>end::clear[]</p>
 </div>
 </div>
 <div class="sect3">
@@ -585,6 +591,9 @@ Format: <code>(ab)birthday</code></p>
 </div>
 <div class="sect2">
 <h3 id="restaurant-book-commands"><a class="link" href="#restaurant-book-commands">3.3. Restaurant Book commands</a></h3>
+<div class="paragraph">
+<p>tag::res[]</p>
+</div>
 <div class="sect3">
 <h4 id="adds-a-new-restaurant-code-rt-add-code"><a class="link" href="#adds-a-new-restaurant-code-rt-add-code">3.3.1. Adds a new restaurant : <code>(rt)add</code></a></h4>
 <div class="paragraph">
@@ -596,7 +605,7 @@ Format: <code>(rt)add n/NAME l/LOCATION v/VISITED [o/OPERATING_HOURS] [p/PRICE_P
 <div class="ulist">
 <ul>
 <li>
-<p>VISITED can only be Yes or No</p>
+<p>VISITED can only be "Yes" or "No"</p>
 </li>
 <li>
 <p>OPERATING_HOURS must be written in HHmm:HHmm format</p>
@@ -656,6 +665,9 @@ Format: <code>(rt)edit INDEX [n/RESTAURANT] [l/LOCATION] [v/VISITED] [o/OPERATIN
 <li>
 <p>At least one optional field needs to be specified.</p>
 </li>
+<li>
+<p>Specify nothing after the prefix to delete the field (RESTAURANT, LOCATION, VISITED cannot be deleted)</p>
+</li>
 </ul>
 </div>
 </div>
@@ -668,6 +680,10 @@ Format: <code>(rt)edit INDEX [n/RESTAURANT] [l/LOCATION] [v/VISITED] [o/OPERATIN
 <li>
 <p><code>(rt)edit 1 o/0700:2200</code><br>
 Edits the 1st restaurant&#8217;s operating hours to "0700:2200" in the restaurant book.</p>
+</li>
+<li>
+<p>`(rt)edit 3 p/ `<br>
+Removes the 3rd restaurant&#8217;s price point.</p>
 </li>
 </ul>
 </div>
@@ -688,6 +704,9 @@ Format: <code>(rt)delete INDEX</code></p>
 Deletes the 1st restaurant in the restaurant book.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>end::res[]</p>
 </div>
 <div class="paragraph">
 <p>tag::rtnotetaker[]</p>
@@ -1413,4 +1432,4 @@ Format: <code>(ev)list</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:17:39 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 15:29:32 UTC</div></div></div></body></html>
