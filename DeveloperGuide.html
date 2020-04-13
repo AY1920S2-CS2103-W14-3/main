@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Naggy Joel - Developer Guide</title><link rel="stylesheet" href="stylesheets/gh-pages.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Naggy Joel</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://ay1920s2-cs2103-w14-3.github.io/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Naggy Joel - Developer Guide</h1></div><div id="content"><div id="preamble">
+<link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">Naggy Joel</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link active" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://ay1920s2-cs2103-w14-3.github.io/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Naggy Joel - Developer Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>By: <code>Team Naggy Joel</code>      Since: <code>Mar 2020</code>      Licence: <code>MIT</code></p>
@@ -39,36 +39,35 @@
 <li><a href="#use-cases">Appendix C: Use Cases</a></li>
 <li><a href="#non-functional-requirements">Appendix D: Non Functional Requirements</a></li>
 <li><a href="#glossary">Appendix E: Glossary</a></li>
-<li><a href="#product-survey">Appendix F: Product Survey</a></li>
-<li><a href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a>
+<li><a href="#instructions-for-manual-testing">Appendix F: Instructions for Manual Testing</a>
 <ul class="sectlevel2">
-<li><a href="#launch-and-shutdown">G.1. Launch and Shutdown</a></li>
-<li><a href="#adding-a-person">G.2. Adding a person</a></li>
-<li><a href="#deleting-a-person">G.3. Deleting a person</a></li>
-<li><a href="#editing-a-person">G.4. Editing a person</a></li>
-<li><a href="#adding-additional-information-to-a-person">G.5. Adding additional information to a person</a></li>
-<li><a href="#editing-additional-information-for-a-person">G.6. Editing additional information for a person</a></li>
-<li><a href="#deleting-additional-information-of-a-person">G.7. Deleting additional information of a person</a></li>
-<li><a href="#finding-a-specific-contact-specific-set-of-contacts">G.8. Finding a specific contact/specific set of contacts</a></li>
-<li><a href="#retrieving-a-specific-contact-and-view-in-full-details">G.9. Retrieving a specific contact and view in full details</a></li>
-<li><a href="#list-contacts-with-upcoming-birthdays">G.10. List contacts with upcoming birthdays</a></li>
-<li><a href="#adding-a-restaurant">G.11. Adding a restaurant</a></li>
-<li><a href="#list-all-restaurants-saved">G.12. List all restaurants saved</a></li>
-<li><a href="#editing-a-restaurant">G.13. Editing a restaurant</a></li>
-<li><a href="#deleting-a-restaurant">G.14. Deleting a restaurant</a></li>
-<li><a href="#adding-food-note-s-to-a-restaurant">G.15. Adding food note(s) to a restaurant</a></li>
-<li><a href="#editing-food-note-s-of-a-restaurant">G.16. Editing food note(s) of a restaurant</a></li>
-<li><a href="#deleting-food-note-s-of-a-restaurant">G.17. Deleting food note(s) of a restaurant</a></li>
-<li><a href="#search-for-restaurants-based-on-a-number-of-criteria">G.18. Search for restaurants based on a number of criteria</a></li>
-<li><a href="#adding-an-assignment">G.19. Adding an assignment</a></li>
-<li><a href="#list-current-assignments">G.20. List current assignments</a></li>
-<li><a href="#deleting-an-assignment">G.21. Deleting an assignment</a></li>
-<li><a href="#editing-an-assignment">G.22. Editing an assignment</a></li>
-<li><a href="#adding-a-social-event">G.23. Adding a social event</a></li>
-<li><a href="#listing-all-events">G.24. Listing all events</a></li>
-<li><a href="#editing-a-social-event">G.25. Editing a social event</a></li>
-<li><a href="#deleting-a-social-event">G.26. Deleting a social event</a></li>
-<li><a href="#saving-data">G.27. Saving data</a></li>
+<li><a href="#launch-and-shutdown">F.1. Launch and Shutdown</a></li>
+<li><a href="#adding-a-person">F.2. Adding a person</a></li>
+<li><a href="#deleting-a-person">F.3. Deleting a person</a></li>
+<li><a href="#editing-a-person">F.4. Editing a person</a></li>
+<li><a href="#adding-additional-information-to-a-person">F.5. Adding additional information to a person</a></li>
+<li><a href="#editing-additional-information-for-a-person">F.6. Editing additional information for a person</a></li>
+<li><a href="#deleting-additional-information-of-a-person">F.7. Deleting additional information of a person</a></li>
+<li><a href="#finding-a-specific-contact-specific-set-of-contacts">F.8. Finding a specific contact/specific set of contacts</a></li>
+<li><a href="#retrieving-a-specific-contact-and-view-in-full-details">F.9. Retrieving a specific contact and view in full details</a></li>
+<li><a href="#list-contacts-with-upcoming-birthdays">F.10. List contacts with upcoming birthdays</a></li>
+<li><a href="#adding-a-restaurant">F.11. Adding a restaurant</a></li>
+<li><a href="#list-all-restaurants-saved">F.12. List all restaurants saved</a></li>
+<li><a href="#editing-a-restaurant">F.13. Editing a restaurant</a></li>
+<li><a href="#deleting-a-restaurant">F.14. Deleting a restaurant</a></li>
+<li><a href="#adding-food-note-s-to-a-restaurant">F.15. Adding food note(s) to a restaurant</a></li>
+<li><a href="#editing-food-note-s-of-a-restaurant">F.16. Editing food note(s) of a restaurant</a></li>
+<li><a href="#deleting-food-note-s-of-a-restaurant">F.17. Deleting food note(s) of a restaurant</a></li>
+<li><a href="#search-for-restaurants-based-on-a-number-of-criteria">F.18. Search for restaurants based on a number of criteria</a></li>
+<li><a href="#adding-an-assignment">F.19. Adding an assignment</a></li>
+<li><a href="#list-current-assignments">F.20. List current assignments</a></li>
+<li><a href="#deleting-an-assignment">F.21. Deleting an assignment</a></li>
+<li><a href="#editing-an-assignment">F.22. Editing an assignment</a></li>
+<li><a href="#generating-schedule">F.23. Generating schedule</a></li>
+<li><a href="#adding-a-social-event">F.24. Adding a social event</a></li>
+<li><a href="#listing-all-events">F.25. Listing all events</a></li>
+<li><a href="#editing-a-social-event">F.26. Editing a social event</a></li>
+<li><a href="#deleting-a-social-event">F.27. Deleting a social event</a></li>
 </ul>
 </li>
 </ul>
@@ -428,7 +427,7 @@ that should be spent on the assignment on that <code>Day</code>.</p>
 </div>
 </div>
 <div class="paragraph text-center">
-<p><em>Fig 4. Activity Diagram summarizing what happens when the schedule command is executed</em></p>
+<p><em>Fig 4. Activity Diagram summarizing what happens when the schedule command is entered</em></p>
 </div>
 <div class="paragraph text-justify">
 <p>The specific workings of the schedule command will be explained in the paragraphs below.</p>
@@ -590,7 +589,7 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 <div class="ulist text-justify">
 <ul>
 <li>
-<p><strong>Alternative:</strong> For each day, cumulatively add <code>Workload/Days to deadline</code> for all assignments</p>
+<p><strong>Alternative:</strong> For each day, cumulatively add <code>Workload divide by Number of days to deadline</code> for all assignments</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1484,9 +1483,6 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -1541,9 +1537,6 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </li>
 </ol>
 </div>
-<div class="paragraph">
-<p><em>{More to be added}</em></p>
-</div>
 </div>
 </div>
 <div class="sect1">
@@ -1560,44 +1553,7 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect1">
-<h2 id="product-survey"><a class="link" href="#product-survey">Appendix F: Product Survey</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><strong>Product Name</strong></p>
-</div>
-<div class="paragraph">
-<p>Author: &#8230;&#8203;</p>
-</div>
-<div class="paragraph">
-<p>Pros:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Cons:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-<li>
-<p>&#8230;&#8203;</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix G: Instructions for Manual Testing</a></h2>
+<h2 id="instructions-for-manual-testing"><a class="link" href="#instructions-for-manual-testing">Appendix F: Instructions for Manual Testing</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Given below are instructions to test the app manually.</p>
@@ -1615,7 +1571,7 @@ These instructions only provide a starting point for testers to work on; testers
 </table>
 </div>
 <div class="sect2">
-<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">G.1. Launch and Shutdown</a></h3>
+<h3 id="launch-and-shutdown"><a class="link" href="#launch-and-shutdown">F.1. Launch and Shutdown</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1649,14 +1605,11 @@ Expected: The most recent window size and location is retained.</p>
 </ol>
 </div>
 <div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
-<div class="paragraph">
 <p>tag::manual[]</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person"><a class="link" href="#adding-a-person">G.2. Adding a person</a></h3>
+<h3 id="adding-a-person"><a class="link" href="#adding-a-person">F.2. Adding a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1667,7 +1620,7 @@ Expected: A new contact with the name John, phone number 12345, and birthday 20 
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">G.3. Deleting a person</a></h3>
+<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">F.3. Deleting a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1686,7 +1639,7 @@ Expected: First contact is deleted from the list. Details of the deleted contact
 Expected: No person is deleted. Error details shown in the status message.</p>
 </li>
 <li>
-<p>Other incorrect delete commands to try: <code>(ab)delete</code>, <code>(ab)delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+<p>Other incorrect delete commands to try: <code>(ab)delete</code>, <code>(ab)delete x</code> (where x is larger than the list size)<br>
 Expected: Similar to previous.</p>
 </li>
 </ol>
@@ -1700,7 +1653,7 @@ Expected: Similar to previous.</p>
 <p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
 </li>
 <li>
-<p>Test case: <code>(ab)delete x</code> (where x exists in the full contact list but not in the filtered list)<br>
+<p>Test case: <code>(ab)delete x</code> (where x is larger than the filtered list size but smaller than the size of the full contact list)<br>
 Expected: No person is deleted. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -1710,7 +1663,7 @@ Expected: No person is deleted. Error details shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-person"><a class="link" href="#editing-a-person">G.4. Editing a person</a></h3>
+<h3 id="editing-a-person"><a class="link" href="#editing-a-person">F.4. Editing a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1722,7 +1675,7 @@ Expected: No person is deleted. Error details shown in the status message.</p>
 </li>
 <li>
 <p>Test case: <code>(ab)edit 2 t/BFF -t/Friends</code><br>
-Expected: Second contact in the list is edited, with tag "Friends" deleted, and tag "BFF" added. Details  of the edited contact shown in the status message.</p>
+Expected: Second contact in the list is edited, with tag "Friends" deleted, and tag "BFF" added. Details of the edited contact shown in the status message.</p>
 </li>
 </ol>
 </div>
@@ -1735,7 +1688,7 @@ Expected: Second contact in the list is edited, with tag "Friends" deleted, and 
 <p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
 </li>
 <li>
-<p>Test case: <code>(ab)edit x b/06-22</code> (where x exists in the full contact list but not in the filtered list)<br>
+<p>Test case: <code>(ab)edit x b/06-22</code> (where x is larger than the filtered list size but smaller than the size of the full contact list)<br>
 Expected: No person is edited. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -1745,7 +1698,7 @@ Expected: No person is edited. Error details shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-additional-information-to-a-person"><a class="link" href="#adding-additional-information-to-a-person">G.5. Adding additional information to a person</a></h3>
+<h3 id="adding-additional-information-to-a-person"><a class="link" href="#adding-additional-information-to-a-person">F.5. Adding additional information to a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1763,14 +1716,14 @@ Expected: Second contact in the list has 3 new notes, "Likes red", "Lives in Jur
 </div>
 </li>
 <li>
-<p>Editing a person while finding contacts that meet certain criteria</p>
+<p>Add note(s) to a person while finding contacts that meet certain criteria</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
 </li>
 <li>
-<p>Test case: <code>(ab)addnote x i/Can&#8217;t take spicy</code> (where x exists in the full contact list but not in the filtered list)<br>
+<p>Test case: <code>(ab)addnote x i/Can&#8217;t take spicy</code> (where x is larger than the filtered list size but smaller than the size of the full contact list)<br>
 Expected: No new note is added to a person. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -1780,11 +1733,11 @@ Expected: No new note is added to a person. Error details shown in the status me
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-additional-information-for-a-person"><a class="link" href="#editing-additional-information-for-a-person">G.6. Editing additional information for a person</a></h3>
+<h3 id="editing-additional-information-for-a-person"><a class="link" href="#editing-additional-information-for-a-person">F.6. Editing additional information for a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Edits an existing note of person while all persons listed</p>
+<p>Editing an existing note of person while all persons listed</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1813,7 +1766,7 @@ Expected: Similar to previous</p>
 <p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
 </li>
 <li>
-<p>Test case: <code>(ab)editnote x l/3 i/Can&#8217;t take spicy</code> (where x exists in the full contact list but not in the filtered list)<br>
+<p>Test case: <code>(ab)editnote x l/3 i/Can&#8217;t take spicy</code> (where x is larger than the filtered list size but smaller than the size of the full contact list)<br>
 Expected: No note is edited for a person. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -1823,7 +1776,7 @@ Expected: No note is edited for a person. Error details shown in the status mess
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-additional-information-of-a-person"><a class="link" href="#deleting-additional-information-of-a-person">G.7. Deleting additional information of a person</a></h3>
+<h3 id="deleting-additional-information-of-a-person"><a class="link" href="#deleting-additional-information-of-a-person">F.7. Deleting additional information of a person</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1856,7 +1809,7 @@ Expected: Similar to previous</p>
 <p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
 </li>
 <li>
-<p>Test case: <code>(ab)deletenote x l/2</code> (where x exists in the full contact list but not in the filtered list)<br>
+<p>Test case: <code>(ab)deletenote x l/2</code> (where x is larger than the filtered list size but smaller than the size of the full contact list)<br>
 Expected: No note is deleted for a person. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -1866,16 +1819,13 @@ Expected: No note is deleted for a person. Error details shown in the status mes
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-a-specific-contact-specific-set-of-contacts"><a class="link" href="#finding-a-specific-contact-specific-set-of-contacts">G.8. Finding a specific contact/specific set of contacts</a></h3>
+<h3 id="finding-a-specific-contact-specific-set-of-contacts"><a class="link" href="#finding-a-specific-contact-specific-set-of-contacts">F.8. Finding a specific contact/specific set of contacts</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Finding person(s) by organization, name or tag.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li>
-<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
-</li>
 <li>
 <p>Test case: <code>(ab)find o/NUS n/Lim</code><br>
 Expected: If person(s) with the organization "NUS" and have the word "Lim" in the name, person(s) will be listed. The number of person listed shown in the status message.</p>
@@ -1887,7 +1837,7 @@ Expected: If person(s) with the organization "NUS" and have the word "Lim" in th
 </div>
 </div>
 <div class="sect2">
-<h3 id="retrieving-a-specific-contact-and-view-in-full-details"><a class="link" href="#retrieving-a-specific-contact-and-view-in-full-details">G.9. Retrieving a specific contact and view in full details</a></h3>
+<h3 id="retrieving-a-specific-contact-and-view-in-full-details"><a class="link" href="#retrieving-a-specific-contact-and-view-in-full-details">F.9. Retrieving a specific contact and view in full details</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1916,7 +1866,7 @@ Expected: No detailed view of contact is displayed. Error details shown in the s
 <p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
 </li>
 <li>
-<p>Test case: <code>(ab)get x</code> (where x exists in the full contact list but not in the filtered list)<br>
+<p>Test case: <code>(ab)get x</code> (where x is larger than the filtered list size but smaller than the size of the full contact list)<br>
 Expected: No detailed view of contact is displayed. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -1926,16 +1876,13 @@ Expected: No detailed view of contact is displayed. Error details shown in the s
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-contacts-with-upcoming-birthdays"><a class="link" href="#list-contacts-with-upcoming-birthdays">G.10. List contacts with upcoming birthdays</a></h3>
+<h3 id="list-contacts-with-upcoming-birthdays"><a class="link" href="#list-contacts-with-upcoming-birthdays">F.10. List contacts with upcoming birthdays</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>All persons are listed</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
-<li>
-<p>Prerequisite: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
-</li>
 <li>
 <p><code>(ab)birthday</code><br>
 Expected: All contacts with birthdays in the next 5 days (current day included) should be listed.</p>
@@ -1947,7 +1894,7 @@ Expected: All contacts with birthdays in the next 5 days (current day included) 
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-restaurant"><a class="link" href="#adding-a-restaurant">G.11. Adding a restaurant</a></h3>
+<h3 id="adding-a-restaurant"><a class="link" href="#adding-a-restaurant">F.11. Adding a restaurant</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1958,7 +1905,7 @@ Expected: Adds a new restaurant called Ameens at Clementi with 1 dollar sign pri
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-all-restaurants-saved"><a class="link" href="#list-all-restaurants-saved">G.12. List all restaurants saved</a></h3>
+<h3 id="list-all-restaurants-saved"><a class="link" href="#list-all-restaurants-saved">F.12. List all restaurants saved</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -1969,11 +1916,11 @@ Expected: All restaurants added should be displayed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-restaurant"><a class="link" href="#editing-a-restaurant">G.13. Editing a restaurant</a></h3>
+<h3 id="editing-a-restaurant"><a class="link" href="#editing-a-restaurant">F.13. Editing a restaurant</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Edits a restaurant while all restaurants are listed</p>
+<p>Editing a restaurant while all restaurants are listed</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1986,11 +1933,25 @@ Expected: Edits the first restaurant visited status to "Yes" and operating hours
 </ol>
 </div>
 </li>
+<li>
+<p>Editing a restaurant while finding restaurants that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of restaurants using the <code>(rt)find</code> command. Restaurants that meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)edit x</code> (where x is larger than the filtered list size but smaller than the size of the full restaurant list)<br>
+Expected: No restaurant edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-restaurant"><a class="link" href="#deleting-a-restaurant">G.14. Deleting a restaurant</a></h3>
+<h3 id="deleting-a-restaurant"><a class="link" href="#deleting-a-restaurant">F.14. Deleting a restaurant</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2011,11 +1972,25 @@ Expected: No restaurant is deleted. Error details shown in the status message.</
 </ol>
 </div>
 </li>
+<li>
+<p>Deleting a restaurant while finding restaurants that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of restaurants using the <code>(rt)find</code> command. Restaurants that meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)delete x</code> (where x is larger than the filtered list size but smaller than the size of the full restaurant list)<br>
+Expected: No restaurant deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
 </ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-food-note-s-to-a-restaurant"><a class="link" href="#adding-food-note-s-to-a-restaurant">G.15. Adding food note(s) to a restaurant</a></h3>
+<h3 id="adding-food-note-s-to-a-restaurant"><a class="link" href="#adding-food-note-s-to-a-restaurant">F.15. Adding food note(s) to a restaurant</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2036,7 +2011,7 @@ Expected: Add notes to the restaurant at index 1 with recommended food Chicken C
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-food-note-s-of-a-restaurant"><a class="link" href="#editing-food-note-s-of-a-restaurant">G.16. Editing food note(s) of a restaurant</a></h3>
+<h3 id="editing-food-note-s-of-a-restaurant"><a class="link" href="#editing-food-note-s-of-a-restaurant">F.16. Editing food note(s) of a restaurant</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2061,7 +2036,7 @@ Expected: No restaurant&#8217;s food notes is edited. Error details shown in the
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-food-note-s-of-a-restaurant"><a class="link" href="#deleting-food-note-s-of-a-restaurant">G.17. Deleting food note(s) of a restaurant</a></h3>
+<h3 id="deleting-food-note-s-of-a-restaurant"><a class="link" href="#deleting-food-note-s-of-a-restaurant">F.17. Deleting food note(s) of a restaurant</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2086,7 +2061,7 @@ Expected: No restaurant&#8217;s bad notes is edited. Error details shown in the 
 </div>
 </div>
 <div class="sect2">
-<h3 id="search-for-restaurants-based-on-a-number-of-criteria"><a class="link" href="#search-for-restaurants-based-on-a-number-of-criteria">G.18. Search for restaurants based on a number of criteria</a></h3>
+<h3 id="search-for-restaurants-based-on-a-number-of-criteria"><a class="link" href="#search-for-restaurants-based-on-a-number-of-criteria">F.18. Search for restaurants based on a number of criteria</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2097,16 +2072,16 @@ Expected: Searches and display restaurants in the Clementi area. Number of resta
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-an-assignment"><a class="link" href="#adding-an-assignment">G.19. Adding an assignment</a></h3>
+<h3 id="adding-an-assignment"><a class="link" href="#adding-an-assignment">F.19. Adding an assignment</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Test case: <code>(st)add t/CS2103 post lecture quiz d/2020-11-11 23:59 e/2</code><br>
-Expected: Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-11-2020 23:59 PM and which takes an estimated two hours to complete. Details of the added assignment shown in the status message.</p>
+Expected: Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11 Nov 2020 23:59 PM and which takes an estimated two hours to complete. Details of the added assignment shown in the status message.</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Test case: <code>(st)add t/CS2105 lab d/DATETIME e/5</code> (where DATETIME is after the current date and time)<br>
+<p>Test case: <code>(st)add t/CS2105 lab d/DEADLINE e/5</code> (where <code>DEADLINE</code> is before the current date and time)<br>
 Expected: No assignment is added. Error details shown in the status message.</p>
 </li>
 </ol>
@@ -2116,7 +2091,7 @@ Expected: No assignment is added. Error details shown in the status message.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="list-current-assignments"><a class="link" href="#list-current-assignments">G.20. List current assignments</a></h3>
+<h3 id="list-current-assignments"><a class="link" href="#list-current-assignments">F.20. List current assignments</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2135,7 +2110,7 @@ Expected: Assignments will not be sorted. Error details shown in the status mess
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-an-assignment"><a class="link" href="#deleting-an-assignment">G.21. Deleting an assignment</a></h3>
+<h3 id="deleting-an-assignment"><a class="link" href="#deleting-an-assignment">F.21. Deleting an assignment</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2160,7 +2135,7 @@ Expected: No assignment is deleted. Error details shown in the status message.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-an-assignment"><a class="link" href="#editing-an-assignment">G.22. Editing an assignment</a></h3>
+<h3 id="editing-an-assignment"><a class="link" href="#editing-an-assignment">F.22. Editing an assignment</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2183,7 +2158,7 @@ Expected: Marks the first assignment in the Schoolwork Tracker as completed. Det
 Expected: Marks the first assignment in the Schoolwork Tracker as uncompleted. Details of the edited assignment shown in the status message.</p>
 </li>
 <li>
-<p>Test case: <code>(st)edit d/y</code> (where y is after the current date and time)<br>
+<p>Test case: <code>(st)edit d/DEADLINE</code> (where <code>DEADLINE</code> is before the current date and time)<br>
 Expected: No assignment is edited. Error details shown in the status message.</p>
 </li>
 <li>
@@ -2197,7 +2172,34 @@ Expected: Same as above</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-social-event"><a class="link" href="#adding-a-social-event">G.23. Adding a social event</a></h3>
+<h3 id="generating-schedule"><a class="link" href="#generating-schedule">F.23. Generating schedule</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Generates the user&#8217;s schedule</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: There are assignments added to the SchoolworkTracker</p>
+</li>
+<li>
+<p>Test case: <code>(st)schedule n/5</code><br>
+Expected: The user&#8217;s schedule for the next 5 days is displayed. For the query date, the total allocated hours should not exceed the amount of time remaining on query date.
+For each assignment, the amount of time allocated to the day it is due should not exceed the amount of time the user has on that day before the time of submission.
+For each assignment, the total amount of time scheduled and unscheduled should equals the estimated workload of that assignment.</p>
+</li>
+<li>
+<p>Test case: <code>(st)schedule n/-1</code><br>
+Expected: No schedule is displayed. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-social-event"><a class="link" href="#adding-a-social-event">F.24. Adding a social event</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2216,7 +2218,7 @@ Expected: No social event is added. Error details shown in the status message.</
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-events"><a class="link" href="#listing-all-events">G.24. Listing all events</a></h3>
+<h3 id="listing-all-events"><a class="link" href="#listing-all-events">F.25. Listing all events</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2227,7 +2229,7 @@ Expected: List all added social events in the Event Schedule.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="editing-a-social-event"><a class="link" href="#editing-a-social-event">G.25. Editing a social event</a></h3>
+<h3 id="editing-a-social-event"><a class="link" href="#editing-a-social-event">F.26. Editing a social event</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2252,7 +2254,7 @@ Expected: No social event is edited. Error details shown in the status message.<
 </div>
 </div>
 <div class="sect2">
-<h3 id="deleting-a-social-event"><a class="link" href="#deleting-a-social-event">G.26. Deleting a social event</a></h3>
+<h3 id="deleting-a-social-event"><a class="link" href="#deleting-a-social-event">F.27. Deleting a social event</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2279,25 +2281,5 @@ Expected: No social event is deleted. Error details shown in the status message.
 <p>end::manual[]</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="saving-data"><a class="link" href="#saving-data">G.27. Saving data</a></h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Dealing with missing/corrupted data files</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><em>{explain how to simulate a missing/corrupted file and the expected behavior}</em></p>
-</li>
-</ol>
 </div>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p><em>{ more test cases &#8230;&#8203; }</em></p>
-</div>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 13:23:21 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 14:01:11 UTC</div></div></div></body></html>
