@@ -27,8 +27,9 @@
 <li><a href="#detailed-contact-viewer">3.3. Detailed Contact Viewer</a></li>
 <li><a href="#sorting-of-assignments">3.4. Sorting of Assignments</a></li>
 <li><a href="#editing-of-restaurant-notes">3.5. Editing of Restaurant Notes</a></li>
-<li><a href="#logging">3.6. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.7. Configuration</a></li>
+<li><a href="#finding-contacts">3.6. Finding Contacts</a></li>
+<li><a href="#logging">3.7. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -885,10 +886,15 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 <p>end::editRestNote[]</p>
 </div>
 <div class="paragraph">
-<p>tag::findContacts[]
-=== Finding Contacts
-==== Implementation</p>
+<p>tag::findContacts[]</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-contacts"><a class="link" href="#finding-contacts">3.6. Finding Contacts</a></h3>
+<div class="sect3">
+<h4 id="implementation-5"><a class="link" href="#implementation-5">3.6.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The finding of a Person is facilitated by the <code>Address Book</code>. This feature allows for users to find a specific contact in their <code>Address Book</code>.</p>
 </div>
@@ -921,9 +927,8 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.5.3. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.6.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags"><a class="link" href="#aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags">Aspect: How to execute the command for finding a contact using Java Predicates, given that a Person has multiple tags.</a></h5>
 <div class="paragraph">
@@ -987,14 +992,14 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.6. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.7, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1025,7 +1030,7 @@ will then retrieve the generated schedule and display it as shown in <strong>Fig
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.7. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -2282,4 +2287,4 @@ Expected: No social event is deleted. Error details shown in the status message.
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 14:16:00 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 14:23:05 UTC</div></div></div></body></html>
