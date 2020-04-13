@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Sarah Chua - Project Portfolio</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="../images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="../index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">Naggy Joel</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="../LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://ay1920s2-cs2103-w14-3.github.io/main/"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Sarah Chua - Project Portfolio</h1></div><div id="content"><div class="sect1">
+<h2 id="project-naggy-joel"><a class="link" href="#project-naggy-joel">PROJECT: Naggy Joel</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div>
+<div class="sect1">
+<h2 id="overview"><a class="link" href="#overview">Overview</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Naggy Joel is a desktop application for University students who wish to manage their social life as well as their school assignments. While Naggy Joel understands the importance of maintaining a social life, Naggy Joel also understands that school assignments should come first!
+The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to add/delete/edit Events</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to add/delete/edit their events (eg. social events).</p>
+</li>
+<li>
+<p>Justification: This feature improves the product significantly because a user can log their events, delete events if there have been cancellations, or edit events if they have made mistakes in commands and the app should provide a convenient way to rectify them using the edit function.</p>
+</li>
+<li>
+<p>Highlights: The implementation was challenging because I had to integrate this with the existing features (like the Schoolwork Tracker). For instance, I added a warning to be thrown when the user adds an Event on the same day as which an assignment is due, to warn the user that they ought to prioritize the assignment if it isn&#8217;t completed yet, and to prompt the user to reconsider if going to such an event is necessary if they do not have time to complete their schoolwork.</p>
+</li>
+<li>
+<p>Credits: -</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Major enhancement</strong>: added <strong>the ability to find Restaurants and Persons</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: allows the user to find specific people in the address book and specific restaurants in the restaurant tracker.</p>
+</li>
+<li>
+<p>Justification: This feature improves the product significantly because it allows people to find specific restaurants or people in the app (if the user have many contacts and many restaurants logged down, it makes it easier to the user to pick out the specific contact/restaurant that they want).</p>
+</li>
+<li>
+<p>Highlights: This enhancement required in-depth knowledge of the Java Predicate because the existing code base had been using Predicates. Furthermore, since one Person could have multiple tags and our find command allows for searching via tags, the implementation was challenging as it required me to come up with a way to manipulate using one Predicate&#8217;s keywords to search against multiple fields (unlike other Predicates, which usually check their keywords against one field like a Person&#8217;s Name).</p>
+</li>
+<li>
+<p>Credits: -</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Minor enhancement</strong>: Added in the GUI display for the Event Schedule (so a person can see what events they have upcoming).</p>
+</li>
+<li>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#=undefined&amp;search=nidorinas">Summary of code contributions</a>]</p>
+</li>
+<li>
+<p><strong>Other contributions</strong>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Enhancements to existing features:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added in the Organization field of a person, allowing them to be tagged to a specific Organization.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Contributed to both the Developer Guide and User Guide for this project.</p>
+</li>
+<li>
+<p>Did cosmetic tweaks to existing contents of the User Guide: <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/154">#154</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>PRs reviewed (with non-trivial review comments): <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/152">#152</a></p>
+</li>
+<li>
+<p>Reported bugs and suggestions for other teams in the class (examples:  <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/114">1</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/115">2</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/116">3</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/117">4</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/118">5</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/119">6</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/120">7</a>, <a href="https://github.com/AY1920S2-CS2103-T09-3/main/issues/121">8</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Tools:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Integrated Travis with the team repo</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="project-powerpointlabs"><a class="link" href="#project-powerpointlabs">PROJECT: PowerPointLabs</a></h2>
+<div class="sectionbody">
+<hr>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 07:31:01 UTC</div></div></div></body></html>
