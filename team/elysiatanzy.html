@@ -299,7 +299,7 @@ that should be spent on the assignment on that <code>Day</code>.</p>
 <div class="paragraph text-justify">
 <p>As seen from <strong>Fig 5</strong> below, arguments from the input command is first parsed using the <code>ScheduleCommandParser</code> which converts
 the string variable into an integer and then passes it to <code>ScheduleCommand</code> for use later on and represents the <code>NUM_DAYS</code> queried. If the input argument is invalid, a <code>ParseException</code>
-is thrown and the user will be notified of the proper command usage.</p>
+is thrown instead and the user will be notified of the proper command usage. If the command is valid, the <code>ScheduleCommand</code> object will be created and returned to the <code>LogicManager</code> who will then call the <code>execute()</code> method in <code>ScheduleCommand</code>.</p>
 </div>
 <div class="imageblock" style="text-align: center">
 <div class="content">
@@ -308,9 +308,6 @@ is thrown and the user will be notified of the proper command usage.</p>
 </div>
 <div class="paragraph text-center">
 <p><em>Fig 5. Sequence Diagram depicting generation of ScheduleCommand object</em></p>
-</div>
-<div class="paragraph text-justify">
-<p>If the command is valid, <code>LogicManager</code> will call the <code>execute()</code> method in <code>ScheduleCommand</code>.</p>
 </div>
 <div class="paragraph text-justify">
 <p>As seen from <strong>Fig 6</strong> below, the necessary preparations will be made before the schedule is being generated:</p>
@@ -512,4 +509,4 @@ will then retrieve the generated schedule and display it as shown in Fig 10 belo
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 06:36:46 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 06:51:28 UTC</div></div></div></body></html>
