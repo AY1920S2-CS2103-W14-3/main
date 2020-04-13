@@ -24,9 +24,12 @@
 <ul class="sectlevel2">
 <li><a href="#schoolwork-tracker">3.1. Schoolwork Tracker</a></li>
 <li><a href="#schedule">3.2. Schedule</a></li>
-<li><a href="#finding-contacts">3.3. Finding Contacts</a></li>
-<li><a href="#logging">3.4. Logging</a></li>
-<li><a href="#Implementation-Configuration">3.5. Configuration</a></li>
+<li><a href="#detailed-contact-viewer">3.3. Detailed Contact Viewer</a></li>
+<li><a href="#sorting-of-assignments">3.4. Sorting of Assignments</a></li>
+<li><a href="#editing-of-restaurant-notes">3.5. Editing of Restaurant Notes</a></li>
+<li><a href="#finding-contacts">3.6. Finding Contacts</a></li>
+<li><a href="#logging">3.7. Logging</a></li>
+<li><a href="#Implementation-Configuration">3.8. Configuration</a></li>
 </ul>
 </li>
 <li><a href="#documentation">4. Documentation</a></li>
@@ -48,7 +51,7 @@
 <li><a href="#editing-additional-information-for-a-person">G.6. Editing additional information for a person</a></li>
 <li><a href="#deleting-additional-information-of-a-person">G.7. Deleting additional information of a person</a></li>
 <li><a href="#finding-a-specific-contact-specific-set-of-contacts">G.8. Finding a specific contact/specific set of contacts</a></li>
-<li><a href="#retrieves-a-specific-contact-and-view-in-full-details">G.9. Retrieves a specific contact and view in full details</a></li>
+<li><a href="#retrieving-a-specific-contact-and-view-in-full-details">G.9. Retrieving a specific contact and view in full details</a></li>
 <li><a href="#list-contacts-with-upcoming-birthdays">G.10. List contacts with upcoming birthdays</a></li>
 <li><a href="#adding-a-restaurant">G.11. Adding a restaurant</a></li>
 <li><a href="#list-all-restaurants-saved">G.12. List all restaurants saved</a></li>
@@ -646,10 +649,15 @@ will then retrieve the generated schedule and display it as shown in Fig 10 belo
 <p>end::schedule[]</p>
 </div>
 <div class="paragraph">
-<p>tag::get[]
-=== Detailed Contact Viewer
-==== Implementation</p>
+<p>tag::get[]</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="detailed-contact-viewer"><a class="link" href="#detailed-contact-viewer">3.3. Detailed Contact Viewer</a></h3>
+<div class="sect3">
+<h4 id="implementation-2"><a class="link" href="#implementation-2">3.3.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The detailed contact viewer is facilitated by <code>AddressBook</code>. This feature allows a user to view a particular contact details in entirety.</p>
 </div>
@@ -679,9 +687,8 @@ will then retrieve the generated schedule and display it as shown in Fig 10 belo
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.2.3. Design Considerations</a></h4>
+<h4 id="design-considerations-2"><a class="link" href="#design-considerations-2">3.3.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-what-information-to-display"><a class="link" href="#aspect-what-information-to-display">Aspect: What information to display</a></h5>
 <div class="ulist">
@@ -707,8 +714,7 @@ will then retrieve the generated schedule and display it as shown in Fig 10 belo
 <p>Pros: AddressBook list is less cluttered.</p>
 </li>
 <li>
-<p>Cons: Omits certain information.
-end::get[]</p>
+<p>Cons: Omits certain information.</p>
 </li>
 </ul>
 </div>
@@ -716,10 +722,18 @@ end::get[]</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>tag::sortAssgn[]
-=== Sorting of Assignments
-==== Implementation</p>
+<p>end::get[]</p>
 </div>
+<div class="paragraph">
+<p>tag::sortAssgn[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sorting-of-assignments"><a class="link" href="#sorting-of-assignments">3.4. Sorting of Assignments</a></h3>
+<div class="sect3">
+<h4 id="implementation-3"><a class="link" href="#implementation-3">3.4.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The sorting of assignments is facilitated by <code>AssignmentList</code>. This feature allows a user to sort assignments by deadline or estimated completion time.</p>
 </div>
@@ -762,9 +776,8 @@ end::get[]</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.2.4. Design Considerations</a></h4>
+<h4 id="design-considerations-3"><a class="link" href="#design-considerations-3">3.4.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-sort-assignment-by-estimated-completion-time"><a class="link" href="#aspect-how-to-sort-assignment-by-estimated-completion-time">Aspect: How to sort assignment by estimated completion time</a></h5>
 <div class="ulist">
@@ -790,8 +803,7 @@ end::get[]</p>
 <p>Pros: User can clear more assignments faster, by completing those that takes a shorter amount of time first.</p>
 </li>
 <li>
-<p>Cons: User may delay starting on assignments that take longer and risk having uncompleted assignments at the deadline.
-end::sortAssgn[]</p>
+<p>Cons: User may delay starting on assignments that take longer and risk having uncompleted assignments at the deadline.</p>
 </li>
 </ul>
 </div>
@@ -799,10 +811,18 @@ end::sortAssgn[]</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>tag::editRestNote[]
-=== Editing of Restaurant Notes
-==== Implementation</p>
+<p>end::sortAssgn[]</p>
 </div>
+<div class="paragraph">
+<p>tag::editRestNote[]</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-of-restaurant-notes"><a class="link" href="#editing-of-restaurant-notes">3.5. Editing of Restaurant Notes</a></h3>
+<div class="sect3">
+<h4 id="implementation-4"><a class="link" href="#implementation-4">3.5.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The editing of restaurant notes is facilitated by <code>RestaurantBook</code>. This feature allows a user to edit existing notes of a restaurant in the list.</p>
 </div>
@@ -837,9 +857,8 @@ end::sortAssgn[]</p>
 </div>
 </div>
 </div>
-</div>
 <div class="sect3">
-<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.2.5. Design Considerations</a></h4>
+<h4 id="design-considerations-4"><a class="link" href="#design-considerations-4">3.5.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-edit-note-given-3-editable-notes-for-a-restaurant"><a class="link" href="#aspect-how-to-execute-the-command-for-edit-note-given-3-editable-notes-for-a-restaurant">Aspect: How to execute the command for edit note, given 3 editable notes for a restaurant.</a></h5>
 <div class="ulist">
@@ -865,21 +884,23 @@ end::sortAssgn[]</p>
 <p>Pros: Easier to implement.</p>
 </li>
 <li>
-<p>Cons: Not user-friendly since different notes cannot be edited in a single command.
-end::editRestNote[]</p>
+<p>Cons: Not user-friendly since different notes cannot be edited in a single command.</p>
 </li>
 </ul>
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>end::editRestNote[]</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="finding-contacts"><a class="link" href="#finding-contacts">3.3. Finding Contacts</a></h3>
+<h3 id="finding-contacts"><a class="link" href="#finding-contacts">3.6. Finding Contacts</a></h3>
 <div class="sect3">
-<h4 id="implementation-2"><a class="link" href="#implementation-2">3.3.1. Implementation</a></h4>
+<h4 id="implementation-5"><a class="link" href="#implementation-5">3.6.1. Implementation</a></h4>
 <div class="paragraph">
 <p>The finding of a Person is facilitated by the <code>Address Book</code>. This feature allows for users to find a specific contact in their <code>Address Book</code>.</p>
 </div>
@@ -913,7 +934,7 @@ end::editRestNote[]</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.3.2. Design Considerations</a></h4>
+<h4 id="design-considerations-5"><a class="link" href="#design-considerations-5">3.6.2. Design Considerations</a></h4>
 <div class="sect4">
 <h5 id="aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags"><a class="link" href="#aspect-how-to-execute-the-command-for-finding-a-contact-using-java-predicates-given-that-a-person-has-multiple-tags">Aspect: How to execute the command for finding a contact using Java Predicates, given that a Person has multiple tags.</a></h5>
 <div class="paragraph">
@@ -974,14 +995,14 @@ end::editRestNote[]</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="logging"><a class="link" href="#logging">3.4. Logging</a></h3>
+<h3 id="logging"><a class="link" href="#logging">3.7. Logging</a></h3>
 <div class="paragraph">
 <p>We are using <code>java.util.logging</code> package for logging. The <code>LogsCenter</code> class is used to manage the logging levels and logging destinations.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.5, &#8220;Configuration&#8221;</a>)</p>
+<p>The logging level can be controlled using the <code>logLevel</code> setting in the configuration file (See <a href="#Implementation-Configuration">Section 3.8, &#8220;Configuration&#8221;</a>)</p>
 </li>
 <li>
 <p>The <code>Logger</code> for a class can be obtained using <code>LogsCenter.getLogger(Class)</code> which will log messages according to the specified logging level</p>
@@ -1012,7 +1033,7 @@ end::editRestNote[]</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.5. Configuration</a></h3>
+<h3 id="Implementation-Configuration"><a class="link" href="#Implementation-Configuration">3.8. Configuration</a></h3>
 <div class="paragraph">
 <p>Certain properties of the application can be controlled (e.g user prefs file location, logging level) through the configuration file (default: <code>config.json</code>).</p>
 </div>
@@ -1637,6 +1658,9 @@ Expected: The most recent window size and location is retained.</p>
 <div class="paragraph">
 <p><em>{ more test cases &#8230;&#8203; }</em></p>
 </div>
+<div class="paragraph">
+<p>tag::manual[]</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="adding-a-person"><a class="link" href="#adding-a-person">G.2. Adding a person</a></h3>
@@ -1870,7 +1894,7 @@ Expected: If person(s) with the organization "NUS" and have the word "Lim" in th
 </div>
 </div>
 <div class="sect2">
-<h3 id="retrieves-a-specific-contact-and-view-in-full-details"><a class="link" href="#retrieves-a-specific-contact-and-view-in-full-details">G.9. Retrieves a specific contact and view in full details</a></h3>
+<h3 id="retrieving-a-specific-contact-and-view-in-full-details"><a class="link" href="#retrieving-a-specific-contact-and-view-in-full-details">G.9. Retrieving a specific contact and view in full details</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -2258,6 +2282,9 @@ Expected: No social event is deleted. Error details shown in the status message.
 </li>
 </ol>
 </div>
+<div class="paragraph">
+<p>end::manual[]</p>
+</div>
 </div>
 <div class="sect2">
 <h3 id="saving-data"><a class="link" href="#saving-data">G.27. Saving data</a></h3>
@@ -2280,4 +2307,4 @@ Expected: No social event is deleted. Error details shown in the status message.
 </div>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 06:29:48 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 06:32:07 UTC</div></div></div></body></html>

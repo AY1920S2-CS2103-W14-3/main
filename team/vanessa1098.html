@@ -29,13 +29,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to add multiple notes, edit the added notes, or delete the added notes.</p>
+<p>What it does: Allows the user to add multiple notes, edit the added notes, or delete the added notes.</p>
 </li>
 <li>
 <p>Justification: This feature improves the product significantly because a user can add in additional information to a contact that they wish to remember/ is deemed important.</p>
 </li>
 <li>
-<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+<p>Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives.</p>
 </li>
 <li>
 <p>Credits: <em>{reused the original RemarkCommand}</em></p>
@@ -48,26 +48,42 @@
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: allows the user to add multiple notes, edit the added notes, or delete the added notes.</p>
+<p>What it does: Allows the user to add multiple notes, edit the added notes, or delete the added notes.</p>
 </li>
 <li>
 <p>Justification: This feature improves the product significantly because a user can add additional information to a restaurant in order to keep track of the dishes' reviews.</p>
+</li>
+<li>
+<p>Highlights: Each restaurant has 3 food notes that can be added, edited, or deleted. Multiple addition/deletion of notes require a detailed validity check of the command since the inputs are dependent.</p>
+</li>
+<li>
+<p>Credits: <em>{referenced from RemarkCommand}</em></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Added the ability to retrieve a single particular contact.</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does: This allows the user to view the information of a particular contact in full detail.</p>
+</li>
+<li>
+<p>Justification: As we added in more fields to a person in the Address Book, we cut down the information displayed on the Address Book list command. Thus, this command allows the user to view the rest of the information.</p>
 </li>
 <li>
 <p>Highlights:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands.</p>
+<p>This enhancement requires the understanding of how the filtering of the Address Book contacts are done, and to display it on the application.</p>
 </li>
 <li>
-<p>Each restaurant has 3 food notes that can be added, edited, or deleted. Multiple addition/deletion of notes require a detailed checking of inputs that are dependent on other inputs.</p>
+<p>Independent filtering is required. To retrieve a single contact information on a third display panel, the filtering of the Address Book contacts should not affect the original contact list on the second panel.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Credits: <em>{referenced from RemarkCommand}</em></p>
 </li>
 </ul>
 </div>
@@ -80,52 +96,36 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Added the ability to retrieve a single particular contact.</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p>What it does: This allows the user to view the information of a particular contact in full detail.</p>
-</li>
-<li>
-<p>Justification: As we added in more fields to a person in the Address Book, we cut down the information listed on the Address Book list command. Thus, this command allows the user to view the rest of the information.</p>
-</li>
-<li>
-<p>Highlights: This enhancements requires the understanding of how the filtering of the Address Book contacts are done, and to display it on the application.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
 <p><strong>Added the ability to sort assignments</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: This allows the user to sort the assignments by deadline, or estimated number of hours to be completed.</p>
+<p>What it does: This allows the user to sort the assignments by deadline or estimated number of hours to be completed, or by the assignment&#8217;s title in alphabetical order.</p>
 </li>
 <li>
 <p>Justification: As our application allows user to keep track of the assignments that they have to complete, providing a sorting feature allows for prioritisation of assignments based on the criteria (deadline/time needed) the user prefers.</p>
 </li>
 <li>
-<p>Highlights: Uncompleted assignments will always be listed before completed assignments so that users have a clearer view.</p>
+<p>Highlights: Uncompleted assignments, assignments with the most recent deadline and take a longer time to complete will be listed first.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Added a visited option for restaurants</strong></p>
+<p><strong>Ensure that the filtered search results remains after editing of contacts/restaurants</strong></p>
 <div class="ulist">
 <ul>
 <li>
-<p>What it does: This allows the user to indicate if they have visited a restaurant.</p>
+<p>What it does: After a user enters <code>(ab)find</code> or <code>(rt)find</code> and wish to edit information of the contacts/restaurants in this search result, the filtered search result will still remain on the second panel even with the edits.</p>
 </li>
 <li>
-<p>Justification: As there might be a handful of restaurants stored in the Restaurant Book, this feature allows the user to keep track of which restaurants they have visited.</p>
+<p>Justification: This helps to complement the commands and allows the user to have the option to return to the full list of contacts/remain the filtered search results after any edits.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#=undefined&amp;search=vanessa1098">Summary of code contributions</a>]</p>
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s2.github.io/tp-dashboard/#search=vanessa1098&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2020-02-14&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=Vanessa1098&amp;tabRepo=AY1920S2-CS2103-W14-3%2Fmain%5Bmaster%5D">Summary of code contributions</a>]</p>
 </li>
 <li>
 <p><strong>Other contributions</strong>:</p>
@@ -155,10 +155,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Did cosmetic tweaks to existing contents of the User Guide (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/140">#140</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/146">#146</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/152">#152</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/158">#158</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/161">#161</a>)</p>
-</li>
-<li>
-<p>Contributed to the Developer Guide of this project</p>
+<p>Contributed to the User Guide and Developer Guide of this project</p>
 </li>
 </ul>
 </div>
@@ -168,7 +165,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Reported bugs and suggestions for other teams in the module</p>
+<p>Reported bugs and suggestions for other teams in the module (<a href="https://github.com/Vanessa1098/ped/issues">PED</a>)</p>
 </li>
 </ul>
 </div>
@@ -178,7 +175,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Reviewed PRs, provided suggestions for my teammates and comments to improve/clarify (Pull requests <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/150">#150</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/152">#152</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/153">#153</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/155">#155</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/158">#158</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/160">#160</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/187">#187</a>, <a href="https://github.com/AY1920S2-CS2103-W14-3/main/pull/188">#188</a>)</p>
+<p>Reviewed PRs, provided suggestions for my teammates and comments to improve/clarify (<a href="https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+is%3Aclosed+reviewed-by%3A%40me">Reviews</a>)</p>
+</li>
+<li>
+<p>Created PRs for approvals (<a href="https://github.com/AY1920S2-CS2103-W14-3/main/pulls?q=is%3Apr+is%3Aclosed+author%3AVanessa1098">Pull requests</a>)</p>
 </li>
 </ul>
 </div>
@@ -299,6 +299,124 @@ Format: <code>(ab)deletenote INDEX l/LINE_NUMBER&#8230;&#8203;</code></p>
 <li>
 <p><code>(ab)deletenote 1 l/4 l/5</code><br>
 Deletes the 4th and 5th note from the first person.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="add-notes-to-a-restaurant-code-rt-addnote-code"><a class="link" href="#add-notes-to-a-restaurant-code-rt-addnote-code">Add notes to a restaurant : <code>(rt)addnote</code></a></h4>
+<div class="paragraph">
+<p>Adds a new note to a restaurant<br>
+Format: <code>(rt)addnote INDEX [r/RECOMMENDED_FOOD1] [r/RECOMMENDED_FOOD2] [g/GOOD_FOOD] [b/BAD_FOOD] &#8230;&#8203;</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX must be a positive integer. It refers to the index of the respective restaurant as displayed in the LIST function.</p>
+</li>
+<li>
+<p>There should be at least either one r/RECOMMENDED_FOOD, one g/GOOD_FOOD, or one b/BAD_FOOD specified.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(rt)addnote 5 r/chicken chop g/truffle fries b/risotto</code><br>
+Add notes to the restaurant at index 5 with recommended food Chicken Chop, good food Truffle Fries, and bad food Risotto.</p>
+</li>
+<li>
+<p><code>(rt)addnote 2 g/Cheese baked rice</code><br>
+Adds a note to the restaurant at index 2 with good food Cheese baked rice.</p>
+</li>
+<li>
+<p><code>(rt)addnote 1 b/Fried rice b/Latte</code><br>
+Add notes to the restaurant at index 1 with bad food Fried rice and Latte.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="edit-notes-to-a-restaurant-code-rt-editnote-code"><a class="link" href="#edit-notes-to-a-restaurant-code-rt-editnote-code">Edit notes to a restaurant : <code>(rt)editnote</code></a></h4>
+<div class="paragraph">
+<p>Edits a note to a restaurant<br>
+Format: <code>(rt)editnote INDEX [rl/LINE_NUMBER] [r/RECOMMENDED_FOOD] [gl/LINE_NUMBER] [g/GOOD_FOOD] [bl/BAD_FOOD] [b/BAD_FOOD]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX must be a positive integer. It refers to the index of the respective restaurant as displayed in the LIST function.</p>
+</li>
+<li>
+<p>There should be at least either one r/RECOMMENDED_FOOD, one g/GOOD_FOOD, or one b/BAD_FOOD specified to be edited.</p>
+</li>
+<li>
+<p>For each of the food notes, at most one can be edited each time.</p>
+</li>
+<li>
+<p>Line number for the respective food notes to be edited should be present.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(rt)editnote 1 rl/2 r/Lobster pasta gl/1 g/Mushroom soup bl/3 b/Salad</code><br>
+Edit notes to the restaurant at index 1 with recommend food Lobster pasta at line number 2, good food Mushroom soup at line number 1, and bad food Salad at line number 3.</p>
+</li>
+<li>
+<p><code>(rt)editnote 2 gl/2 g/Chicken chop</code><br>
+Edits note to the restaurant at index 2 with good food Chicken chop.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="delete-notes-to-a-restaurant-code-rt-deletenote-code"><a class="link" href="#delete-notes-to-a-restaurant-code-rt-deletenote-code">Delete notes to a restaurant : <code>(rt)deletenote</code></a></h4>
+<div class="paragraph">
+<p>Deletes a note to a restaurant<br>
+Format: <code>(rt)deletenote INDEX [rl/LINE_NUMBER1] [rl/LINE_NUMBER2] [gl/LINE_NUMBER] [bl/BAD_FOOD]</code></p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>INDEX must be a positive integer. It refers to the index of the respective restaurant as displayed in the LIST function.</p>
+</li>
+<li>
+<p>There should be at least either one rl/LINE_NUMBER, one gl/LINE_NUMBER, or one bl/LINE_NUMBER specified to be deleted from the respective notes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>(rt)deletenote 1 rl/2 gl/1 bl/3</code><br>
+Delete notes to the restaurant at index 1, at line number 2 of recommended food notes, at line number 1 of good food notes, at line number 3 of bad food notes.</p>
+</li>
+<li>
+<p><code>(rt)deletenote 2 gl/1 gl/2</code><br>
+Deletes a note to the restaurant at index 2, at line numbers 1 and 2 of good food notes.</p>
 </li>
 </ul>
 </div>
@@ -543,9 +661,630 @@ Deletes the 4th and 5th note from the first person.</p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-person"><a class="link" href="#adding-a-person">Adding a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(ab)add n/John p/12345 o/NUS n/05-20</code>
+Expected: A new contact with the name John, phone number 12345, and birthday 20 May is added to the list. Details of the added contact shown in the status message.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-person"><a class="link" href="#deleting-a-person">Deleting a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deleting a person while all persons are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)delete 1</code><br>
+Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)delete 0</code><br>
+Expected: No person is deleted. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect delete commands to try: <code>(ab)delete</code>, <code>(ab)delete x</code> (where x is larger than the list size) <em>{give more}</em><br>
+Expected: Similar to previous.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Deleting a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)delete x</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No person is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-person"><a class="link" href="#editing-a-person">Editing a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Editing a person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)edit 2 t/BFF -t/Friends</code><br>
+Expected: Second contact in the list is edited, with tag "Friends" deleted, and tag "BFF" added. Details  of the edited contact shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)edit x b/06-22</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No person is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-additional-information-to-a-person"><a class="link" href="#adding-additional-information-to-a-person">Adding additional information to a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adds note(s) to a person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)addnote 2 i/Likes red i/Lives in Jurong i/Cycles</code><br>
+Expected: Second contact in the list has 3 new notes, "Likes red", "Lives in Jurong" and "Cycles", added. Details of the edited contact shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)addnote x i/Can&#8217;t take spicy</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No new note is added to a person. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-additional-information-for-a-person"><a class="link" href="#editing-additional-information-for-a-person">Editing additional information for a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits an existing note of person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)editnote 2 l/2 i/Likes matcha</code><br>
+Expected: Edits the second note of the second contact in the list to "Likes matcha". Details of the edited contact shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)editnote x i/Likes red</code> (where x is larger than the number of existing notes of a person)<br>
+Expected: No note is edited for the person. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect commands to try: <code>(ab)editnote 2 l/aaa i/Likes cats</code> (where line number is not an integer)<br>
+Expected: Similar to previous</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing an existing note of a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)editnote x l/3 i/Can&#8217;t take spicy</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No note is edited for a person. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-additional-information-of-a-person"><a class="link" href="#deleting-additional-information-of-a-person">Deleting additional information of a person</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete note(s) of a person while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)deletenote 2 l/1 l/3</code><br>
+Expected: Deletes the first and third note of the second contact in the list. Details of the edited contact shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)deletenote 2 l/x</code> (where x is larger than the number of existing notes of a person)<br>
+Expected: No note is deleted for the person. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect commands to try: <code>(ab)deletenote 2 l/2 l/aaa</code> (where line number is not an integer)<br>
+Expected: Similar to previous</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Editing a person while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)deletenote x l/2</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No note is deleted for a person. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-a-specific-contact-specific-set-of-contacts"><a class="link" href="#finding-a-specific-contact-specific-set-of-contacts">Finding a specific contact/specific set of contacts</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Finding person(s) by organization, name or tag.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)find o/NUS n/Lim</code><br>
+Expected: If person(s) with the organization "NUS" and have the word "Lim" in the name, person(s) will be listed. The number of person listed shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="retrieving-a-specific-contact-and-view-in-full-details"><a class="link" href="#retrieving-a-specific-contact-and-view-in-full-details">Retrieving a specific contact and view in full details</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Retrieves a person contact while all persons listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)get 2</code><br>
+Expected: Display the second person in the full contact list. The number of person listed shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)get x</code> (where x is larger than the number of contacts in the list)<br>
+Expected: No detailed view of contact is displayed. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Retrieves a person contact while finding contacts that meet certain criteria</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List subset of contacts using the <code>(ab)find</code> command. Persons who meet the criteria are listed.</p>
+</li>
+<li>
+<p>Test case: <code>(ab)get x</code> (where x exists in the full contact list but not in the filtered list)<br>
+Expected: No detailed view of contact is displayed. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-contacts-with-upcoming-birthdays"><a class="link" href="#list-contacts-with-upcoming-birthdays">List contacts with upcoming birthdays</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>All persons are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisite: List all persons using the <code>(ab)list</code> command. Multiple persons in the list.</p>
+</li>
+<li>
+<p><code>(ab)birthday</code><br>
+Expected: All contacts with birthdays in the next 5 days (current day included) should be listed.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-restaurant"><a class="link" href="#adding-a-restaurant">Adding a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(rt)add n/Ameens l/Clementi v/No o/0900:2300 p/$ c/Indian</code><br>
+Expected: Adds a new restaurant called Ameens at Clementi with 1 dollar sign price point, opens from 9am to 11pm, with cuisine Indian and has yet to be visited.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-all-restaurants-saved"><a class="link" href="#list-all-restaurants-saved">List all restaurants saved</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>(rt)list</code><br>
+Expected: All restaurants added should be displayed.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-restaurant"><a class="link" href="#editing-a-restaurant">Editing a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)edit 1 v/Yes o/0900:2200</code><br>
+Expected: Edits the first restaurant visited status to "Yes" and operating hours to "0900:2200".</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-restaurant"><a class="link" href="#deleting-a-restaurant">Deleting a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)delete 2</code><br>
+Expected: Deletes the second restaurant in the restaurant list. Details of the deleted restaurant shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)delete x</code> (where x is larger than the size of the restaurant list)<br>
+Expected: No restaurant is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-food-note-s-to-a-restaurant"><a class="link" href="#adding-food-note-s-to-a-restaurant">Adding food note(s) to a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Add food note(s) to a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)addnote 1 r/Chicken Chop g/Truffle Fries b/Risotto b/Lobster Pasta</code><br>
+Expected: Add notes to the restaurant at index 1 with recommended food Chicken Chop, good food Truffle Fries, and bad food Risotto and Lobster Pasta. Details of the edited restaurant shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-food-note-s-of-a-restaurant"><a class="link" href="#editing-food-note-s-of-a-restaurant">Editing food note(s) of a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edit food note(s) to a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)editnote 1 rl/1 r/Fish and Chip gl/1 g/Mushroom soup bl/2 b/Salad</code><br>
+Expected: Edit notes to the restaurant at index 3 with recommend food Fish and Chip at line number 1, good food Mushroom soup at line number 1, and bad food Salad at line number 2. Details of the edited restaurant shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)editnote 2 rl/aaa r/Fried Rice gl/1 g/Tomato soup</code> (Non-integer line number for recommended food notes)<br>
+Expected: No restaurant&#8217;s food notes is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-food-note-s-of-a-restaurant"><a class="link" href="#deleting-food-note-s-of-a-restaurant">Deleting food note(s) of a restaurant</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Delete food note(s) to a restaurant while all restaurants are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all restaurants using the <code>(rt)list</code> command. Multiple restaurants in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(rt)deletenote 1 rl/1 gl/1 bl/2</code><br>
+Expected: Delete notes to the restaurant at index 1, at line number 1 of recommended food notes, at line number 1 of good food notes, at line number 2 of bad food notes.</p>
+</li>
+<li>
+<p>Test case <code>(rt)deletenote 1 rl/1 gl/x bl/aaa</code> (where x is larger than the size of good food notes, and non-integer line number for bad food notes)<br>
+Expected: No restaurant&#8217;s bad notes is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="search-for-restaurants-based-on-a-number-of-criteria"><a class="link" href="#search-for-restaurants-based-on-a-number-of-criteria">Search for restaurants based on a number of criteria</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>(rt)find l/Clementi</code><br>
+Expected: Searches and display restaurants in the Clementi area. Number of restaurants displayed shown in the status message.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-an-assignment"><a class="link" href="#adding-an-assignment">Adding an assignment</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(st)add t/CS2103 post lecture quiz d/2020-11-11 23:59 e/2</code><br>
+Expected: Adds an assignment titled CS2103 post lecture quiz to the Schoolwork Tracker, due 11-11-2020 23:59 PM and which takes an estimated two hours to complete. Details of the added assignment shown in the status message.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>(st)add t/CS2105 lab d/DATETIME e/5</code> (where DATETIME is after the current date and time)<br>
+Expected: No assignment is added. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="list-current-assignments"><a class="link" href="#list-current-assignments">List current assignments</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(st)list -d</code><br>
+Expected: Assignments will be shown in chronological order, with respect to the deadline, with all completed assignments at the bottom of the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)list -e</code><br>
+Expected: Assignments will be shown according to the estimated completed time in descending order with all completed assignments at the bottom of the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)list -d -e</code><br>
+Expected: Assignments will not be sorted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-an-assignment"><a class="link" href="#deleting-an-assignment">Deleting an assignment</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes an assignment while all assignments are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all assignments using the <code>(st)list</code> command. Multiple assignments in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)delete 1</code><br>
+Expected: Deletes the first assignment in the Schoolwork Tracker. Details of the deleted assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)delete x</code> (where x is larger than the size of Schoolwork Tracker)<br>
+Expected: No assignment is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-an-assignment"><a class="link" href="#editing-an-assignment">Editing an assignment</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits an assignment while all assignments are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all assignments using the <code>(st)list</code> command. Multiple assignments in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit 1 t/CS2103 Quiz e/1</code><br>
+Expected: Changes the title of the first assignment to 'CS2103 Quiz' and estimated completion time to 1 hour. Details of the edited assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit 1 s/Completed</code><br>
+Expected: Marks the first assignment in the Schoolwork Tracker as completed. Details of the edited assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit 1 s/Uncompleted</code><br>
+Expected: Marks the first assignment in the Schoolwork Tracker as uncompleted. Details of the edited assignment shown in the status message.</p>
+</li>
+<li>
+<p>Test case: <code>(st)edit d/y</code> (where y is after the current date and time)<br>
+Expected: No assignment is edited. Error details shown in the status message.</p>
+</li>
+<li>
+<p>Other incorrect commands to try: <code>(st)edit x</code> (where x is larger than the size of Schoolwork Tracker)<br>
+Expected: Same as above</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="adding-a-social-event"><a class="link" href="#adding-a-social-event">Adding a social event</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Test case: <code>(ev)add t/Facebook job interview dt/2020-05-18 10:00 d/3 p/Facebook APAC HQ</code><br>
+Expected: Adds a new social event with title "Facebook job interview", event date 2020-05-18, duration of 3 hours and location at "Facebook APAC HQ".</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Test case: <code>(ev)add t/Birthday party dt/DATETIME d/3 p/Clementi</code> (where DATETIME is after the current date and time)<br>
+Expected: No social event is added. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="listing-all-events"><a class="link" href="#listing-all-events">Listing all events</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>(ev)list</code><br>
+Expected: List all added social events in the Event Schedule.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="editing-a-social-event"><a class="link" href="#editing-a-social-event">Editing a social event</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Edits a social event while all social events are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all social events using the <code>(ev)list</code> command. Multiple social events in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)edit 1 edt/2020-04-09 11:00 ed/2</code><br>
+Expected: Edits the first event in the Event Schedule by changing the timing to 11AM on the 9th of April and the estimated duration to be 2 hours.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)edit dt/DATETIME</code> (where DATETIME is after the current date and time)<br>
+Expected: No social event is edited. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="deleting-a-social-event"><a class="link" href="#deleting-a-social-event">Deleting a social event</a></h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Deletes a social event while all social events are listed</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Prerequisites: List all social events using the <code>(ev)list</code> command. Multiple social events in the list.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)delete 1</code><br>
+Expected: Deletes the first social event in the Event Schedule.</p>
+</li>
+<li>
+<p>Test case: <code>(ev)delete x</code> (where x is larger than the size of Event Schedule)<br>
+Expected: No social event is deleted. Error details shown in the status message.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
 <hr>
 </div>
 </div>
-</div>
-</div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 06:29:48 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 06:32:07 UTC</div></div></div></body></html>
