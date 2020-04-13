@@ -17,8 +17,9 @@
 <li><a href="#address-book-commands">3.2. Address Book Commands</a></li>
 <li><a href="#restaurant-book-commands">3.3. Restaurant Book commands</a></li>
 <li><a href="#schoolwork-tracker-commands">3.4. Schoolwork Tracker commands</a></li>
-<li><a href="#saving-the-data">3.5. Saving the data</a></li>
-<li><a href="#coming-in-v2-0">3.6. Coming in v2.0</a></li>
+<li><a href="#event-schedule-commands">3.5. Event Schedule commands</a></li>
+<li><a href="#saving-the-data">3.6. Saving the data</a></li>
+<li><a href="#coming-in-v2-0">3.7. Coming in v2.0</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -504,9 +505,11 @@ If you want more information about a particular contact, see <code>(ab)get</code
 </table>
 </div>
 <div class="paragraph">
-<p>tag::findCommand[]
-==== Finding contacts : <code>(ab)find</code></p>
+<p>tag::findCommand[]</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="finding-contacts-code-ab-find-code"><a class="link" href="#finding-contacts-code-ab-find-code">3.2.8. Finding contacts : <code>(ab)find</code></a></h4>
 <div class="paragraph">
 <p>Lists out all your contacts in the address book which match a certain criteria. Each contact will have a displayed index. Only the contact&#8217;s name, phone number and tags (if present) will be listed<br>
 Format: <code>(ab)find [o/ORGANIZATION] [n/NAME] [t/TAG]</code></p>
@@ -541,7 +544,7 @@ Finds and lists all contacts that is in organization “NUS” and have the word
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-everything-about-a-contact-in-field-code-ab-get-code"><a class="link" href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.2.8. List everything about a contact in field : <code>(ab)get</code></a></h4>
+<h4 id="list-everything-about-a-contact-in-field-code-ab-get-code"><a class="link" href="#list-everything-about-a-contact-in-field-code-ab-get-code">3.2.9. List everything about a contact in field : <code>(ab)get</code></a></h4>
 <div class="paragraph">
 <p>Displays all information about the queried contact<br>
 Format: <code>(ab)get INDEX</code></p>
@@ -573,7 +576,7 @@ Displays all information about the 1st person.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="list-contacts-with-upcoming-birthdays-code-ab-birthday-code"><a class="link" href="#list-contacts-with-upcoming-birthdays-code-ab-birthday-code">3.2.9. List contacts with upcoming birthdays : <code>(ab)birthday</code></a></h4>
+<h4 id="list-contacts-with-upcoming-birthdays-code-ab-birthday-code"><a class="link" href="#list-contacts-with-upcoming-birthdays-code-ab-birthday-code">3.2.10. List contacts with upcoming birthdays : <code>(ab)birthday</code></a></h4>
 <div class="paragraph">
 <p>Lists all contacts with birthdays in the next 5 days (current day included)<br>
 Format: <code>(ab)birthday</code></p>
@@ -829,9 +832,11 @@ Lists all restaurants.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p>tag::findRestaurantCommand[]
-==== Find restaurants : <code>(rt)find</code></p>
+<p>tag::findRestaurantCommand[]</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="find-restaurants-code-rt-find-code"><a class="link" href="#find-restaurants-code-rt-find-code">3.3.8. Find restaurants : <code>(rt)find</code></a></h4>
 <div class="paragraph">
 <p>Finds restaurants based on a number of criteria.<br>
 Format: <code>(rt)find [n/RESTAURANT_NAME] [l/LOCATION]</code></p>
@@ -867,10 +872,12 @@ Finds restaurants with the keyword <code>no signboard</code>.</p>
 Finds restaurants in the <code>Bedok</code> area.</p>
 </li>
 <li>
-<p>[COMING SOON] Ability to search by price point and operating hours.
-end::findRestaurantCommand[]</p>
+<p>[COMING SOON] Ability to search by price point and operating hours.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>end::findRestaurantCommand[]</p>
 </div>
 <div class="paragraph">
 <p>tag::schoolworkTracker[]</p>
@@ -1101,12 +1108,14 @@ Displays 5 days of your generated schedule.</p>
 <p>end::schedule[]</p>
 </div>
 <div class="paragraph">
-<p>tag::eventSchedule[]
-=== Event Schedule commands</p>
+<p>tag::eventSchedule[]</p>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="event-schedule-commands"><a class="link" href="#event-schedule-commands">3.5. Event Schedule commands</a></h3>
 <div class="sect3">
-<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.4.6. Create a new social event : <code>(ev)add</code></a></h4>
+<h4 id="create-a-new-social-event-code-ev-add-code"><a class="link" href="#create-a-new-social-event-code-ev-add-code">3.5.1. Create a new social event : <code>(ev)add</code></a></h4>
 <div class="paragraph">
 <p>Creates a social event.<br>
 Format: <code>(ev)add t/EVENT_TITLE d/EVENT_DATE h/DURATION p/PLACE</code></p>
@@ -1135,7 +1144,7 @@ Adds a new social event with title "Facebook job interview", event date 2020-10-
 </div>
 </div>
 <div class="sect3">
-<h4 id="edit-a-social-event-code-ev-edit-code"><a class="link" href="#edit-a-social-event-code-ev-edit-code">3.4.7. Edit a social event : <code>(ev)edit</code></a></h4>
+<h4 id="edit-a-social-event-code-ev-edit-code"><a class="link" href="#edit-a-social-event-code-ev-edit-code">3.5.2. Edit a social event : <code>(ev)edit</code></a></h4>
 <div class="paragraph">
 <p>Allows editing of a social event.<br>
 Format: <code>(ev)edit INDEX [t/EVENT_TITLE] [d/EVENT_DATE] [h/DURATION] [p/LOCATION]</code></p>
@@ -1170,7 +1179,7 @@ Edits the 2nd event in the Event Schedule by changing the timing to 10PM on the 
 </div>
 </div>
 <div class="sect3">
-<h4 id="deletes-a-social-event-code-ev-delete-code"><a class="link" href="#deletes-a-social-event-code-ev-delete-code">3.4.8. Deletes a social event : <code>(ev)delete</code></a></h4>
+<h4 id="deletes-a-social-event-code-ev-delete-code"><a class="link" href="#deletes-a-social-event-code-ev-delete-code">3.5.3. Deletes a social event : <code>(ev)delete</code></a></h4>
 <div class="paragraph">
 <p>Deletes a social event.<br>
 Format: <code>(ev)delete INDEX</code></p>
@@ -1199,7 +1208,7 @@ Deletes the 1st Event in the Event Schedule.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.4.9. Listing all events : <code>(ev)list</code></a></h4>
+<h4 id="listing-all-events-code-ev-list-code"><a class="link" href="#listing-all-events-code-ev-list-code">3.5.4. Listing all events : <code>(ev)list</code></a></h4>
 <div class="paragraph">
 <p>Lists all social events in your Event Schedule.<br>
 Format: <code>(ev)list</code></p>
@@ -1210,23 +1219,23 @@ Format: <code>(ev)list</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.5. Saving the data</a></h3>
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.6. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book, Schoolwork Tracker, Event Book and Restaurant Book data are saved in the hard disk automatically after any command that changes the data. There is no need to save manually.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.6. Coming in v2.0</a></h3>
+<h3 id="coming-in-v2-0"><a class="link" href="#coming-in-v2-0">3.7. Coming in v2.0</a></h3>
 <div class="sect3">
-<h4 id="auto-deletion-of-completed-assignments-whose-deadline-have-passed-from-the-the-schoolwork-tracker"><a class="link" href="#auto-deletion-of-completed-assignments-whose-deadline-have-passed-from-the-the-schoolwork-tracker">3.6.1. Auto-deletion of completed assignments whose deadline have passed from the the Schoolwork Tracker</a></h4>
+<h4 id="auto-deletion-of-completed-assignments-whose-deadline-have-passed-from-the-the-schoolwork-tracker"><a class="link" href="#auto-deletion-of-completed-assignments-whose-deadline-have-passed-from-the-the-schoolwork-tracker">3.7.1. Auto-deletion of completed assignments whose deadline have passed from the the Schoolwork Tracker</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.6.2. Obtain gift suggestions for a particular contact</a></h4>
+<h4 id="obtain-gift-suggestions-for-a-particular-contact"><a class="link" href="#obtain-gift-suggestions-for-a-particular-contact">3.7.2. Obtain gift suggestions for a particular contact</a></h4>
 
 </div>
 <div class="sect3">
-<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.6.3. Encrypting data files</a></h4>
+<h4 id="encrypting-data-files"><a class="link" href="#encrypting-data-files">3.7.3. Encrypting data files</a></h4>
 
 </div>
 </div>
@@ -1404,4 +1413,4 @@ Format: <code>(ev)list</code></p>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 14:04:07 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2020-04-13 14:05:06 UTC</div></div></div></body></html>
